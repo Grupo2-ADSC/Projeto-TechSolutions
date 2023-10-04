@@ -11,8 +11,8 @@ email VARCHAR(90) default 'sem e-mail',
 senha VARCHAR(50) not null
 );
  INSERT INTO Empresa VALUES
-(null, '01262217000140', 'pilao', '11999267541', 'pilao_saopaulo@pilao.com.br', '08460220', 'Bananinha123'),
-	(null, '63310411001094', '3coracoes', '1138060020', '3coracoes_ceara@3coracoes.com.br', '61768290', 'Manga123');
+(null, '05483257694125', 'pilao', '11999267541', 'pilao_saopaulo@pilao.com.br', 'Bananinha123'),
+	(null, '63310411001094', '3coracoes', '1138060020', '3coracoes_ceara@3coracoes.com.br', 'Manga123');
 
 CREATE TABLE endereco (
  idEndereco INT PRIMARY KEY auto_increment,
@@ -27,10 +27,10 @@ CREATE TABLE endereco (
  fkEmpresa INT, foreign key (fkEmpresa) references empresa(idEmpresa)
  );
  INSERT INTO endereco VALUES 
- ('08230769','Rua João Mendes',1245,'Empresa','Predio roxo','Campo Limpo','São Paulo','SP'), 
- ('07830650','Avenida Francisco Pessoa',25,'Casa','Casa amarela','Brasilandia','São Paulo','SP'),
- ('06230890','Avenida Brasil',255,'Empresa','Predio espelhado','Tucuruvi','Santo André','MG'),
- ('09250700','Avenida João Pessoa',255,'Casa','Casa de esquina ','Camilopolis','Santo André','MG'); 
+ (null, '08230769','Rua João Mendes',1245,'Empresa','Predio roxo','Campo Limpo','São Paulo','SP', 1 ), 
+ (null, '07830650','Avenida Francisco Pessoa',25,'Casa','Casa amarela','Brasilandia','São Paulo','SP', 2),
+ (null, '06230890','Avenida Brasil',255,'Empresa','Predio espelhado','Tucuruvi','Santo André','MG', null),
+ (null, '09250700','Avenida João Pessoa',255,'Casa','Casa de esquina ','Camilopolis','Santo André','MG', null); 
  
  
  
@@ -44,9 +44,9 @@ CREATE TABLE endereco (
  fkEmpresa INT, foreign key (fkEmpresa) references empresa(idEmpresa)
 );
 INSERT INTO funcionario VALUES
-(null,'Pedro@gmail.com','Bananinha123','Pedro','Santos','Gerente de operações'),
-(null,'Rafael@gmail.com','Uva123','Rafael','Carmona','Auxiliar de operações'),
-(null,'Yago@gmail.com','Maçã123','Yago','Martins','Supervisor de operações');
+(null,'Pedro@gmail.com','Bananinha123','Pedro','Santos','Gerente de operações', 1),
+(null,'Rafael@gmail.com','Uva123','Rafael','Carmona','Auxiliar de operações', 1),
+(null,'Yago@gmail.com','Maçã123','Yago','Martins','Supervisor de operações', 2);
 
 CREATE TABLE armazem (
 idArmazem INT PRIMARY KEY auto_increment,
@@ -57,10 +57,10 @@ fkEmpresa INT, foreign key (fkEmpresa) references empresa(idEmpresa)
 );
 
 INSERT INTO armazem VALUES 
-(null,11,'MG',12),
-(null,13,'SP',35),
-(null,24,'RJ',27),
-(null,27,'RS',39);
+(null,11,'MG',12, 1 ),
+(null,13,'SP',35, 1),
+(null,24,'RJ',27, 2),
+(null,27,'RS',39, 2);
 
 CREATE TABLE sensor (
 idSensor INT PRIMARY KEY auto_increment,
@@ -68,24 +68,26 @@ modelo_sensor VARCHAR(100),
 fkArmazem INT, CONSTRAINT fkA foreign key (fkArmazem) references armazem(idArmazem)
 ) auto_increment = 40; 
 
-INSERT INTO sensor VALUES
-(null,'DHT11',24),
-(null,'LM35',11),
-(null,'DHT11',13),
-(null,'LM35',37);
+INSERT INTO sensor (modelo_sensor, fkArmazem) VALUES
+('DHT11',1),
+('LM35',1),
+('DHT11',2),
+('LM35',2);
 
 
 CREATE TABLE registro (
 idRegistro INT PRIMARY KEY auto_increment,
-dataRegistro DATETIME,
+dataRegistro DATETIME default current_timestamp,
 umidadeRegistro INT,
 fkSensor INT, CONSTRAINT fkS foreign key (fkSensor) references sensor(idSensor)
 )auto_increment = 30;
 
-INSERT INTO registro VALUES 
-(null,'','12%'),
-(null,'','25%'),
-(null,'','18%'),
-(null,'','40%');
+INSERT INTO registro (umidadeRegistro, fkSensor) VALUES 
+('12', 40),
+('25' ,40),
+('18', 42),
+('40', 42);
+
+
  
  
