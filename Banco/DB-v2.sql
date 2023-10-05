@@ -88,6 +88,27 @@ INSERT INTO registro (umidadeRegistro, fkSensor) VALUES
 ('18', 42),
 ('40', 42);
 
+show tables;
+select * from armazem;
+select * from empresa;
+select * from endereco;
+select * from funcionario;
+select * from registro;
+select * from sensor;
 
- 
- 
+SELECT * FROM empresa
+JOIN endereco ON empresa.idEmpresa = endereco.fkEmpresa;
+
+SELECT * FROM empresa
+JOIN funcionario ON empresa.idEmpresa = funcionario.fkEmpresa;
+
+SELECT * FROM empresa
+JOIN armazem ON empresa.idEmpresa = armazem.fkEmpresa;
+
+SELECT * FROM armazem
+JOIN sensor ON armazem.idArmazem = sensor.fkArmazem;
+
+SELECT * FROM sensor
+JOIN registro ON sensor.idSensor = registro.fkSensor;
+
+
