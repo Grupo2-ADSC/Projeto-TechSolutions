@@ -7,46 +7,41 @@ idEmpresa INT primary key auto_increment,
 cnpj CHAR(14) UNIQUE not null,
 nome VARCHAR(100) not null,
 telefone CHAR(11) default 'sem numero',
-email VARCHAR(90) default 'sem e-mail',
+email VARCHAR(90) not null,
 senha VARCHAR(50) not null
 );
  INSERT INTO Empresa VALUES
 (null, '05483257694125', 'pilao', '11999267541', 'pilao_saopaulo@pilao.com.br', 'Bananinha123'),
-	(null, '63310411001094', '3coracoes', '1138060020', '3coracoes_ceara@3coracoes.com.br', 'Manga123');
+(null, '63310411001094', '3coracoes', '1138060020', '3coracoes_ceara@3coracoes.com.br', 'Manga123');
 
 CREATE TABLE endereco (
  idEndereco INT PRIMARY KEY auto_increment,
  CEP CHAR(8) not null,
  logradouro VARCHAR(130) not null,
  numero VARCHAR(12) not null,
- tipo_local VARCHAR(20),
- complemento VARCHAR(250),
+ complemento VARCHAR(45),
  bairo VARCHAR(45) not null,
  cidade VARCHAR(45) not null,
  estado CHAR(2) not null,
  fkEmpresa INT, foreign key (fkEmpresa) references empresa(idEmpresa)
  );
  INSERT INTO endereco VALUES 
- (null, '08230769','Rua João Mendes',1245,'Empresa','Predio roxo','Campo Limpo','São Paulo','SP', 1 ), 
- (null, '07830650','Avenida Francisco Pessoa',25,'Casa','Casa amarela','Brasilandia','São Paulo','SP', 2),
- (null, '06230890','Avenida Brasil',255,'Empresa','Predio espelhado','Tucuruvi','Santo André','MG', null),
- (null, '09250700','Avenida João Pessoa',255,'Casa','Casa de esquina ','Camilopolis','Santo André','MG', null); 
- 
- 
+ (null, '08230769','Rua João Mendes',1245,'B','Campo Limpo','São Paulo','SP', 1 ), 
+ (null, '07830650','Avenida Francisco Pessoa',25,null,'Brasilandia','São Paulo','SP', 2);
  
  CREATE TABLE funcionario (
  idFuncionario INT PRIMARY KEY auto_increment,
- email VARCHAR(90) not null,
- senha VARCHAR(50) not null,
  nome VARCHAR(45) not null,
  sobrenome VARCHAR(90) not null,
  cargo VARCHAR(45),
+ email VARCHAR(90) not null,
+ senha VARCHAR(50) not null,
  fkEmpresa INT, foreign key (fkEmpresa) references empresa(idEmpresa)
 );
 INSERT INTO funcionario VALUES
-(null,'Pedro@gmail.com','Bananinha123','Pedro','Santos','Gerente de operações', 1),
-(null,'Rafael@gmail.com','Uva123','Rafael','Carmona','Auxiliar de operações', 1),
-(null,'Yago@gmail.com','Maçã123','Yago','Martins','Supervisor de operações', 2);
+(null,'Pedro','Santos','Gerente de operações','Pedro@gmail.com','Bananinha123', 1),
+(null,'Rafael','Carmona','Auxiliar de operações','Rafael@gmail.com','Uva123', 1),
+(null,'Yago','Martins','Supervisor de operações','Yago@gmail.com','Maçã123', 2);
 
 CREATE TABLE armazem (
 idArmazem INT PRIMARY KEY auto_increment,
@@ -89,12 +84,12 @@ INSERT INTO registro (umidadeRegistro, fkSensor) VALUES
 ('40', 42);
 
 show tables;
-select * from armazem;
 select * from empresa;
 select * from endereco;
 select * from funcionario;
-select * from registro;
+select * from armazem;
 select * from sensor;
+select * from registro;
 
 SELECT * FROM empresa
 JOIN endereco ON empresa.idEmpresa = endereco.fkEmpresa;
@@ -102,13 +97,25 @@ JOIN endereco ON empresa.idEmpresa = endereco.fkEmpresa;
 SELECT * FROM empresa
 JOIN funcionario ON empresa.idEmpresa = funcionario.fkEmpresa;
 
+SELECT empresa.nome as 'Empresa', funcionario.nome, funcionario.sobrenome, funcionario.cargo FROM empresa
+JOIN funcionario ON empresa.idEmpresa = funcionario.fkEmpresa;
+
 SELECT * FROM empresa
+JOIN armazem ON empresa.idEmpresa = armazem.fkEmpresa;
+
+SELECT empresa.nome as 'Empresa', armazem.* FROM empresa
 JOIN armazem ON empresa.idEmpresa = armazem.fkEmpresa;
 
 SELECT * FROM armazem
 JOIN sensor ON armazem.idArmazem = sensor.fkArmazem;
 
+SELECT armazem.idArmazem as 'Armazem', sensor.idSensor, sensor.modelo_sensor FROM armazem
+JOIN sensor ON armazem.idArmazem = sensor.fkArmazem;
+
 SELECT * FROM sensor
+JOIN registro ON sensor.idSensor = registro.fkSensor;
+
+SELECT sensor.idSensor as 'Sensor', registro.dataRegistro as 'Data e Hora', registro.umidadeRegistro as 'Umidade' FROM sensor
 JOIN registro ON sensor.idSensor = registro.fkSensor;
 
 
