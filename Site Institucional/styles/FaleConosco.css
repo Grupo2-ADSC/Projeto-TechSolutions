@@ -101,7 +101,6 @@ input {
 
 #icones, #infos, #termos {
     list-style: none;
-    cursor: pointer;
     padding: 10px;
     color: #fff;
 }
@@ -114,7 +113,7 @@ input {
 #icones img {
     width: 40px;
     height: 40px;
-    color: #F8F5EC;
+    cursor: pointer;
 }
 
 #infos a, #termos li {
