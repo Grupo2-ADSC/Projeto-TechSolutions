@@ -9,11 +9,10 @@
 }
 
 .header{
- background-color: #F8F5EC;
- width: 100%;
- height: 100px;
- 
- font-family: 'Montserrat', sans-serif;
+background-color: #F8F5EC;
+width: 100%;
+height: 100px;
+font-family: 'Montserrat', sans-serif;
 box-shadow: rgba(0, 0, 0, 0.253) 0px 25px 20px -20px;
 }
 
@@ -49,8 +48,71 @@ box-shadow: rgba(0, 0, 0, 0.253) 0px 25px 20px -20px;
     
 }
 
+
+
 .titulo1 {
     color: #794830;
+    font-family: 'Alice', serif;
+    font-size: 65px;
+    
+}
 
+.quadrado_esquerda{
+    background-color: #794830;
+    height: 90vh;
+    width: 45%;
+    position: absolute;
+    left: 55%;
+}
+.quadrado_direita{
+    background-color:#F8F5EC;
+    height: 90vh;
+    width: 55%;
+    
+    
+}
+.container1{
+    width: 70%;
+    height: 10%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-top: 15%;
+}
 
+.topicos{
+    font-size: 24px;
+    width: 40%;
+    margin: 0 10%;
+    position: absolute;
+    left: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+.topicos2{
+    font-size: 24px;
+    width: 500px;
+    position: absolute;
+    margin-left: 10%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.container2{
+    width: 70%;
+    height: 10%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-top: 25%;
+}
+
+.cafe{
+    width: 400px;
+    height: 400px;
+    border: #F8F5EC solid 20px;
+    position: absolute;
+    left: 45%;
+    top: 30%;
 }
