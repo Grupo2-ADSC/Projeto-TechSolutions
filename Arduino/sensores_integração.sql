@@ -1,8 +1,8 @@
-create database metricas;
+create database if not exists metricas;
 
 use metricas;
 
-create table sensores (
+create table if not exists sensores (
 dht11_umidade float,
 dht11_temperatura float,
 luminosidade float,

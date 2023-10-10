@@ -15,13 +15,13 @@ const serial = async (
 ) => {
     const poolBancoDados = mysql.createPool(
         {
-            host: 'localhost', /*local do SQL*/
+            host: '127.0.0.1', /*local do SQL*/
 
             port: 3306,  /* a porta de entrada do usb, entre no cmd do pc para ativar, "netstat -ano", pegue o PID ex:"12567" e faça "taskkill /PID 12567 -F" obs: veja em qual porta está seu arduino, aparece no git bash quando dá npm start.*/
 
-            user: 'root', /* usuario do SQL*/
+            user: 'Arduino', /* usuario do SQL*/
 
-            password: 'bananinha123', /*senha do usuario*/
+            password: 'Arduino12', /*senha do usuario*/
 
             database: 'metricas' /* database do banco, INSERT INTO sensores (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave),*/
         }
@@ -54,6 +54,8 @@ const serial = async (
         valoresLuminosidade.push(luminosidade);
         valoresLm35Temperatura.push(lm35Temperatura);
         valoresChave.push(chave);
+
+        console.log(chave)
 
         if (HABILITAR_OPERACAO_INSERIR) {
             await poolBancoDados.execute(
