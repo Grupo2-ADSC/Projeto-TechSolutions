@@ -10,4 +10,5 @@ lm35_temperatura float,
 chave int
 );
 
+SELECT * FROM sensores;
 
