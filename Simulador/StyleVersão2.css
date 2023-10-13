@@ -93,7 +93,7 @@ font-family: 'Montserrat', sans-serif;
     font-weight: bolder; /* Deixando a letra em negrito b de bold/bolder */
     box-shadow: rgba(0, 0, 0, 0.418) 0px 7px 7px;/* Colocando uma sombrinha no fundo branco */
   }
-
+  
   .input {
     border-radius: 5px 5px 5px 5px;
     border: 2px solid rgb(94, 37, 10); /* Dando uma borda nos input, a parte marrom de 2px */
