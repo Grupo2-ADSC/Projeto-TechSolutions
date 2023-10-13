@@ -125,8 +125,8 @@
   }
 
   .esqueceu{
-    font-family: 'Montserrat', sans-serif;
-    color: steelblue;
+    text-decoration: none;
+    color: #794830;
  }
 
 #containderFooter{
