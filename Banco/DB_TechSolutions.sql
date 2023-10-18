@@ -10,7 +10,8 @@ telefone CHAR(11) default 'sem numero',
 email VARCHAR(90) not null,
 senha VARCHAR(50) not null
 );
- INSERT INTO Empresa VALUES
+
+INSERT INTO Empresa VALUES
 (null, '05483257694125', 'pilao', '11999267541', 'pilao_saopaulo@pilao.com.br', 'Bananinha123'),
 (null, '63310411001094', '3coracoes', '1138060020', '3coracoes_ceara@3coracoes.com.br', 'Manga123');
 
@@ -18,13 +19,15 @@ CREATE TABLE endereco (
  idEndereco INT PRIMARY KEY auto_increment,
  CEP CHAR(8) not null,
  logradouro VARCHAR(130) not null,
- numero VARCHAR(12) not null,
- complemento VARCHAR(45),
+ numero int not null,
+ complemento VARCHAR(45) default 'sem complemento',
  bairo VARCHAR(45) not null,
  cidade VARCHAR(45) not null,
  estado CHAR(2) not null,
  fkEmpresa INT, foreign key (fkEmpresa) references empresa(idEmpresa)
+ fkArmazem INT,
  );
+ 
  INSERT INTO endereco VALUES 
  (null, '08230769','Rua João Mendes',1245,'B','Campo Limpo','São Paulo','SP', 1 ), 
  (null, '07830650','Avenida Francisco Pessoa',25,null,'Brasilandia','São Paulo','SP', 2);
@@ -45,8 +48,7 @@ INSERT INTO funcionario VALUES
 
 CREATE TABLE armazem (
 idArmazem INT PRIMARY KEY auto_increment,
-numero VARCHAR(50),
-localidade VARCHAR(50),
+numero int,
 areaArmazem VARCHAR(100),
 fkEmpresa INT, foreign key (fkEmpresa) references empresa(idEmpresa)
 );
@@ -56,6 +58,7 @@ INSERT INTO armazem VALUES
 (null,13,'SP',35, 1),
 (null,24,'RJ',27, 2),
 (null,27,'RS',39, 2);
+
 
 CREATE TABLE sensor (
 idSensor INT PRIMARY KEY auto_increment,
