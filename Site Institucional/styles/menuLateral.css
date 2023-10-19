@@ -7,6 +7,10 @@ body{
 
 }
 
+.nav{
+
+}
+
 #imgPerfil{
   height: 100px;
   width: 120px;
@@ -25,6 +29,19 @@ body{
   padding-top: 2%;
 }
 
+.seila{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seila2{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 220px;
+  border-bottom: solid white 2px;
+}
 
 #menuLateral a{
   padding: 16px;
@@ -33,11 +50,7 @@ body{
   color: white;
   display: block;
   cursor: pointer;
-  border-bottom: 1px solid white;
   width: fit-content;
-  margin: 0 auto;
-
- 
 }
 
 #menuLateral p{
