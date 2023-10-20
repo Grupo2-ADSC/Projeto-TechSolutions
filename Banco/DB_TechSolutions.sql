@@ -7,7 +7,7 @@ CREATE TABLE endereco (
  CEP CHAR(8) not null,
  logradouro VARCHAR(130) not null,
  numero VARCHAR(12) not null,
- complemento VARCHAR(45),
+ complemento VARCHAR(100) default 'Sem endereço',
  bairo VARCHAR(45) not null,
  cidade VARCHAR(45) not null,
  estado CHAR(2) not null,
@@ -16,18 +16,18 @@ CREATE TABLE endereco (
  )auto_increment = 100;
  
  INSERT INTO endereco VALUES 
- (null, '08230769', 'Rua João Mendes', 1245, 'B', 'Campo Limpo', 'São Paulo', 'SP', 'Empresa'), 
+ (null, '08230769', 'Rua João Mendes', 1245, null, 'Campo Limpo', 'São Paulo', 'SP', 'Empresa'), 
  (null, '07830650', 'Avenida Francisco Pessoa', 25, null, 'Brasilandia', 'São Paulo', 'SP', 'Empresa'),
- (null, '12345678', 'Rua da Liberdade', 1245, 'B', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
- (null, '87654321', 'Rua Almada', 1245, 'B', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem'), 
- (null, '43218765', 'Rua Mimo de Vênus', 1245, 'B', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
- (null, '12341234', 'Rua flor de Abril', 1245, 'B', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' );
+ (null, '12345678', 'Rua da Liberdade', 1245, null, 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
+ (null, '87654321', 'Rua Almada', 1245, 'Ao lado do posto ipiranga', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem'), 
+ (null, '43218765', 'Rua Mimo de Vênus', 1245, 'Ao lado do restaurante Vivano', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
+ (null, '12341234', 'Rua flor de Abril', 1245, 'Muro azul', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' );
 
 CREATE TABLE empresa (
 idEmpresa INT primary key auto_increment,
 cnpj CHAR(14) UNIQUE not null,
 nome VARCHAR(100) not null,
-telefone CHAR(11) default 'sem numero',
+telefone CHAR(11) default 'Sem numero',
 email VARCHAR(90) not null,
 senha VARCHAR(50) not null,
 fkEndereco INT, 
