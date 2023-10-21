@@ -1,122 +1,124 @@
-drop database if exists TechSolutions;
-create database if not exists TechSolutions;
-use TechSolutions;
+DROP DATABASE IF EXISTS TechSolutions;
 
-create table endereco (
- idEndereco int primary key auto_increment,
- CEP char(8) not null,
- logradouro varchar(130) not null,
- numero varchar(12) not null,
- complemento varchar(100) default 'Sem endereço',
- bairo varchar(45) not null,
- cidade varchar(45) not null,
- estado char(2) not null,
- tipo char(7),
- constraint chk check (tipo in('Empresa','Armazem'))
- )auto_increment = 100;
+CREATE DATABASE IF NOT EXISTS TechSolutions;
+
+USE TechSolutions;
+
+CREATE TABLE endereco (
+ idEndereco INT PRIMARY KEY AUTO_INCREMENT,
+ CEP CHAR(8) NOT NULL,
+ logradouro VARCHAR(130) NOT NULL,
+ numero VARCHAR(12) NOT NULL,
+ complemento VARCHAR(100) DEFAULT 'Sem endereço',
+ bairo VARCHAR(45) NOT NULL,
+ cidade VARCHAR(45) NOT NULL,
+ estado CHAR(2) NOT NULL,
+ tipo CHAR(7),
+ CONSTRAINT chk CHECK (tipo IN('Empresa','Armazem'))
+ )AUTO_INCREMENT = 100;
  
- insert into endereco values 
- (null, '08230769', 'Rua João Mendes', 1245, null, 'Campo Limpo', 'São Paulo', 'SP', 'Empresa'), 
- (null, '07830650', 'Avenida Francisco Pessoa', 25, null, 'Brasilandia', 'São Paulo', 'SP', 'Empresa'),
- (null, '12345678', 'Rua da Liberdade', 1245, null, 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
- (null, '87654321', 'Rua Almada', 1245, 'Ao lado do posto ipiranga', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem'), 
- (null, '43218765', 'Rua Mimo de Vênus', 1245, 'Ao lado do restaurante Vivano', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
- (null, '12341234', 'Rua flor de Abril', 1245, 'Muro azul', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' );
+ INSERT INTO endereco VALUES 
+ (NULL, '09260290', 'Rua João Mendes', 1245, NULL, 'Campo Limpo', 'São Paulo', 'SP', 'Empresa'), 
+ (NULL, '07830650', 'Avenida Francisco Pessoa', 25, NULL, 'BrASilandia', 'São Paulo', 'SP', 'Empresa'),
+ (NULL, '12345678', 'Rua da Liberdade', 1245, NULL, 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
+ (NULL, '87654321', 'Rua Almada', 1245, 'Ao lado do posto ipiranga', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem'), 
+ (NULL, '43218765', 'Rua Mimo de Vênus', 1245, 'Ao lado do restaurante Vivano', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
+ (NULL, '12341234', 'Rua flor de Abril', 1245, 'Muro azul', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' );
 
-create table empresa (
-idEmpresa int primary key auto_increment,
-cnpj char(14) unique not null,
-nome varchar(100) not null,
-telefone char(11) default 'Sem numero',
-email varchar(90) not null,
-senha varchar(50) not null,
-fkEndereco int, 
-foreign key (fkEndereco) references endereco(idEndereco)
-);
-
- insert into empresa values
-(null, '05483257694125', 'pilao', '11999267541', 'pilao_saopaulo@pilao.com.br', 'Bananinha123', null),
-(null, '63310411001094', '3coracoes', '1138060020', '3coracoes_ceara@3coracoes.com.br', 'Manga123', null);
-
-select * from empresa;
-
-update empresa set fkEndereco = 100 where idEmpresa = 1;
-update empresa set fkEndereco = 101 where idEmpresa = 2;
- 
- create table funcionario (
- idFuncionario int auto_increment,
- nome varchar(45) not null,
- sobrenome varchar(90) not null,
- cargo varchar(45),
- email varchar(90) not null,
- senha varchar(50) not null,
- fkEmpresa int, 
- foreign key (fkEmpresa) references empresa(idEmpresa),
- primary key (idFuncionario, fkEmpresa)
-);
-
-insert into funcionario (nome, sobrenome, cargo, email, senha, idFuncionario, fkEmpresa) values
-('Pedro','Santos','Gerente de operações','Pedro@gmail.com','Bananinha123', 1, 1),
-('Rafael','Carmona','Auxiliar de operações','Rafael@gmail.com','Uva123', 1, 2),
-('Yago','Martins','Supervisor de operações','Yago@gmail.com','Maçã123', 2, 2);
-
-create table armazem (
-idArmazem int primary key auto_increment,
-numero varchar(50),
-areaArmazem decimal(4,3),
-fkEmpresa int, 
-foreign key (fkEmpresa) references empresa(idEmpresa),
+CREATE TABLE empresa (
+idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
+cnpj CHAR(14) UNIQUE NOT NULL,
+nome VARCHAR(100) NOT NULL,
+telefone CHAR(11) DEFAULT 'Sem numero',
+email VARCHAR(90) NOT NULL,
+senha VARCHAR(50) NOT NULL,
 fkEndereco INT, 
-foreign key (fkEndereco) references endereco(idEndereco)
+FOREIGN KEY (fkEndereco) REFERENCES endereco(idEndereco)
 );
 
-insert into armazem values 
-(null, 11, 2.000, 1, 102),
-(null, 13, 5.000, 1, 103),
-(null, 24, 7.000, 2, 104),
-(null, 27, 9.000, 2, 105);
+ INSERT INTO empresa VALUES
+(NULL, '05483257694125', 'pilao', '11999267541', 'pilao_saopaulo@pilao.com.br', 'BananINha123', NULL),
+(NULL, '63310411001094', '3coracoes', '1138060020', '3coracoes_ceara@3coracoes.com.br', 'Manga123', NULL);
 
-select * from armazem;
+SELECT * FROM empresa;
 
-select * from endereco;
+UPDATE empresa SET fkEndereco = 100 WHERE idEmpresa = 1;
+UPDATE empresa SET fkEndereco = 101 WHERE idEmpresa = 2;
+ 
+ CREATE TABLE funcionario (
+ idFuncionario INT AUTO_INCREMENT,
+ nome VARCHAR(45) NOT NULL,
+ sobrenome VARCHAR(90) NOT NULL,
+ cargo VARCHAR(45),
+ email VARCHAR(90) NOT NULL,
+ senha VARCHAR(50) NOT NULL,
+ fkEmpresa INT, 
+ FOREIGN KEY (fkEmpresa) REFERENCES empresa(idEmpresa),
+ PRIMARY KEY (idFuncionario, fkEmpresa)
+);
 
-create table sensor (
-idSensor int auto_increment,
-modelo_sensor varchar(100),
-fkArmazem int, 
-constraint fkA foreign key (fkArmazem) references armazem(idArmazem),
-primary key (idSensor, fkArmazem)
-) auto_increment = 40; 
+INSERT INTO funcionario (nome, sobrenome, cargo, email, senha, idFuncionario, fkEmpresa) VALUES
+('Pedro','Santos','Gerente de operações','Pedro@gmail.com','BananINha123', 1, 1),
+('Rafael','Carmona','Auxiliar de operações','Rafael@gmail.com','Uva123', 1, 2),
+('Yago','MartINs','Supervisor de operações','Yago@gmail.com','Maçã123', 2, 2);
 
-insert into sensor values
+CREATE TABLE armazem (
+idArmazem INT PRIMARY KEY AUTO_INCREMENT,
+numero VARCHAR(50),
+areaArmazem decimal(4,3),
+fkEmpresa INT, 
+FOREIGN KEY (fkEmpresa) REFERENCES empresa(idEmpresa),
+fkEndereco INT, 
+FOREIGN KEY (fkEndereco) REFERENCES endereco(idEndereco)
+);
+
+INSERT INTO armazem VALUES 
+(NULL, 11, 2.000, 1, 102),
+(NULL, 13, 5.000, 1, 103),
+(NULL, 24, 7.000, 2, 104),
+(NULL, 27, 9.000, 2, 105);
+
+SELECT * FROM armazem;
+
+SELECT * FROM endereco;
+
+CREATE TABLE sensor (
+idSensor INT AUTO_INCREMENT,
+modelo_sensor VARCHAR(100),
+fkArmazem INT, 
+CONSTRAINT fkA FOREIGN KEY (fkArmazem) REFERENCES armazem(idArmazem),
+PRIMARY KEY (idSensor, fkArmazem)
+)AUTO_INCREMENT = 40; 
+
+INSERT INTO sensor VALUES
 (40, 'DHT11', 1),
 (41, 'DHT11', 2),
 (42, 'DHT11', 3),
 (43, 'DHT11', 3);
 
 
-create table registro (
-idRegistro int auto_increment,
-dataRegistro datetime default current_timestamp,
-umidadeRegistro int,
-fkSensor int, 
-constraint fkS foreign key (fkSensor) references sensor(idSensor),
-primary key (idRegistro, fkSensor)
-)auto_increment = 30;
+CREATE TABLE registro (
+idRegistro INT AUTO_INCREMENT,
+dataRegistro datetime DEFAULT current_timestamp,
+umidadeRegistro INT,
+fkSensor INT, 
+CONSTRAINT fkS FOREIGN KEY (fkSensor) REFERENCES sensor(idSensor),
+PRIMARY KEY (idRegistro, fkSensor)
+)AUTO_INCREMENT = 30;
 
-insert into registro (umidadeRegistro, idRegistro, fkSensor) values 
+INSERT INTO registro (umidadeRegistro, idRegistro, fkSensor) VALUES 
 (30, 12, 40),
 (31, 25, 41),
 (32, 18, 42),
 (33, 40, 42);
 
-show tables;
-select * from empresa;
-select * from endereco;
-select * from funcionario;
-select * from armazem;
-select * from sensor;
-select * from registro;
+SHOW TABLES;
+SELECT * FROM empresa;
+SELECT * FROM endereco;
+SELECT * FROM funcionario;
+SELECT * FROM armazem;
+SELECT * FROM sensor;
+SELECT * FROM registro;
 
 SELECT * FROM empresa
 JOIN endereco ON empresa.idEmpresa = endereco.fkEmpresa;
@@ -124,25 +126,25 @@ JOIN endereco ON empresa.idEmpresa = endereco.fkEmpresa;
 SELECT * FROM empresa
 JOIN funcionario ON empresa.idEmpresa = funcionario.fkEmpresa;
 
-SELECT empresa.nome as 'Empresa', funcionario.nome, funcionario.sobrenome, funcionario.cargo FROM empresa
+SELECT empresa.nome AS 'Empresa', funcionario.nome, funcionario.sobrenome, funcionario.cargo FROM empresa
 JOIN funcionario ON empresa.idEmpresa = funcionario.fkEmpresa;
 
 SELECT * FROM empresa
 JOIN armazem ON empresa.idEmpresa = armazem.fkEmpresa;
 
-SELECT empresa.nome as 'Empresa', armazem.* FROM empresa
+SELECT empresa.nome AS 'Empresa', armazem.* FROM empresa
 JOIN armazem ON empresa.idEmpresa = armazem.fkEmpresa;
 
 SELECT * FROM armazem
 JOIN sensor ON armazem.idArmazem = sensor.fkArmazem;
 
-SELECT armazem.idArmazem as 'Armazem', sensor.idSensor, sensor.modelo_sensor FROM armazem
+SELECT armazem.idArmazem AS 'Armazem', sensor.idSensor, sensor.modelo_sensor FROM armazem
 JOIN sensor ON armazem.idArmazem = sensor.fkArmazem;
 
 SELECT * FROM sensor
 JOIN registro ON sensor.idSensor = registro.fkSensor;
 
-SELECT sensor.idSensor as 'Sensor', registro.dataRegistro as 'Data e Hora', registro.umidadeRegistro as 'Umidade' FROM sensor
+SELECT sensor.idSensor AS 'Sensor', registro.dataRegistro AS 'Data e Hora', registro.umidadeRegistro AS 'Umidade' FROM sensor
 JOIN registro ON sensor.idSensor = registro.fkSensor;
 
 
