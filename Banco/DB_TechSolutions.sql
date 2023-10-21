@@ -6,24 +6,25 @@ USE TechSolutions;
 
 CREATE TABLE endereco (
  idEndereco INT PRIMARY KEY AUTO_INCREMENT,
- CEP CHAR(8) NOT NULL,
+ CEP CHAR(9) NOT NULL,
  logradouro VARCHAR(130) NOT NULL,
- numero VARCHAR(12) NOT NULL,
+ numero INT NOT NULL,
  complemento VARCHAR(100) DEFAULT 'Sem endereço',
  bairo VARCHAR(45) NOT NULL,
  cidade VARCHAR(45) NOT NULL,
  estado CHAR(2) NOT NULL,
  tipo CHAR(7),
- CONSTRAINT chk CHECK (tipo IN('Empresa','Armazem'))
+ CONSTRAINT chk CHECK (tipo IN('Empresa','Armazém'))
  )AUTO_INCREMENT = 100;
  
  INSERT INTO endereco VALUES 
- (NULL, '09260290', 'Rua João Mendes', 1245, NULL, 'Campo Limpo', 'São Paulo', 'SP', 'Empresa'), 
- (NULL, '07830650', 'Avenida Francisco Pessoa', 25, NULL, 'BrASilandia', 'São Paulo', 'SP', 'Empresa'),
- (NULL, '12345678', 'Rua da Liberdade', 1245, NULL, 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
- (NULL, '87654321', 'Rua Almada', 1245, 'Ao lado do posto ipiranga', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem'), 
- (NULL, '43218765', 'Rua Mimo de Vênus', 1245, 'Ao lado do restaurante Vivano', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
- (NULL, '12341234', 'Rua flor de Abril', 1245, 'Muro azul', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' );
+ (NULL, '09260-290', 'Rua Conceição', 1245, NULL, 'Campo Limpo', 'São Paulo', 'SP', 'Empresa'), 
+ (NULL, '09260-420', 'Avenida Francisco Pessoa', 25, NULL, 'Brasilandia', 'Santo André', 'SP', 'Empresa'),
+ (NULL, '09260-420', 'Avenida dos Estados', 2540, NULL, 'Alzira Franco', 'São Paulo', 'SP', 'Empresa'),
+ (NULL, '03340-390', 'Rua da Liberdade', 190, NULL, 'Jardim Santo Alberto', 'São Bernardo do Campo', 'SP', 'Armazém' ), 
+ (NULL, '08310-220', 'Rua Almada', 31, 'Ao lado do posto ipiranga', 'Parque das Nações', 'São Paulo', 'SP', 'Armazém'), 
+ (NULL, '04270-190', 'Avenida Mimo de Vênus', 147, 'Ao lado do Mercado Rossi', 'Assunçao', 'São Bernardo do Campo', 'SP', 'Armazém' ), 
+ (NULL, '06270-210', 'Avenida flor de Abril', 19, 'Muro azul', 'Jardim Ana Maria', 'São Caetano do Sul', 'SP', 'Armazém' );
 
 CREATE TABLE empresa (
 idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
@@ -37,13 +38,14 @@ FOREIGN KEY (fkEndereco) REFERENCES endereco(idEndereco)
 );
 
  INSERT INTO empresa VALUES
-(NULL, '05483257694125', 'pilao', '11999267541', 'pilao_saopaulo@pilao.com.br', 'BananINha123', NULL),
-(NULL, '63310411001094', '3coracoes', '1138060020', '3coracoes_ceara@3coracoes.com.br', 'Manga123', NULL);
+(NULL, '05483257000125', 'Pilão', '11999267541', 'pilao@cafebrasil.com.br', 'pil4o123', 100),
+(NULL, '01340569000140', 'Café Pelé', '11999267541', 'cafepele@brasil.com.br', 'C4f3pele', 101),
+(NULL, '63310411000194', '3corações', '1138060020', '3coracoes@cafe.com.br', '3cor4co3s', 102);
 
 SELECT * FROM empresa;
 
-UPDATE empresa SET fkEndereco = 100 WHERE idEmpresa = 1;
-UPDATE empresa SET fkEndereco = 101 WHERE idEmpresa = 2;
+/*UPDATE empresa SET fkEndereco = 100 WHERE idEmpresa = 1;
+UPDATE empresa SET fkEndereco = 101 WHERE idEmpresa = 2;*/
  
  CREATE TABLE funcionario (
  idFuncionario INT AUTO_INCREMENT,
@@ -58,9 +60,11 @@ UPDATE empresa SET fkEndereco = 101 WHERE idEmpresa = 2;
 );
 
 INSERT INTO funcionario (nome, sobrenome, cargo, email, senha, idFuncionario, fkEmpresa) VALUES
-('Pedro','Santos','Gerente de operações','Pedro@gmail.com','BananINha123', 1, 1),
-('Rafael','Carmona','Auxiliar de operações','Rafael@gmail.com','Uva123', 1, 2),
-('Yago','MartINs','Supervisor de operações','Yago@gmail.com','Maçã123', 2, 2);
+('Pedro','Santos','Gerente de operações','Pedro@gmail.com','12345678', 1, 1),
+('Rafael','Carmona','Auxiliar de operações','Rafael@gmail.com','87654321', 2, 1),
+('Gabriel','Silva','Analista','Gabriel@gmail.com','G4br!3l', 3, 2),
+('Yago','Martins','Supervisor de operações','Yago@gmail.com','Y4go123', 4, 3),
+('Marcus','Souza','Analista','Marcus@gmail.com','M4rcu5', 5, 3);
 
 CREATE TABLE armazem (
 idArmazem INT PRIMARY KEY AUTO_INCREMENT,
@@ -73,10 +77,10 @@ FOREIGN KEY (fkEndereco) REFERENCES endereco(idEndereco)
 );
 
 INSERT INTO armazem VALUES 
-(NULL, 11, 2.000, 1, 102),
-(NULL, 13, 5.000, 1, 103),
-(NULL, 24, 7.000, 2, 104),
-(NULL, 27, 9.000, 2, 105);
+(NULL, 1, 2.000, 1, 103),
+(NULL, 3, 5.000, 2, 104),
+(NULL, 7, 7.000, 3, 105),
+(NULL, 11, 9.000, 3, 106);
 
 SELECT * FROM armazem;
 
@@ -113,6 +117,7 @@ INSERT INTO registro (umidadeRegistro, idRegistro, fkSensor) VALUES
 (33, 40, 42);
 
 SHOW TABLES;
+
 SELECT * FROM empresa;
 SELECT * FROM endereco;
 SELECT * FROM funcionario;
@@ -121,7 +126,7 @@ SELECT * FROM sensor;
 SELECT * FROM registro;
 
 SELECT * FROM empresa
-JOIN endereco ON empresa.idEmpresa = endereco.fkEmpresa;
+JOIN endereco ON empresa.fkendereco = endereco.idEndereco;
 
 SELECT * FROM empresa
 JOIN funcionario ON empresa.idEmpresa = funcionario.fkEmpresa;
