@@ -1,3 +1,5 @@
+/*header*/
+
 body{
     margin: 0;
     background-color: #e7eaf0;
@@ -16,6 +18,7 @@ body{
     color:#184062 ; 
 }
 
+/*perguntas*/
 
 .container_perguntas{
     background-color: #f8f5ec;
@@ -28,7 +31,7 @@ body{
     margin-top: 80px;
     margin-left: 580px ;
     padding-left: 200px;
-    border: 2px solid #000;
+    border: 2px solid #184062;
     box-shadow: 5px 6px 8px 5px #a7a0a0;
 }
 
@@ -43,6 +46,7 @@ body{
 p{
     font-weight: bolder;
     text-align: start;
+    font-size: 16px;
 }
 
 input{
@@ -51,8 +55,40 @@ input{
     height: 30px;
 }
 
+input::placeholder {
+    color:#b6b6b6 ;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* botões*/
+
 .botao{
     display: flex;
+    width: 350px;
+    justify-content: space-around;
+    margin-left: -180px;
+    margin-bottom: 50px ;
+    height: 35px ;
+}
+
+.botao_confirmar, .botao_cancelar{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+
+.botao_confirmar{
+    background-color: rgb(48, 170, 48);
+    width: 200px;
+}
+
+.botao_cancelar{
+    background-color: red;
+    width: 120px;
 }
 
 
