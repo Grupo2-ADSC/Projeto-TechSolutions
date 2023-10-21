@@ -1,21 +1,21 @@
-DROP DATABASE if exists TechSolutions;
-CREATE DATABASE if not exists TechSolutions;
-USE TechSolutions;
+drop database if exists TechSolutions;
+create database if not exists TechSolutions;
+use TechSolutions;
 
-CREATE TABLE endereco (
- idEndereco INT PRIMARY KEY auto_increment,
- CEP CHAR(8) not null,
- logradouro VARCHAR(130) not null,
- numero VARCHAR(12) not null,
- complemento VARCHAR(100) default 'Sem endereço',
- bairo VARCHAR(45) not null,
- cidade VARCHAR(45) not null,
- estado CHAR(2) not null,
+create table endereco (
+ idEndereco int primary key auto_increment,
+ CEP char(8) not null,
+ logradouro varchar(130) not null,
+ numero varchar(12) not null,
+ complemento varchar(100) default 'Sem endereço',
+ bairo varchar(45) not null,
+ cidade varchar(45) not null,
+ estado char(2) not null,
  tipo char(7),
  constraint chk check (tipo in('Empresa','Armazem'))
  )auto_increment = 100;
  
- INSERT INTO endereco VALUES 
+ insert into endereco values 
  (null, '08230769', 'Rua João Mendes', 1245, null, 'Campo Limpo', 'São Paulo', 'SP', 'Empresa'), 
  (null, '07830650', 'Avenida Francisco Pessoa', 25, null, 'Brasilandia', 'São Paulo', 'SP', 'Empresa'),
  (null, '12345678', 'Rua da Liberdade', 1245, null, 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
@@ -23,54 +23,54 @@ CREATE TABLE endereco (
  (null, '43218765', 'Rua Mimo de Vênus', 1245, 'Ao lado do restaurante Vivano', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' ), 
  (null, '12341234', 'Rua flor de Abril', 1245, 'Muro azul', 'Campo Limpo', 'São Paulo', 'SP', 'Armazem' );
 
-CREATE TABLE empresa (
-idEmpresa INT primary key auto_increment,
-cnpj CHAR(14) UNIQUE not null,
-nome VARCHAR(100) not null,
-telefone CHAR(11) default 'Sem numero',
-email VARCHAR(90) not null,
-senha VARCHAR(50) not null,
-fkEndereco INT, 
+create table empresa (
+idEmpresa int primary key auto_increment,
+cnpj char(14) unique not null,
+nome varchar(100) not null,
+telefone char(11) default 'Sem numero',
+email varchar(90) not null,
+senha varchar(50) not null,
+fkEndereco int, 
 foreign key (fkEndereco) references endereco(idEndereco)
 );
 
- INSERT INTO empresa VALUES
+ insert into empresa values
 (null, '05483257694125', 'pilao', '11999267541', 'pilao_saopaulo@pilao.com.br', 'Bananinha123', null),
 (null, '63310411001094', '3coracoes', '1138060020', '3coracoes_ceara@3coracoes.com.br', 'Manga123', null);
 
 select * from empresa;
 
-UPDATE empresa SET fkEndereco = 100 WHERE idEmpresa = 1;
-UPDATE empresa SET fkEndereco = 101 WHERE idEmpresa = 2;
+update empresa set fkEndereco = 100 where idEmpresa = 1;
+update empresa set fkEndereco = 101 where idEmpresa = 2;
  
- CREATE TABLE funcionario (
- idFuncionario INT auto_increment,
- nome VARCHAR(45) not null,
- sobrenome VARCHAR(90) not null,
- cargo VARCHAR(45),
- email VARCHAR(90) not null,
- senha VARCHAR(50) not null,
- fkEmpresa INT, 
+ create table funcionario (
+ idFuncionario int auto_increment,
+ nome varchar(45) not null,
+ sobrenome varchar(90) not null,
+ cargo varchar(45),
+ email varchar(90) not null,
+ senha varchar(50) not null,
+ fkEmpresa int, 
  foreign key (fkEmpresa) references empresa(idEmpresa),
- PRIMARY KEY (idFuncionario, fkEmpresa)
+ primary key (idFuncionario, fkEmpresa)
 );
 
-INSERT INTO funcionario (nome, sobrenome, cargo, email, senha, idFuncionario, fkEmpresa) VALUES
+insert into funcionario (nome, sobrenome, cargo, email, senha, idFuncionario, fkEmpresa) values
 ('Pedro','Santos','Gerente de operações','Pedro@gmail.com','Bananinha123', 1, 1),
 ('Rafael','Carmona','Auxiliar de operações','Rafael@gmail.com','Uva123', 1, 2),
 ('Yago','Martins','Supervisor de operações','Yago@gmail.com','Maçã123', 2, 2);
 
-CREATE TABLE armazem (
-idArmazem INT PRIMARY KEY auto_increment,
-numero VARCHAR(50),
+create table armazem (
+idArmazem int primary key auto_increment,
+numero varchar(50),
 areaArmazem decimal(4,3),
-fkEmpresa INT, 
+fkEmpresa int, 
 foreign key (fkEmpresa) references empresa(idEmpresa),
 fkEndereco INT, 
 foreign key (fkEndereco) references endereco(idEndereco)
 );
 
-INSERT INTO armazem VALUES 
+insert into armazem values 
 (null, 11, 2.000, 1, 102),
 (null, 13, 5.000, 1, 103),
 (null, 24, 7.000, 2, 104),
@@ -80,31 +80,31 @@ select * from armazem;
 
 select * from endereco;
 
-CREATE TABLE sensor (
-idSensor INT auto_increment,
-modelo_sensor VARCHAR(100),
-fkArmazem INT, 
-CONSTRAINT fkA foreign key (fkArmazem) references armazem(idArmazem),
-PRIMARY KEY (idSensor, fkArmazem)
+create table sensor (
+idSensor int auto_increment,
+modelo_sensor varchar(100),
+fkArmazem int, 
+constraint fkA foreign key (fkArmazem) references armazem(idArmazem),
+primary key (idSensor, fkArmazem)
 ) auto_increment = 40; 
 
-INSERT INTO sensor VALUES
+insert into sensor values
 (40, 'DHT11', 1),
 (41, 'DHT11', 2),
 (42, 'DHT11', 3),
 (43, 'DHT11', 3);
 
 
-CREATE TABLE registro (
-idRegistro INT auto_increment,
-dataRegistro DATETIME default current_timestamp,
-umidadeRegistro INT,
-fkSensor INT, 
-CONSTRAINT fkS foreign key (fkSensor) references sensor(idSensor),
+create table registro (
+idRegistro int auto_increment,
+dataRegistro datetime default current_timestamp,
+umidadeRegistro int,
+fkSensor int, 
+constraint fkS foreign key (fkSensor) references sensor(idSensor),
 primary key (idRegistro, fkSensor)
 )auto_increment = 30;
 
-INSERT INTO registro (umidadeRegistro, idRegistro, fkSensor) VALUES 
+insert into registro (umidadeRegistro, idRegistro, fkSensor) values 
 (30, 12, 40),
 (31, 25, 41),
 (32, 18, 42),
