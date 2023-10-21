@@ -9,12 +9,12 @@
 
 .header{
  background-color: #F8F5EC;
- border-bottom: 4px solid rgb(107, 51, 25); 
+ border-bottom: 4px solid rgb(0, 0, 0); 
  font-family: 'Montserrat', sans-serif;
 }
 
 .header .container {
-    width: 85%;
+    width: 80%;
     height: 100%;
     margin: 0 10% ;
     display: flex;
@@ -46,33 +46,45 @@
     box-shadow: 0px 0px 0px 2px rgba(255,255,255,1), 0px 0px 0px 5px rgba(121,72,48,1);
 }
 
+.button2{
+    width: 120px;
+    height: 35px;
+    background-color: #2C2C2C;
+    color: white;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
 .background {
-    padding: 0;
+    padding-top: 50px;
     display: flex;
-    align-items: center;
-    height: 110vh;
+    height: 95vh;
     background-image: url(../assets/Fundo.png);
     background-size: cover;
     justify-content: center;
   }
 
-  .ContainerTitulo{
-    font-size: 20px;
-    color: #794830;
-    text-align: center;
-    height: 35px;
-    margin-bottom: 30px;
+  .container1{
+    margin-right: 40px;
   }
 
+  .divisao{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+  }
+
+
   .fundoBranco{
+    border: solid 1px black;
     padding-top: 20px;
     flex-direction: column;
     position: absolute; 
     display: flex;
     align-items: center;
-    height: 530px;
-    width: 400px;
-    border-radius: 20px;
+    height: 540px;
+    width: 550px;
+    border-radius: 5px;
     background-color: #fff;
     box-shadow: #2c2c2c 10px;
     box-shadow: rgba(0, 0, 0, 0.418) 0px 7px 7px;
@@ -81,8 +93,9 @@
   }
 
   .input {
-    border-radius: 5px 5px 5px 5px;
-    border: 2px solid rgb(94, 37, 10);
+    background-color: #F8F5EC;
+    border-radius: 3px;
+    border: 2px solid #5C5B5B; 
     height: 18px;
     width: 200px;
   }
