@@ -90,12 +90,7 @@
  .texto{
     padding-top: 20px;
     font-size: 20px;
-  }
-
-  
-  
-
-  
+  } 
   
 /*
 .teste{
@@ -195,7 +190,6 @@
 
  
  #rodape {
-    border-top: 4px solid rgb(0, 0, 0);
     padding: 20px;
     text-align: center;
  }
