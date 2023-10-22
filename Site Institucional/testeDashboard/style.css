@@ -87,45 +87,46 @@
   
     #conteudoPrincipal{
       margin-left: 25%;
+      margin-right: 5%;
     }
    /* alertas umidade */
     .containerAlert{
       display: flex;
       height: flex;
       width: flex;
-      margin: 40px;
+      margin: 20px;
       justify-content: space-between;
       text-align: center;
-      line-height: 125px;
+      line-height: 100px;
       font-weight: bolder;
     }
   
     .alerta-vermelho{
       background-color: #FF3131;
-      font-size: 20px;
+      font-size: 15px;
       width: 125px;
-      height:125px;
+      height:100px;
      
   }
   .alerta-laranja{
       background-color: #FF914D;
-      font-size: 20px;
+      font-size: 15px;
       width: 125px;
-      height:125px;
+      height:100px;
       
   }
   .alerta-amarelo{
       background-color: #efb661;
-      font-size: 20px;
+      font-size: 15px;
       width: 125px;
-      height:125px;
+      height:100px;
       
   }
   .alerta-verde{
       background-color: #58c758;
-      font-size: 20px;
+      font-size: 15px;
       width: 125px;
-      height:125px;
+      height:100px;
       
   }
   
@@ -138,6 +139,8 @@
   }
   .Dashs>#graficosEsquerda>p{
     text-align: center;
+    font-size: 10px;
+    background-color: white;
 
   }
 
@@ -146,6 +149,7 @@
     position: relative; 
     height:35vh; 
     width:50%;
+    padding-top: 10px;
   }
   #graficoDireita{
     justify-content: center;
@@ -154,6 +158,12 @@
     height:50vh; 
     width:50%;
   }
+
+
+  .corGraficos{
+    background-color: white;
+  }
+
 
   
     
