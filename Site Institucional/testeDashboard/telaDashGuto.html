@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <title>Tela Dashboard</title>
+</head>
+
+<body>
+    
+
+
+
+    <nav id="menuLateral">
+        <div class="seila">
+            <!-- <p><img id="imgPerfil" src="./assets/imgPerfil.png" alt=""></p> essa aqui é a img com borda preta -->
+            <p><img id="imgPerfil" src="../assets/imgPerf.png" alt=""></p>
+
+            <p>Bem Vindo!</p>
+            <div class="seila2">
+                <a href="#"><span class="material-symbols-outlined">monitoring</span> - Dashboard</a>
+            </div>
+
+            <div class="seila2">
+                <a href="#"> <span class="material-symbols-outlined">warehouse</span> - Armazém</a>
+            </div>
+
+            <div class="seila2">
+                <a href="#"> <span class="material-symbols-outlined">groups</span> - Funcionário</a>
+            </div>
+            
+            <br> <br><br>
+
+            <button id="buttonDeslogar">Sair</button>
+        </div>
+    </nav>
+    
+
+
+    <main id="conteudoPrincipal">
+
+    
+
+        <p></p>
+
+        <div class="containerAlert">
+            <div class="alerta-vermelho">0 á 20</div>
+            <div class="alerta-laranja">20 á 41</div>
+            <div class="alerta-amarelo">42 á 63</div>
+            <div class="alerta-verde">64 á 66</div>
+            <div class="alerta-amarelo">67 á 77</div>
+            <div class="alerta-laranja">78 á 88</div>
+            <div class="alerta-vermelho">89 á 100</div>
+        </div>
+        
+        <div class="Dashs">
+        <div id="graficosEsquerda">
+            <p>Média por hora da umidade por armazém de café <br>
+                no dia 20.10.23</p>
+            <canvas id="graficoBarra"></canvas>
+            
+            <canvas id="graficoLinha"></canvas>
+            
+        </div>
+        
+        <div id="graficoDireita">
+            <canvas id="graficoDonnut"></canvas>
+        </div>
+        
+
+        </div>
+
+    </main>
+</body>
+
+</html>
+
+<script>
+    const labels = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+    ];
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Armazem 2',
+            backgroundColor: '#ff914d',
+            borderColor: '#ff914d',
+            data: [30, 29, 28, 25, 22, 23]
+        },
+        {
+            label: 'Armazem 1',
+            backgroundColor: '#0004ad',
+            borderColor: '#0004ad',
+            data: [80, 82, 80, 85, 80, 83],
+        }
+        ]
+    };
+
+    const labels2 = [
+        'Janeiro',
+        'Feveireiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+    ];
+
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Armazem 2',
+            backgroundColor: '#ff914d',
+            borderColor: '#ff914d',
+            data: [22, 24, 27, 23, 20, 18],
+        },
+        {
+            label: 'Armazem 1',
+            backgroundColor: '#0004ad',
+            borderColor: '#0004ad',
+            data: [90, 89, 93, 87, 88, 82],
+        }
+        ]
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+
+    };
+
+    const configChart2 = {
+        type: 'bar',
+        data: data2,
+        options: {}
+    };
+</script>
+
+<script>
+    const myChart = new Chart(
+        document.getElementById('graficoLinha'),
+        config
+    );
+    const myChart2 = new Chart(
+        document.getElementById('graficoBarra'),
+        configChart2
+    );
+</script>
+
+<script>
+    const ctx = document.getElementById('graficoDonnut');
+
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
