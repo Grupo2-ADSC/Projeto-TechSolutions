@@ -83,8 +83,7 @@
     padding-top: 50px;
     display: flex;
     height: 95vh;
-/*     background-image: url(../assets/Fundo.png); */
-background-color: white;
+    background-image: url(../assets/Fundo.png);
     background-size: cover;
     justify-content: center;
 }
