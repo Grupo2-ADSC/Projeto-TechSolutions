@@ -79,6 +79,7 @@ input::placeholder {
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .botao_confirmar{

@@ -84,13 +84,13 @@
     width: 400px;
 }
 
-.buttonFaleConosco {
+.buttonSelecionado {
     color: #F8F5EC;
     background-color: #794830;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 15px;
-    width: 100px;
+    width: 120px;
     height: 35px;
     margin-top: 10px;
     border-radius: 8px;

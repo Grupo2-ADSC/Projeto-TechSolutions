@@ -56,9 +56,9 @@ input {
     background-color: #ffffff;
 }
 
-.buttonFaleConosco {
+.buttonSelecionado {
     color: #F8F5EC;
-    background-color: #794830;
+    background-color:#794830;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 15px;
@@ -83,7 +83,7 @@ input {
     font-size: 60px; 
     font-weight: bold;
     margin-bottom: 50px; 
-    font-family: 'Alice', serif;
+    font-family: 'Montserrat', sans-serif; 
     padding-left: -60px;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -91,6 +91,7 @@ input {
 
 .texto, .titulo {
     background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .texto {
@@ -106,7 +107,6 @@ input {
 .destaque{
     color: black;
 }
-
 
 
 /* inicio footer */
