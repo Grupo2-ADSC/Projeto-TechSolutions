@@ -48,7 +48,7 @@ input{
   height: 35px ;
 }
 
-.botao_cadastrar, .botao_cancelar{
+.button_cadastrar, .button_cancelar{
   color: white;
   font-weight: bold;
   font-size: 14px;
@@ -57,12 +57,12 @@ input{
   cursor: pointer;
 }
 
-.botao_cadastrar{
+.button_cadastrar{
   background-color: rgb(48, 170, 48);
   width: 200px;
 }
 
-.botao_cancelar{
+.button_cancelar{
   background-color: red;
   width: 120px;
 }
