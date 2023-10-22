@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleDashGuto.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -66,10 +66,14 @@
 
             <div class="corGraficos">
 
-                <p>Média por hora da umidade por armazém de café <br>no dia 20.10.23</p>    
+                <p>Média por hora da umidade por armazém de café <br> no dia 20.10.23</p>    
                 <canvas id="graficoBarra"></canvas>
-                <p>Média por hora da umidade por armazém de café <br>no dia 20.10.23</p>
-                <canvas id="graficoLinha"></canvas>
+
+                <div id="divGraficoLinha">
+
+                    <p>Média por hora da umidade por armazém de café <br>no dia 20.10.23</p>
+                    <canvas id="graficoLinha"></canvas>
+                </div>
                         
             </div>
         </div>
@@ -138,6 +142,25 @@
         }
         ]
     };
+    const data3 = {
+  labels: [
+    'Amarelo',
+    'Laranja',
+    'Vermelho',
+    'verde'
+  ],
+  datasets: [{
+    label: 'Pie Chart',
+    data: [30, 13.3, 10, 46.7],
+    backgroundColor: [
+      '#efb661',
+      '#FF914D',
+      '#FF3131',
+      '#58c758'
+    ],
+    hoverOffset: 4
+  }]
+};
 
     const config = {
         type: 'line',
@@ -151,6 +174,11 @@
         data: data2,
         options: {}
     };
+    const configDougdonnut = {
+        type: 'doughnut',
+        data: data3,
+        options: {}
+};
 </script>
 
 <script>
@@ -162,10 +190,14 @@
         document.getElementById('graficoBarra'),
         configChart2
     );
+    const ctx = new Chart(
+
+    document.getElementById('graficoDonnut'),
+    configDougdonnut
+    ); 
 </script>
 
 <script>
-    const ctx = document.getElementById('graficoDonnut');
 
     new Chart(ctx, {
         type: 'doughnut',

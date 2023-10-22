@@ -147,6 +147,7 @@
 
   #graficosEsquerda{
     position: relative; 
+    text-align: center;
     height:35vh; 
     width:50%;
     padding-top: 10px;
@@ -155,10 +156,12 @@
     justify-content: center;
     align-items: center;
     padding: 90px;
-    height:50vh; 
+    height:40vh; 
     width:50%;
   }
-
+  #divGraficoLinha{
+    border-top: 30px solid #E7EAF0;
+  }
 
   .corGraficos{
     background-color: white;
