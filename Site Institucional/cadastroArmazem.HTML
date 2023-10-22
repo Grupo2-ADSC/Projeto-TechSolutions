@@ -5,16 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/cadastroArmazem.CSS">
+    <link rel="stylesheet" href="./styles/menuLateral.css">
+    <link rel="stylesheet" href="./styles/codigo_HeaderDash.CSS">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
-    <title>Tela Dashboard</title>
+    <title>Adicionar Armazém</title>
 </head>
 
 <body>
+
+
+
+    
+    <div class="header">
+        <div class="container">
+        
+            <h1 class="titulo">Adicionar Armazém</h1>
+                
+        </div>
+    </div>
+
+</body>
+    <html>
+
+
     <nav id="menuLateral">
         <div class="seila">
             <!-- <p><img id="imgPerfil" src="./assets/imgPerfil.png" alt=""></p> essa aqui é a img com borda preta -->
@@ -32,28 +50,46 @@
             <div class="seila2">
                 <a href="#"> <span class="material-symbols-outlined">groups</span> - Funcionário</a>
             </div>
-            
+
             <br> <br><br>
 
             <button id="buttonDeslogar">Sair</button>
         </div>
     </nav>
-    
-    <div class="header"> <p>Adicionar armazém</p> </div>
 
-    <main id="conteudoPrincipal">
 
-    
+    <div class="Div">
 
-        <p></p>
+        <div class="imput1">
 
-        <div class="container">
-            
-            <div class="central"></div>
-            
+
+            <div class="imputE">
+                <p>Número do armazém</p><input id="ipt_numArm" type="number">
+                <p>Área</p><input id="ipt_area" type="text">
+                <p>Logradouro</p><input id="ipt_logradouro" type="text">
+                <p>Número</p><input id="ipt_num" type="text">
+            </div>
+
+            <div class="imputD">
+                <p>Complemento</p><input id="ipt_complemento" type="text">
+                <p>Bairro</p><input id="ipt_bairro" type="text">
+                <p>Cidade</p><input id="ipt_cidade" type="text">
+                <p>Estado</p><input id="ipt_estado" type="text">
+            </div>
+
         </div>
 
-    </main>
+        <div class="button">
+
+            <button class="button_cadastrar">Cadastrar</button>
+            <button class="button_cancelar">Cancelar</button>
+
+
+        </div>
+
+    </div>
+
+
 </body>
 
 </html>
