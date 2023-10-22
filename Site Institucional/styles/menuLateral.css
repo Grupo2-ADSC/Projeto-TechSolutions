@@ -10,7 +10,7 @@ body{
 #imgPerfil{
   height: 100px;
   width: 120px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 #menuLateral{
@@ -25,65 +25,55 @@ body{
   padding-top: 2%;
 }
 
-.seila{
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.seila2{
+.container-itens {
+  margin-top: 30px
+}
+
+.item{
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 220px;
-  border-bottom: solid white 2px;
+  border-bottom: solid white 1px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 #menuLateral a{
   padding: 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 22px;
   color: white;
   display: block;
   cursor: pointer;
   width: fit-content;
 }
 
+#menuLateral a span {
+  padding-right: 25px;
+}
+
 #menuLateral p{
-  font-size: 30px;
+  font-size: 28px;
   color: white;
   display: block;
   font-weight: bold;
-  margin-bottom: 10%;
+  margin-bottom: 15px;
 }
 
-.gambiarra{
-  color: #F8F5EC;
+.buttonSair {
+  margin-top: 45px;
 }
-
-#buttonDeslogar{
-  border: none;
-  color: black;
-  background-color: #F8F5EC;
-  font-weight: bold;
-  font-size: 15px;
-  width: 80px;
-  height: 35px;
-  margin-top: 15px;
-  border-radius: 5%;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-
 
 #conteudoPrincipal{
   margin-left: 23%;
 }
-
-
 
 
 /* fim do menu lateral */
