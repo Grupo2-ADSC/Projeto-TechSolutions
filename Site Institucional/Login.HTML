@@ -34,35 +34,33 @@
         </div>
     </div>
 
-
     <div class="FundoImagem">
-        <div class="Container">
-            <div class="titulo">
-                <h1>Login</h1>
-            </div>
-            <div class="texto">
-                <p>
-                    <span> E-mail </span><br>
-                    <input type="email" class="input" placeholder="Digite seu email" id="input_email"> <br>
-                </p><br>
 
-                <p>
-                    <span> Senha </span><br>
-                    <input class="input" placeholder="Digite sua senha" id="input_senha" type="password"> <br>
-                </p><br>
+      <div class="Div">
 
-                <div class="teste">
-                    <a href="#"> <button onclick="entrar()" class="button2"> Entrar </button> </a>
-                    <p></p>
-                </div><br>
+       <div class="titulo">
+           <h1>Login</h1>
 
-                <a href="redefiniçãoDeSenha.html">
-                    <h5 class="esqueceu">Esqueceu sua senha?</h5>
-                </a>
+       </div>
+       
+        <div class="imput1">
+    
+
+            <div class="">
+                <p>E-Mail</p><input id="ipt_email" type="email" placeholder="Digite seu e-mail"><br><br>
+                <p>Senha</p><input id="ipt_senha" type="password" placeholder="Digite sua senha"><br><br>
             </div>
         </div>
-    </div>
 
+            <div class="button">
+
+              <a href="#"><button onclick = "Entrar ()" class="button_entrar">Entrar</button></a>
+               <p></p>
+            </div>
+            
+            <a href="redefiniçãoDeSenha.html">
+                <h5 class="esqueceu">Esqueceu sua senha?</h5></a>
+                
     </div>
     </div>
 
@@ -98,6 +96,7 @@
 </body>
 
 </html>
+
 <script>
     function entrar() {
         var senha = input_senha.value
