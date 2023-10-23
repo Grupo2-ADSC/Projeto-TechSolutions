@@ -57,7 +57,7 @@
 
             <div class="button">
 
-              <a href="#"><button onclick = "Entrar ()" class="button_entrar">Entrar</button></a>
+              <a href="#"><button onclick = "entrar ()" class="button_entrar">Entrar</button></a>
                <p></p>
             </div>
       
@@ -102,19 +102,48 @@
 </html>
 
 <script>
-    function entrar() {
-        var senha = input_senha.value
-        var email = input_email.value
+    function entrar () {
+
+        var senha = ipt_senha.value;
+        var email = ipt_email.value;
 
         if (senha.length < 8) {
             alert(`Verifique a sua senha, ela deve conter pelo menos 8 caracteres`)
+        }
+        
+        if(senha.toUpperCase("") == -1)
+
+        if(senha.indexOf(".") == -1)
+        
+        if(senha.indexOf("!") == -1)
+
+        if(senha.indexOf("?") == -1)
+
+        if(senha.indexOf("#") == -1)
+
+        if(senha.indexOf("*") == -1)
+        {
+        
         }
 
         if (email.indexOf("@") == -1){
             alert(`Insira um email válido`)
         }
 
-        if(email.indexOf(".com")){
+        if(email.indexOf(".com") == -1)
+
+        if(email.indexOf(".br") == -1)
+
+        if(email.indexOf(".net") == -1)
+
+        if(email.indexOf(".org") == -1)
+
+        if(email.indexOf(".io") == -1)
+
+        if(email.indexOf(".company") == -1)
+
+        if(email.indexOf(".gov") == -1)
+        {
             alert(`Insira um email válido`)
         }
     }
