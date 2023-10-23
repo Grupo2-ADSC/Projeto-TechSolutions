@@ -64,8 +64,8 @@ font-family: 'Montserrat', sans-serif;
 
 .FundoImagem {
     display: flex; /* Aqui eu estou tornando o meu conteúdo flex = flexível */
-    height: 110vh; /* Aqui eu defini a altura da imagem de fundo, Vh é V = view, H = height que significa altura */
-    background-image: url(../Simulador/assets/Fundo.png); /* Baixei uma imagem de fundo e chamei ela pelo caminho de pastas */
+    height: 100vh; /* Aqui eu defini a altura da imagem de fundo, Vh é V = view, H = height que significa altura */
+    background-image: url(../Simulador/assets/testinho.jpg); /* Baixei uma imagem de fundo e chamei ela pelo caminho de pastas */
     background-size: cover; /* Aqui eu falo pra minha imagem de fundo cobrir a tela inteira no tamanho certo */
     justify-content: center; /* Aqui eu estou mandando todo meu conteúdo ficar no meio, tudo que fica dentro da img de fundo  */
   }
@@ -78,7 +78,6 @@ font-family: 'Montserrat', sans-serif;
   .Titulo{
     color: rgb(99, 36, 11); /* Dando a cor do título de marrom */
     font-size: 35px; /* Dando tamanho para a fonte(letra) do título */
-    margin-top: 35px; /* Dando uma margem na parte de cima, assim ele vai se afastar do começo(parte de cima) da página */
   }
 
   .Container{
@@ -88,15 +87,15 @@ font-family: 'Montserrat', sans-serif;
   }
 
   .ContainerFundoBranco {
-    margin-top: 4vh;
     position: absolute; 
-    padding-top: 50px;
     display: flex;
+    text-align: center;
+    justify-content: center;
     flex-direction: column;
     align-items: center; /* Alinhando todos itens do container (as duas partes brancas) no centro */
     background-color: white;
     border-radius: 5px 0px 0px 5px; /* Aqui estou falando que quero uma borda com raio */
-    height: 459px; /* Dando altura para o fundo branco */
+    height: 509px; /* Dando altura para o fundo branco */
     width: 332px; /* Dando largura para o fundo branco */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Chamando um tipo de fonte(letra) */
     font-weight: bolder; /* Deixando a letra em negrito b de bold/bolder */
@@ -119,7 +118,6 @@ font-family: 'Montserrat', sans-serif;
   }
 
   .FundoBrancoMensagem{
-    margin-top: 4vh;
     margin-left: 53vh;
     padding: 30px;
     padding-bottom: 15px; /* dando padding (margem interna) na parte de baixo */
