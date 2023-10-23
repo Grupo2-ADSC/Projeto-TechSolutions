@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="StyleVersão2.css" />
+    <link rel="stylesheet" href="StyleVersão3.css" />
     <title>Calculadora | TechSolutions</title>
 </head>
 
@@ -27,35 +27,34 @@
     </div>
 
     <div class="FundoImagem">
-        <div class="ContainerMaior">
-            <div class="ContainerTitulo">
-                <h1 class="Titulo"> Calculadora TechSolutions</h1> <br>
-            </div>  
             <div class="Container">
                 <div class="ContainerFundoBranco">
+                    <div class="ContainerTitulo">
+                        <h1 class="Titulo"> Calculadora TechSolutions</h1> <br>
+                    </div>  
                     <div class="CaixaInput">
                         <p>
-                            <span>Nome empresa:</span><br><br>
+                            <span>Nome empresa:</span><br>
                             <input class="input" placeholder="Rei do café" id="input_nome"> <br>
                         </p><br>
 
                         <p>
-                            <span>Valor por saco de café:</span><br><br>
+                            <span>Valor por saco de café:</span><br>
                             <input class="input" placeholder="R$ 650,00" id="input_valorsaco"> <br>
                         </p><br>
 
                         <p>
-                            <span>Quantidade de sacos:</span><br><br>
+                            <span>Quantidade de sacos:</span><br>
                             <input class="input" placeholder="1000" id="input_qtdsacos"> <br>
                         </p><br>
 
                         <p>
-                            <Span>Umidade média:</Span><br><br>
-                            <input class="input" placeholder="65%" id="input_umidade"> <br>
-                        </p><br> <br>
+                            <Span>Umidade média:</Span><br>
+                            <input class="input" placeholder="65" id="input_umidade"> <br>
+                        </p><br>
 
                         <div class="ContainerButton">
-                            <button class="button" onclick="calcularlucro()">Verificar</button>
+                            <button class="button2" onclick="calcularlucro()">Verificar</button>
                         </div>
                     </div>
                 </div>
@@ -65,7 +64,6 @@
                 </div>
 
             </div>
-        </div>
     </div>
 
     <footer id="rodape" class="back-Rodape">
@@ -115,11 +113,11 @@
 
 - Você está <b>perdendo</b> <b style="color: red;">${perdakgTotalKilos.toFixed(0)}</b> quilos de <b>${qtdSacos}</b> sacos o que <b>equivale</b> a <b style="color: red;">${perdaTotalSacos.toFixed(0)}</b> sacos<br>
 
-- Então, na <b>quebra de safra</b>, onde o <b>preço do café dobra</b>, seu <b>prejuízo</b> com <b style="color: red;">${perdaTotalSacos.toFixed(0)}</b> <b>sacos a menos</b> vai ser de <b>R$</b><b style="color: red;">${ValorPerdaQuebraSafra.toFixed(2)}</b><br><br>
+- Então, na <b>quebra de safra</b>, onde o <b>preço do café dobra</b>, seu <b>prejuízo</b> com <b style="color: red;">${perdaTotalSacos.toFixed(0)}</b> <b>sacos a menos</b> vai ser de <b>R$</b><b style="color: red;">${ValorPerdaQuebraSafra.toLocaleString('pt-BR')}</b><br><br>
 
-- O seu <b>lucro atual</b> é de <b>R$</b><b style="color: blue;">${lucro}</b><br><br>
+- O seu <b>lucro atual</b> é de <b>R$</b><b style="color: blue;">${lucro.toLocaleString('pt-BR')}</b><br><br>
 
-Com o <b>nosso serviço</b> você terá um retorno de até <b>100%</b>, totalizando <b>R$</b><b style="color: green;">${lucroFinal}</b> e <b style="color: green;">0</b> quilos perdidos.<br><br>
+Com o <b>nosso serviço</b> você terá um retorno de até <b>100%</b>, totalizando <b>R$</b><b style="color: green;">${lucroFinal.toLocaleString('pt-BR') }</b> e <b style="color: green;">0</b> quilos perdidos.<br><br>
 
 <b>Vamos conversar sobre a nossa solução para o seu problema?<br>
 Faça seu orçamento em nossa página “Fale conosco”</b>`
@@ -139,7 +137,7 @@ Faça seu orçamento em nossa página “Fale conosco”</b>`
 
         div_lucro.innerHTML += `<br>- Sua <b>umidade está adequada</b> ao ambiente e <b>com a nossa solução garantimos ao nosso cliente que ele não terá prejuizo no futuro</b>,
         caso a umidade venha a <b>oscilar</b> com a falta de um monitorimento adequado.<br><br>
-        - O seu <b>lucro atual</b> é de <b>R$</b><b style="color: blue;">${lucro}</b><br><br>
+        - O seu <b>lucro atual</b> é de <b>R$</b><b style="color: blue;">${lucro .toLocaleString('pt-BR')}</b><br><br>
         - Na quebra de safra seus grãos podem chegar ao dobro do preço <b style="color: green;">R$${(valorSaco * qtdSacos) * 2}</b>.<br>`
     }
 
