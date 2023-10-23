@@ -1,0 +1,171 @@
+*{margin: 0;
+margin-bottom: 0;}
+
+.logo{
+  align-items: flex-start;
+  width: 350px;
+}
+
+.header{
+background-color: #F8F5EC;
+width: 100%;
+height: 100px;
+border-bottom: 4px solid rgb(100, 47, 26);
+font-family: 'Montserrat', sans-serif;
+
+}
+
+.header .container {
+  width: 85%;
+  height: 100%;
+  margin: 0 10% ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .container li{
+  display: inline;
+  padding: 20px;
+}
+
+.header .container .navbar li a{
+  text-decoration: none;
+  color: #794830;
+}
+
+.logo{
+  align-items: flex-start;
+  width: 350px;
+}
+
+.button {
+    color: #F8F5EC;
+    background-color: #794830;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 4px solid #794830;
+    box-shadow: 0px 0px 0px 2px rgba(255,255,255,1), 0px 0px 0px 5px rgba(121,72,48,1);
+}
+
+.FundoImagem {
+    display: flex; /* Aqui eu estou tornando o meu conteúdo flex = flexível */
+    height: 100vh; /* Aqui eu defini a altura da imagem de fundo, Vh é V = view, H = height que significa altura */
+    background-image: url(../Simulador/assets/Fundo.png); /* Baixei uma imagem de fundo e chamei ela pelo caminho de pastas */
+    background-size: cover; /* Aqui eu falo pra minha imagem de fundo cobrir a tela inteira no tamanho certo */
+    justify-content: center; /* Aqui eu estou mandando todo meu conteúdo ficar no meio, tudo que fica dentro da img de fundo  */
+  }
+
+  .ContainerTitulo{
+    text-align: center; /* Dentro desse container a gente tem apenas o título, e eu alinho o texto no centro */
+    height: 35px; /* Dou uma altura pro container */
+  }
+
+  .Titulo{
+    color: rgb(99, 36, 11); /* Dando a cor do título de marrom */
+    font-size: 35px; /* Dando tamanho para a fonte(letra) do título */
+    margin-top: 35px; /* Dando uma margem na parte de cima, assim ele vai se afastar do começo(parte de cima) da página */
+  }
+
+  .Container{
+    display: flex; /* Aqui eu estou tornando o meu conteúdo flex = flexível */
+    flex-direction: row; /* Aqui estou ordenando que a direção dele seja row = em linha */
+    align-items: center; /* Alinhando todos itens do container (as duas partes brancas) no centro */
+  }
+
+  .ContainerFundoBranco {
+    margin-top: 4vh;
+    position: absolute; 
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinhando todos itens do container (as duas partes brancas) no centro */
+    background-color: white;
+    border-radius: 30px 0px 0px 30px; /* Aqui estou falando que quero uma borda com raio */
+    height: 459px; /* Dando altura para o fundo branco */
+    width: 332px; /* Dando largura para o fundo branco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Chamando um tipo de fonte(letra) */
+    font-weight: bolder; /* Deixando a letra em negrito b de bold/bolder */
+    box-shadow: rgba(0, 0, 0, 0.418) 0px 7px 7px;/* Colocando uma sombrinha no fundo branco */
+  }
+  
+  .input {
+    border-radius: 5px 5px 5px 5px;
+    border: 2px solid rgb(94, 37, 10); /* Dando uma borda nos input, a parte marrom de 2px */
+    width: 150px;
+  }
+
+  .ContainerButton{
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .FundoBrancoMensagem{
+    margin-top: 4vh;
+    margin-left: 53vh;
+    padding: 30px;
+    padding-bottom: 15px; /* dando padding (margem interna) na parte de baixo */
+    align-items: center;
+    background-color: white;
+    border-radius: 0px 30px 30px 0px;
+    height: 464px;
+    width: 700px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.418) 0px 10px 12px;
+  }
+
+  #containderFooter{
+    display: block;
+ }
+ 
+ #rodape {
+     border-top: 4px solid rgb(0, 0, 0);
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ #icones, #infos, #termos {
+     list-style: none;
+     cursor: pointer;
+     padding: 10px;
+     color: #fff;
+ }
+
+  #icones li, #infos li, #termos li {
+    display: inline;
+    margin: 0 10px;
+    
+}
+
+#icones img {
+    width: 40px;
+    height: 40px;
+    color: #F8F5EC;
+}
+
+#infos a, #termos li {
+    font-family: 'Alice', serif;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+#direitos {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff; /* Cor do texto branco */
+}
+
+  .back-Rodape{
+    background-color: #2c2c2c;
+}
+
