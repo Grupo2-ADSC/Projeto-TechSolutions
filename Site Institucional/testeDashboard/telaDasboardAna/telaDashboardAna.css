@@ -1,0 +1,112 @@
+body{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e7eaf0;
+  
+  }
+  
+  #imgPerfil{
+    height: 100px;
+    width: 120px;
+    margin-bottom: 5px;
+  }
+  
+  #menuLateral{
+    height: 100%;
+    width: 22%;
+    background-color: #184062;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 2%;
+  }
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container-itens {
+    margin-top: 30px
+  }
+  
+  .item{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 220px;
+    border-bottom: solid white 1px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  #menuLateral a{
+    padding: 16px;
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    display: block;
+    cursor: pointer;
+    width: fit-content;
+  }
+  
+  #menuLateral a span {
+    padding-left: 75px;
+  }
+  
+  #menuLateral p{
+    font-size: 28px;
+    color: white;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .buttonSair {
+    margin-top: 45px;
+  }
+  
+  #conteudoPrincipal{
+    margin-left: 23%;
+  }
+
+  
+
+.metricas{
+    display: flex;
+    margin: 45px;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bolder;
+  }
+
+.quadrado_vermelho{
+    width: 125px;
+    height:100px;
+    background-color: #FF3131;
+   
+}
+.quadrado_laranja{
+    width: 125px;
+    height:100px;
+    background-color: #FF914D;
+    
+}
+.quadrado_amarelo{
+    width: 125px;
+    height:100px;
+    background-color: #efb661;
+    
+}
+.quadrado_verde{
+    width: 125px;
+    height:100px;
+    background-color: #58c758;
+    
+}
