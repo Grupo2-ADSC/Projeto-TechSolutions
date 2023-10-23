@@ -1,4 +1,4 @@
-/* {
+*{
     background-color: #F8F5EC;
     margin: 0;
     padding: 0;
@@ -43,7 +43,7 @@
     width: 350px;
 }
 
-.buttonSelecionado {
+.buttonSimulador {
     color: #F8F5EC;
     background-color: #794830;
     font-family: 'Montserrat', sans-serif;
@@ -56,8 +56,13 @@
     border: 4px solid #794830;
     box-shadow: 0px 0px 0px 2px rgba(255,255,255,1), 0px 0px 0px 5px rgba(121,72,48,1);
   }
-*/
-.buttonHome {
+
+  .buttonSimulador b{
+    color: #F8F5EC;
+    background-color: #794830;
+  }
+
+/* .buttonHome {
     color: #F8F5EC;
     background-color: #794830;
     font-family: 'Montserrat', sans-serif;
@@ -68,7 +73,11 @@
     border-radius: 8px;
     border: 4px solid #794830;
     box-shadow: 0px 0px 0px 2px rgba(255,255,255,1), 0px 0px 0px 5px rgba(121,72,48,1);
-}
+
+
+} */
+
+
  /* HOME INDEX */
 
  #homeIndex
