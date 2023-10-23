@@ -1,60 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  background-color: #F8F5EC;   
-}
-
-.logo{
-  align-items: flex-start;
-  width: 350px;
-}
-
-.header{
-background-color: #F8F5EC;
-width: 100%;
-height: 100px;
-border-bottom: 4px solid rgb(0, 0, 0);
-font-family: 'Montserrat', sans-serif;
-
-}
-
-
-.header .container {
-  width: 80%;
-  height: 100%;
-  margin: 0 10% ;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header .container li{
-  display: inline;
-  padding: 20px;
-}
-
-.header .container .navbar li a{
-  text-decoration: none;
-  color: #794830;
-}
-
-.buttonSelecionado {
-  color: #F8F5EC;
-  background-color: #794830;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-  width: 100px;
-  height: 35px;
-  margin-top: 10px;
-  border-radius: 8px;
-  border: 4px solid #794830;
-  box-shadow: 0px 0px 0px 2px rgba(255,255,255,1), 0px 0px 0px 5px rgba(121,72,48,1);
-}
 
 .FundoImagem {
     display: flex; 
-    height: 80vh; 
+    height: 700px; 
     width: 100%;
     background-image: url(../assets/Fundo.png);
     background-size: cover; 
@@ -120,8 +67,9 @@ font-family: 'Montserrat', sans-serif;
     display: flex;
     width: 350px;
     justify-content: space-around;
-    margin-left: -180px;
-    margin-bottom: 50px ;
+    flex-direction: row;
+    margin-bottom: 60px ;
+    margin-left: -10vh;
     height: 35px ;
   }
   
@@ -133,11 +81,15 @@ font-family: 'Montserrat', sans-serif;
     border-radius: 5px;
     font-size: 15px;
   }
+
   
   .esqueceu{
     text-decoration: none;
     font-size: 15px;
     color: rgb(73, 73, 73);
+    display:flex;
+    margin-left: -18vh;
+    margin-top: -5vh;
  }
 
  .texto{
@@ -235,52 +187,62 @@ font-family: 'Montserrat', sans-serif;
  }
 */
 
-#containderFooter{
-    display: block;
-    position: absolute;
-   
- }
+#containderFooter {
+  display: block;
+}
 
- 
- #rodape {
-    padding: 20px;
-    text-align: center;
- }
- 
- #icones, #infos, #termos {
-     list-style: none;
-     padding: 10px;
-     color: #fff;
- }
- #icones li, #infos li, #termos li {
-     display: inline;
-     margin: 0 10px;
-     
- }
- 
- #icones img {
-     width: 40px;
-     height: 40px;
-     cursor: pointer;
- }
- 
- #infos a, #termos li {
-     font-family: 'Alice', serif;
-     text-decoration: none;
-     color: #fff;
-     
- }
- 
- #direitos {
-     font-family: 'Montserrat', sans-serif;
-     margin-top: 20px;
-     font-size: 14px;
-     color: #fff; 
- }
- 
- .back-Rodape{
-     background-color: #2c2c2c;
- }
- .back-Rodape li, li a, li img{
-     background-color:#2c2c2c;
- }
+#rodape {
+  padding: 20px;
+  text-align: center;
+}
+
+#icones,
+#infos,
+#termos {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+}
+
+#icones li,
+#infos li,
+#termos li {
+  display: inline;
+  margin: 0 10px;
+
+}
+
+#icones img {
+  width: 40px;
+  height: 40px;
+  color: #F8F5EC;
+}
+
+#infos a,
+#termos li {
+  font-family: 'Alice', serif;
+  text-decoration: none;
+  color: #fff;
+
+}
+
+#direitos {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fff;
+  /* Cor do texto branco */
+}
+
+.back-Rodape {
+  background-color: #2c2c2c;
+}
+
+.back-Rodape li,
+li a,
+li img {
+  background-color: #2c2c2c;
+}
+
+/* fim footer */
