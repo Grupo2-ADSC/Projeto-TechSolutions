@@ -43,7 +43,7 @@
       <div class="DivPrincipal">
 
        <div class="titulo">
-           <h1>Login</h1>-
+           <h1>Login</h1>
 
        </div>
        
@@ -113,7 +113,9 @@
 
 
 
-        if(email.indexOf("@") == -1)
+        if(email.indexOf("@") == -1){
+            div_email.innerHTML = `Insira um email válido`
+        }
 
         if(email.indexOf(".com") == -1)
 
@@ -136,7 +138,7 @@
             div_email.innerHTML = `Insira um email válido`
         }
 
-        
+
 
         if(senha.indexOf(" ") >=0){
             div_senha.innerHTML = `Sua senha não pode conter espaço`
