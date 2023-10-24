@@ -34,7 +34,6 @@ body{
   .container-itens {
     margin-top: 30px;
     height: 100%;
-    border: #000 solid 2px;
   }
   
   .item{
@@ -96,7 +95,7 @@ body{
     display: flex;
     padding-left: 400px;
     border: none; 
-    border-bottom: 4px solid #000; 
+    border-bottom: 4px solid #184062; 
 }
 
 .titulo{
@@ -108,7 +107,8 @@ body{
 
 #divGuia {
     margin-top: 10%;
-    border: #184062 solid 2px;
+    border: black solid 1px;
+    border-radius: 5px;
     width: 550px;
     height: 350px;
     background-color: #F8F5EC;

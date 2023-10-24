@@ -12,32 +12,36 @@
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
     <link rel="stylesheet" href="./styles/telaAdicionarFuncionario.css">
+    <link rel="stylesheet" href="./styles/menuLateral.css">
 
     <title>navegação menu lateral</title>
 </head>
 
 <body>
     <nav id="menuLateral">
-        <div class="seila">
-            <!-- <p><img id="imgPerfil" src="./assets/imgPerfil.png" alt=""></p> essa aqui é a img com borda preta -->
+        <div class="container">
             <p><img id="imgPerfil" src="./assets/imgPerf.png" alt=""></p>
 
-            <p>Bem Vindo!</p>
-            <div class="seila2">
-                <a href="#"><span class="material-symbols-outlined"> monitoring</span> - Dashboard</a>
+            <p>Bem Vindo</p>
+
+            <div class="container-itens">
+                <div class="item">
+                    <a href="#"><span class="material-symbols-outlined"> monitoring</span> Dashboard</a>
+                </div>
+
+                <div class="item">
+                    <a href="#"> <span class="material-symbols-outlined">warehouse</span> Armazém</a>
+                </div>
+
+                <div class="item">
+                    <b><a href="#"> <span class="material-symbols-outlined">groups</span> Funcionário</a></b>
+                </div>
             </div>
 
-            <div class="seila2">
-                <a href="#"> <span class="material-symbols-outlined">warehouse</span> - Armazém</a>
+            <div class="buttonSair">
+                <a href="#"> <span class="material-symbols-outlined">logout</span>Sair</a>
             </div>
 
-            <div class="seila2">
-                <a href="#"> <span class="material-symbols-outlined">groups</span> - Funcionário</a>
-            </div>
-            
-            <br> <br><br>
-
-            <button id="buttonDeslogar">Sair</button>
         </div>
     </nav>
     <!-- Header 2 -->
