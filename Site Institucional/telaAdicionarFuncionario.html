@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- lib de icones -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
@@ -46,91 +46,81 @@
     </nav>
     <!-- Header 2 -->
     <div class="header">
-            <h2 class="titulo">Adicionar Funcionário</h2>
+        <h2 class="titulo">Adicionar Funcionário</h2>
     </div>
 
-    <main id="conteudoPrincipal">
-
-        <div id="divGuia">
-
-            <div id="div_input1">
+    <div class="quadro">
+        <div class="divisao">
+            <div class="containerP">
                 <p>
-                Nome  <br>
-                <input id="ipt_nome" class="inputCadastro" type="text">
-                </p>
+                    Nome: <br>
+                    <input id="ipt_nome" placeholder="Ex: Maria" class="input" type="text">
+                </p><br>
 
                 <p>
-                Sobrenome  <br>
-                <input id="ipt_sobrenome" class="inputCadastro" type="text">
-                
-                </p>
-            </div>
-            
-
-            <div id="div_input2">
-                <p>
-                Cargo  <br>
-                <input id="ipt_cargo" class="inputCadastro" type="text">
-                </p>
+                    Sobrenome: <br>
+                    <input id="ipt_sobrenome" placeholder="Ex: Santos" class="input" type="text">
+                </p><br>
 
                 <p>
-                Email  <br>
-                <input id="ipt_email" class="inputCadastro" type="text">
-                </p>
+                    Cargo: <br>
+                    <input id="ipt_cargo" placeholder="Ex: Técnico" class="input" type="text">
+                </p><br>
             </div>
 
 
-            <div id="div_input3">
+            <div id="containerS">
                 <p>
-                Senha  <br>
-                <input id="ipt_senha" class="inputCadastro" type="password" placeholder="Digite a sua senha">
-                <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha()" ></span>
-            </p>
-            
-            <p>
-                Confirmação de senha  <br>
-                <input id="ipt_confirmacao" class="inputCadastro" type="password" placeholder="Digite a mesma senha">
-                <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha2()" ></span>
+                    Email: <br>
+                    <input id="ipt_email" placeholder="Ex: maria.santos@gmail.com" class="input" type="text">
+                </p><br>
+
+                <p>
+                    Senha: <br>
+                    <input id="ipt_senha" class="input" type="password" placeholder="********">
+                    <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha()"></span>
+                </p><br>
+
+                <p>
+                    Confirmação de senha: <br>
+                    <input id="ipt_confirmacao" class="input" type="password"
+                        placeholder="********">
+                    <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha2()"></span>
                 </p>
             </div>
-
-            <div id="div_botao">
-                <button id="botaoCadastro" onclick="cadastrar()">Cadastrar</button>
-                <button id="botaoCancelar" onclick="cancelar()">Cancelar</button>
-            </div>
-
         </div>
-
-        <p></p>
-
-    </main>
+        <div class="buttonDivisao">
+            <button class="button1" onclick="Confirmar()">Confirmar</button>
+            <button class="button2" onclick="Cancelar()">Cancelar</button>
+        </div>
+    </div>
 </body>
 
 </html>
 
 <script>
-    function verSenha(){
+    function verSenha() {
         var inputPass = document.getElementById('ipt_senha');
-       
 
-        if(inputPass.type === 'password'){
-            inputPass.setAttribute('type','text')
-        }else {
-            inputPass.setAttribute('type','password')
+
+        if (inputPass.type === 'password') {
+            inputPass.setAttribute('type', 'text')
+        } else {
+            inputPass.setAttribute('type', 'password')
         }
     }
-    function verSenha2(){
+    function verSenha2() {
         var inputPass = document.getElementById('ipt_confirmacao');
-       
 
-        if(inputPass.type === 'password'){
-            inputPass.setAttribute('type','text')
-        }else {
-            inputPass.setAttribute('type','password')
+
+        if (inputPass.type === 'password') {
+            inputPass.setAttribute('type', 'text')
+        } else {
+            inputPass.setAttribute('type', 'password')
         }
     }
 
-    function cadastrar(){
+    function cadastrar() {
         var senha = ipt_senha.value
         var senhaConfirmacao = ipt_confirmacao.value
 
