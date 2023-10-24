@@ -19,9 +19,9 @@ const serial = async (
 
             port: 3306,  /* a porta de entrada do usb, entre no cmd do pc para ativar, "netstat -ano", pegue o PID ex:"12567" e faça "taskkill /PID 12567 -F" obs: veja em qual porta está seu arduino, aparece no git bash quando dá npm start.*/
 
-            user: 'Arduino', /* usuario do SQL*/
+            user: 'MichellyMendes', /* usuario do SQL*/
 
-            password: 'Arduino12', /*senha do usuario*/
+            password: 'Urubu100', /*senha do usuario*/
 
             database: 'metricas' /* database do banco, INSERT INTO sensores (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave),*/
         }
