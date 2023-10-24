@@ -66,3 +66,53 @@ input{
   background-color: red;
   width: 120px;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color:  #F8F5EC;
+  padding-left: 380px;
+  border-bottom: 4px solid #184062; 
+}
+
+.texto{
+  color:#184062; 
+}
+
+/* arrumando */
+.quadro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 100px;
+  margin-left: 575px;
+  width: 700px;
+  height: 400px;
+  background-color: #F8F5EC;
+  border: solid black 1px;
+  border-radius: 5px;
+  box-shadow: #5C5B5B 10px 10px 10px;
+}
+
+.divisao{
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+}
+
+.container1{
+  justify-content: space-around;
+  margin-right: 40px;
+}
+
+.input{
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: 2px solid #5C5B5B;
+  height: 25px;
+  width: 225px;
+}
