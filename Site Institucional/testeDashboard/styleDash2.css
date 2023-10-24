@@ -138,9 +138,10 @@ body{
 #graficosEsquerda{
     position: relative; 
     text-align: center;
-    height: 120vh; 
-    width:140vh;
-    padding-top: 10px;
+    height: 80vh; 
+    width:100vh;
+    padding-top: 20px;
+    margin-left: 150px;
 }
 
 

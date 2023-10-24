@@ -1,5 +1,9 @@
 
  /* HOME INDEX */
+ body{
+    overflow-x: hidden;
+
+ }
 
  #homeIndex
 
