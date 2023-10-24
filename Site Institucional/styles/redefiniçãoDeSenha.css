@@ -130,7 +130,7 @@
 #sombra {
     border: 1px solid;
     padding: 10px;
-    box-shadow: 5px 10px #888888;
+    box-shadow: 5px 6px 8px 5px #a7a0a0;
 }
 .FundoImagem {
     display: flex;
