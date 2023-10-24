@@ -107,26 +107,43 @@
         var senha = ipt_senha.value;
         var email = ipt_email.value;
 
+       
         if (senha.length < 8) {
             alert(`Verifique a sua senha, ela deve conter pelo menos 8 caracteres`)
         }
-        
-        if(senha.toUpperCase("") == -1)
 
-        if(senha.indexOf(".") == -1)
+        if(senha != senha.toUpperCase() && senha != senha.toLowerCase()){
+        }else {
+            alert(`Sua senha deve conter pelo menos uma LETRA MAIÚSCULA e Caracteres especiais "!@/?#*."`)
+        }
         
         if(senha.indexOf("!") == -1)
+        
+        if(senha.indexOf("@") == -1)
+
+        if(senha.indexOf("/") == -1)
 
         if(senha.indexOf("?") == -1)
 
         if(senha.indexOf("#") == -1)
 
         if(senha.indexOf("*") == -1)
+
+        if(senha.indexOf(".") == -1)
         {
-        
+        alert(`Sua senha deve conter pelo menos uma LETRA MAIÚSCULA e Caracteres especiais "!@/?#*."`)
+        }
+
+
+
+
+        if(email.indexOf(" ") = true){
+
+            alert(`Insira um email válido`)
         }
 
         if (email.indexOf("@") == -1){
+
             alert(`Insira um email válido`)
         }
 
@@ -147,4 +164,5 @@
             alert(`Insira um email válido`)
         }
     }
+    
 </script>
