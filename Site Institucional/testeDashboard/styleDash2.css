@@ -1,0 +1,162 @@
+body{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E7EAF0;
+  }
+  
+  
+  
+  #imgPerfil{
+    height: 100px;
+    width: 120px;
+    margin-bottom: 20px;
+  }
+  
+  #menuLateral{
+    height: 100%;
+    width: 22%;
+    background-color: #184062;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 2%;
+  }
+  
+  .seila{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .seila2{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 220px;
+    border-bottom: solid white 2px;
+  }
+  
+  #menuLateral a{
+    padding: 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    cursor: pointer;
+    width: fit-content;
+  }
+  
+  #menuLateral p{
+    font-size: 30px;
+    color: white;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10%;
+  }
+  
+  .gambiarra{
+    color: #F8F5EC;
+  }
+  
+  #buttonDeslogar{
+    border: none;
+    color: black;
+    background-color: #F8F5EC;
+    font-weight: bold;
+    font-size: 15px;
+    width: 80px;
+    height: 35px;
+    margin-top: 15px;
+    border-radius: 5%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* fim do menu lateral */
+  
+  
+
+  /* inicio conteudo principal */
+
+  #conteudoPrincipal{
+    margin-left: 25%;
+    margin-right: 5%;
+  }
+ /* alertas umidade */
+  .containerAlert{
+    display: flex;
+    height: flex;
+    width: flex;
+    margin: 20px;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bolder;
+  }
+
+  .alerta-vermelho{
+    background-color: #FF3131;
+    font-size: 15px;
+    width: 125px;
+    height:100px;
+   
+}
+.alerta-laranja{
+    background-color: #FF914D;
+    font-size: 15px;
+    width: 125px;
+    height:100px;
+    
+}
+.alerta-amarelo{
+    background-color: #efb661;
+    font-size: 15px;
+    width: 125px;
+    height:100px;
+    
+}
+.alerta-verde{
+    background-color: #58c758;
+    font-size: 15px;
+    width: 125px;
+    height:100px;
+    
+}
+
+
+
+
+
+
+/* dashs */
+
+
+#graficosEsquerda{
+    position: relative; 
+    text-align: center;
+    height: 120vh; 
+    width:140vh;
+    padding-top: 10px;
+}
+
+
+.Dashs>#graficosEsquerda>p{
+    text-align: center;
+    font-size: 10px;
+    background-color: white;
+
+}
+
+#divGraficoLinha{
+    border-top: 50px solid #E7EAF0;
+  }
+.corGraficos{
+    background-color: white;
+}
+
+
+  
