@@ -76,8 +76,13 @@ font-family: 'Montserrat', sans-serif;
   }
 
   .Titulo{
+    margin-top: 40px;
     color: rgb(99, 36, 11); /* Dando a cor do título de marrom */
     font-size: 35px; /* Dando tamanho para a fonte(letra) do título */
+  }
+
+  .CaixaInput{
+    margin-top: 30px;
   }
 
   .Container{
@@ -89,8 +94,6 @@ font-family: 'Montserrat', sans-serif;
   .ContainerFundoBranco {
     position: absolute; 
     display: flex;
-    text-align: center;
-    justify-content: center;
     flex-direction: column;
     align-items: center; /* Alinhando todos itens do container (as duas partes brancas) no centro */
     background-color: white;

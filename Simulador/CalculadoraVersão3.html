@@ -30,26 +30,26 @@
             <div class="Container">
                 <div class="ContainerFundoBranco">
 
-                        <h1 class="Titulo"> Calculadora TechSolutions</h1> <br>
+                        <h2 class="Titulo"> Calculadora </h2> <br>
 
                     <div class="CaixaInput">
                         <p>
-                            <span>Nome empresa:</span><br>
+                            <span>Nome empresa</span><br>
                             <input class="input" placeholder="Rei do café" id="input_nome"> <br>
                         </p><br>
 
                         <p>
-                            <span>Valor por saco de café:</span><br>
+                            <span>Valor por saco de café</span><br>
                             <input class="input" placeholder="R$ 650,00" id="input_valorsaco"> <br>
                         </p><br>
 
                         <p>
-                            <span>Quantidade de sacos:</span><br>
+                            <span>Quantidade de sacos</span><br>
                             <input class="input" placeholder="1000" id="input_qtdsacos"> <br>
                         </p><br>
 
                         <p>
-                            <Span>Umidade média:</Span><br>
+                            <Span>Umidade média</Span><br>
                             <input class="input" placeholder="65" id="input_umidade"> <br>
                         </p><br>
 
@@ -137,7 +137,7 @@ Faça seu orçamento em nossa página “Fale conosco”</b>`
 
         div_lucro.innerHTML += `<br>- Sua <b>umidade está adequada</b> ao ambiente e <b>com a nossa solução garantimos ao nosso cliente que ele não terá prejuizo no futuro</b>,
         caso a umidade venha a <b>oscilar</b> com a falta de um monitorimento adequado.<br><br>
-        - O seu <b>lucro atual</b> é de <b>R$</b><b style="color: blue;">${lucro .toLocaleString('pt-BR')}</b><br><br>
+        - O seu <b>lucro atual</b> é de <b>R$</b><b style="color: blue;">${lucroIgual.toLocaleString('pt-BR')}</b><br><br>
         - Na quebra de safra seus grãos podem chegar ao dobro do preço <b style="color: green;">R$${(valorSaco * qtdSacos) * 2}</b>.<br>`
     }
 
@@ -158,6 +158,7 @@ Faça seu orçamento em nossa página “Fale conosco”</b>`
         ValorPerdaQuebraSafra = perdaTotalSacos * valorMaior
         /* alert(`ValorPerdaQuebraSafra: ${ValorPerdaQuebraSafra}`) */
         lucro = valorSaco * sacosRestantes
+        lucroIgual = valorSaco * qtdSacos
         /* alert(`lucro: ${lucro}`) */
         lucroFinal = lucro + ValorPerdaQuebraSafra
         /* alert(`lucroFinal: ${lucroFinal}`) */
@@ -177,33 +178,20 @@ Faça seu orçamento em nossa página “Fale conosco”</b>`
         - A <b>sua umidade</b> é de <b>${umidade}%</b> <br>`
 
 
-        if (umidade <= 13) {
-
+        if (umidade <= 20) {
             porcentagem = 0.15
             variaveis()
             exibirMenos()
             exibir()
         }
-        else if (umidade <= 27) {
-            porcentagem = 0.12
-            variaveis()
-            exibirMenos()
-            exibir()
-        }
-        else if (umidade <= 42) {
-            porcentagem = 0.09
-            variaveis()
-            exibirMenos()
-            exibir()
-        }
-        else if (umidade <= 57) {
-            porcentagem = 0.06
+        else if (umidade <= 41) {
+            porcentagem = 0.10
             variaveis()
             exibirMenos()
             exibir()
         }
         else if (umidade <= 63) {
-            porcentagem = 0.03
+            porcentagem = 0.05
             variaveis()
             exibirMenos()
             exibir()
