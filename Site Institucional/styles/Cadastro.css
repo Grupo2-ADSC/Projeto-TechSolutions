@@ -3,7 +3,7 @@
 .button2 {
     width: 120px;
     height: 35px;
-    background-color: #2C2C2C;
+    background-color: #AD713A;
     color: white;
     border-radius: 3px;
     font-size: 15px;
@@ -89,14 +89,14 @@
 
 #infos a,
 #termos li {
-    font-family: 'Alice', serif;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: #fff;
 
 }
 
 #direitos {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-top: 20px;
     font-size: 14px;
     color: #fff;
@@ -104,15 +104,15 @@
 }
 
 .back-Rodape {
-    background-color: #2c2c2c;
+    background-color: #2A1A17;
 }
 
 .back-Rodape li,
 li a,
 li img {
-    background-color: #2c2c2c;
+    background-color: #2A1A17;
 }
 
 .back-Rodape {
-    background-color: #2c2c2c;
+    background-color: #2A1A17;
 }

@@ -30,7 +30,7 @@
     flex-direction: row;
     align-items: center;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 
 }
   
@@ -215,14 +215,14 @@
 
 #infos a,
 #termos li {
-  font-family: 'Alice', serif;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   color: #fff;
 
 }
 
 #direitos {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-top: 20px;
   font-size: 14px;
   color: #fff;
