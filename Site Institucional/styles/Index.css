@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
  /* HOME INDEX */
  body{
     overflow-x: hidden;
@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -33,7 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 
 .titulo_empresa h1{
@@ -56,7 +56,7 @@
     height: 10px;
     margin-top: 5%;
     text-align: justify;
-    font-family: 'Montserrat', sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 
 .conteudo_empresa h2 {
@@ -85,7 +85,7 @@ border-bottom: 50px solid #794830;
 
 .titulo1 {
     color: #794830;
-    font-family: 'Alice', serif;
+   font-family: 'Roboto', sans-serif;
     font-size: 60px;
     
 }
@@ -120,14 +120,14 @@ border-bottom: 50px solid #794830;
     margin: 0 10%;
     position: absolute;
     left: 2%;
-    font-family: 'Montserrat', sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 .topicos2{
     font-size: 20px;
     width: 500px;
     position: absolute;
     margin-left: 10%;
-    font-family: 'Montserrat', sans-serif;
+   font-family: 'Poppins', sans-serif;
 
 }
 
@@ -167,7 +167,7 @@ border-bottom: 50px solid #794830;
     padding: 15px;
     font-size: 18px;
     background-color:#F8F5EC;
-    font-family: 'Montserrat', sans-serif;
+   font-family: 'Poppins', sans-serif;
     align-items: center;
     
 }
@@ -204,7 +204,7 @@ width: 300px;
     margin-left: 40px;
     height: 0px;
     width: 0px;
-    font-family: 'Montserrat', sans-serif;
+   font-family: 'Poppins', sans-serif;
 }
 
 
@@ -242,14 +242,14 @@ width: 300px;
  }
  
  #infos a, #termos li {
-     font-family: 'Alice', serif;
+    font-family: 'Roboto', sans-serif;
      text-decoration: none;
      color: #fff;
      
  }
  
  #direitos {
-     font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
      margin-top: 20px;
      font-size: 14px;
      color: #fff; /* Cor do texto branco */

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
+
 /* cadastro */
 
 .button2 {
@@ -42,7 +44,7 @@
     background-color: #F8F5EC;
     box-shadow: #2c2c2c 10px;
     box-shadow: rgba(0, 0, 0, 0.418) 0px 7px 7px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
 }
 
