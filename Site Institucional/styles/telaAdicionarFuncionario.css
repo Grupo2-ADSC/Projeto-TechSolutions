@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
 /* inicio do menu lateral */
 body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
   
   }
   
@@ -127,7 +128,7 @@ body{
     justify-content: space-around;
     flex-direction: row;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+   font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 /* Cargo e email */
@@ -139,7 +140,7 @@ body{
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
+ font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 /* Senha e confirmação de senha */
@@ -151,7 +152,7 @@ body{
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   margin-left: 2%;
 }
