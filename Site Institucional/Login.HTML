@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/LoginStyle.CSS">
+    <link rel="stylesheet" href="./styles/testeLogin.css">
      <link rel="stylesheet" href="./styles/headerTechsolutions.CSS">
     <link rel="icon" href="./assets/iconCafe.png">
-    <link rel="stylesheet" href="/styles/testeLogin.css">
     <title>Login | TechSolutions</title>
 </head>
 
@@ -68,58 +68,12 @@
                 </div>
 
             </div>
-            <!-- <div class="inputsEmailSenha2"> -->
-                <!--
-                
-                <div class="oi">
-                </div>
-                
-                
-                
-                <div class="divButtonEntrar">
- 
-                    <a href="#"><button onclick = "entrar ()" class="button_entrar">Entrar</button></a>
-                    <p></p>
-                </div>
-                
             
-            <a href="redefiniçãoDeSenha.html"><h5 class="esqueceuSenha">Esqueceu sua senha?</h5></a><br> -->
         </div>
     </div>
    
 
-    <!-- <div class="FundoImagem">
-
-      <div class="DivPrincipal">
-
-            <div class="titulo">
-           <h1>Login</h1>
-
-            </div>
-       
-            <div class="inputsEmailSenha">
-    
-
-            <div class="oi">
-                <p>E-mail</p><input id="ipt_email" type="email" placeholder="Digite seu e-mail"><br><br>
-                <div id="div_email"></div>
-                <p>Senha</p><input id="ipt_senha" type="password" placeholder="Digite sua senha"><br><br>
-                <div id="div_senha"></div>
-            </div>
-            </div>
-
-            <div class="divButtonEntrar">
-
-              <a href="#"><button onclick = "entrar ()" class="button_entrar">Entrar</button></a>
-               <p></p>
-            </div>
-      
-        
-            <a href="redefiniçãoDeSenha.html"><h5 class="esqueceuSenha">Esqueceu sua senha?</h5></a><br>
-      </div>
-    </div> -->
-
-    <div id="containerFooter">
+   
 
         <footer id="rodape" class="back-Rodape">
             <ul id="icones" class="back-Rodape">
@@ -162,34 +116,6 @@
         alerta_senha.innerHTML = "";
 
 
-
-        if(email.indexOf("@") == -1){
-            alerta_email.innerHTML = `Insira um email válido`
-        }
-
-        if(email.indexOf(".com") == -1)
-
-        if(email.indexOf(".br") == -1)
-
-        if(email.indexOf(".net") == -1)
-
-        if(email.indexOf(".org") == -1)
-
-        if(email.indexOf(".io") == -1)
-
-        if(email.indexOf(".company") == -1)
-
-        if(email.indexOf(".gov") == -1)
-        {
-            alerta_email.innerHTML = `Insira um email válido`
-        }
-
-        if(email.indexOf(" ") >= 0){
-            alertta_email.innerHTML = `Insira um email válido`
-        }
-
-
-
         if(senha.indexOf(" ") >=0){
             alerta_senha.innerHTML = `Sua senha não pode conter espaço`
         }
@@ -219,6 +145,36 @@
         if (senha.length < 8) {
             alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter pelo menos 8 caracteres`
         }
+        
+
+
+        if(email.indexOf(" ") >= 0){
+            alerta_email.innerHTML = `Insira um email válido`
+        }
+
+        if(email.indexOf("@") == -1){
+            alerta_email.innerHTML = `Insira um email válido`
+        }
+
+        if(email.indexOf(".com") == -1)
+
+        if(email.indexOf(".br") == -1)
+
+        if(email.indexOf(".net") == -1)
+
+        if(email.indexOf(".org") == -1)
+
+        if(email.indexOf(".io") == -1)
+
+        if(email.indexOf(".company") == -1)
+
+        if(email.indexOf(".gov") == -1)
+        {
+            alerta_email.innerHTML = `Insira um email válido`
+        }
+
+       
+
 
     }
 
