@@ -1,0 +1,112 @@
+.FundoImagem2{
+    height: 90vh;
+    width: 100%;
+    background-image: url(../assets/Fundo.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DivPrincipal2{
+    background-color: #f8f5ec;
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: solid 1px black;
+    box-shadow: #0000006b 0px 7px 7px;
+    padding: 20px;
+    /* text-align: center; */
+    /* margin-top: 80px; */
+    /* margin-left: 30px; */
+    /* padding-left: 200px; */
+}
+.titulo2{
+    font-size: 25px;
+    display: flex;
+    width: 100%;
+    margin-top:5%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+.inputsEmailSenha2{
+    display: flex;
+    justify-content: center;
+    /* border: black solid 2px; linha guia da div */
+    width: 100%;
+    height: 100%;
+}
+.oi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: red solid 2px; linha guia da div */
+    height: 100%;
+    width: 80%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+#ipt_email2{
+    background-color: #F8F5EC;
+    border-radius: 5px;
+    border: 2px solid #5C5B5B;
+    width: 90%;
+    height: 30px;
+    font-size: 15px;
+    padding-left: 20px;
+}
+#ipt_senha2{
+    background-color: #F8F5EC;
+    border-radius: 5px;
+    border: 2px solid #5C5B5B;
+    width: 90%;
+    height: 30px;
+    font-size: 15px;
+    padding-left: 20px;
+}
+.botaoEntrar{
+    width: 100%;
+    height: 10%;
+    /* border: blue solid 2px; linha guia da div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recuperarSenha{
+    width: 100%;
+    height: 5%;
+    /* border: yellow solid 2px; linha guia da div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#alerta_email{
+    width: 100%;
+    height: 5%;
+    /* border: purple solid 2px; linha guia da div */
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+#alerta_senha{
+    width: 100%;
+    height: 10%;
+    /* border: purple solid 2px; linha guia da div */
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    
+    align-items: center;
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}

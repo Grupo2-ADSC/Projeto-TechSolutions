@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/LoginStyle.CSS">
      <link rel="stylesheet" href="./styles/headerTechsolutions.CSS">
     <link rel="icon" href="./assets/iconCafe.png">
+    <link rel="stylesheet" href="/styles/testeLogin.css">
     <title>Login | TechSolutions</title>
 </head>
 
@@ -36,18 +37,67 @@
         </div>
     </div> 
 
+    <div class="FundoImagem2" >
+
+        
+        <div class="DivPrincipal2">
+            
+            <div class="titulo2">
+                <h1>Login</h1>
+            </div>
+ 
+            <div class="inputsEmailSenha2">
+                <div class="oi" >
+                    <p>E-mail</p> <input id="ipt_email2" type="email" placeholder="Digite seu e-mail">
+                    <span id="alerta_email"></span>
+                    <p>Senha</p><input id="ipt_senha2" type="password" placeholder="Digite sua senha"> 
+                    <span id="alerta_senha"></span>
+
+                    <div class="botaoEntrar">
+                        <button onclick = "entrar ()" class="button_entrar">Entrar</button>
+
+                    </div> 
+                    <br>
+                   <div class="recuperarSenha">
+                    <a class="link" href="/redefiniçãoDeSenha.html">
+                        <h5 class="esqueceuSenha2">Esqueceu sua senha?</h5>
+                    </a>
+                        
+                   </div>
+
+                </div>
+
+            </div>
+            <!-- <div class="inputsEmailSenha2"> -->
+                <!--
+                
+                <div class="oi">
+                </div>
+                
+                
+                
+                <div class="divButtonEntrar">
+ 
+                    <a href="#"><button onclick = "entrar ()" class="button_entrar">Entrar</button></a>
+                    <p></p>
+                </div>
+                
+            
+            <a href="redefiniçãoDeSenha.html"><h5 class="esqueceuSenha">Esqueceu sua senha?</h5></a><br> -->
+        </div>
+    </div>
    
 
-    <div class="FundoImagem">
+    <!-- <div class="FundoImagem">
 
       <div class="DivPrincipal">
 
-       <div class="titulo">
+            <div class="titulo">
            <h1>Login</h1>
 
-       </div>
+            </div>
        
-        <div class="inputsEmailSenha">
+            <div class="inputsEmailSenha">
     
 
             <div class="oi">
@@ -56,7 +106,7 @@
                 <p>Senha</p><input id="ipt_senha" type="password" placeholder="Digite sua senha"><br><br>
                 <div id="div_senha"></div>
             </div>
-        </div>
+            </div>
 
             <div class="divButtonEntrar">
 
@@ -67,7 +117,7 @@
         
             <a href="redefiniçãoDeSenha.html"><h5 class="esqueceuSenha">Esqueceu sua senha?</h5></a><br>
       </div>
-    </div>
+    </div> -->
 
     <div id="containerFooter">
 
@@ -106,15 +156,15 @@
 <script>
     function entrar () {
 
-        var senha = ipt_senha.value;
-        var email = ipt_email.value;
-        div_email.innerHTML = "";
-        div_senha.innerHTML = "";
+        var senha = ipt_senha2.value;
+        var email = ipt_email2.value;
+        alerta_email.innerHTML = "";
+        alerta_senha.innerHTML = "";
 
 
 
         if(email.indexOf("@") == -1){
-            div_email.innerHTML = `Insira um email válido`
+            alerta_email.innerHTML = `Insira um email válido`
         }
 
         if(email.indexOf(".com") == -1)
@@ -131,17 +181,17 @@
 
         if(email.indexOf(".gov") == -1)
         {
-            div_email.innerHTML = `Insira um email válido`
+            alerta_email.innerHTML = `Insira um email válido`
         }
 
         if(email.indexOf(" ") >= 0){
-            div_email.innerHTML = `Insira um email válido`
+            alertta_email.innerHTML = `Insira um email válido`
         }
 
 
 
         if(senha.indexOf(" ") >=0){
-            div_senha.innerHTML = `Sua senha não pode conter espaço`
+            alerta_senha.innerHTML = `Sua senha não pode conter espaço`
         }
         
         if(senha.indexOf("!") == -1)
@@ -158,16 +208,16 @@
         
         if(senha.indexOf(".") == -1){
              
-            div_senha.innerHTML = `Sua senha deve conter pelo menos uma LETRA MAIÚSCULA e Caracteres especiais "!@/?#*."`
+            alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma LETRA MAIÚSCULA e Caracteres especiais "!@/?#*."`
         }
         
         if(senha != senha.toUpperCase() && senha != senha.toLowerCase()){
         }else {
-            div_senha.innerHTML = `Sua senha deve conter pelo menos uma LETRA MAIÚSCULA e Caracteres especiais "!@/?#*."`
+            alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma LETRA MAIÚSCULA e Caracteres especiais "!@/?#*."`
         }
 
         if (senha.length < 8) {
-            div_senha.innerHTML = `Verifique a sua senha, ela deve conter pelo menos 8 caracteres`
+            alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter pelo menos 8 caracteres`
         }
 
     }
