@@ -18,7 +18,7 @@
 <body>
     <div>
         <h1>Sensor DHT 11 - Umidade</h1>
-        <section style="width:100%">
+        <section style="width:50%">
             <canvas id="dht11Umidade"></canvas>
         </section>
         <!-- <h1>Sensor DHT 11 - Temperatura</h1>
@@ -49,11 +49,12 @@
             {
                 type: 'line',
                 data: {
+                    labels: ["10:00","10:30","11:00","11:30","12:00","12:30","10:30","11:00","11:30","12:00","12:30","10:30","11:00","11:30","12:00","12:30"],
                     datasets: [{
                         label: 'Umidade',
                         type: 'line',
                         borderColor: ['#45b3e7'],
-                        backgroundColor: ['#89cff0']
+                        fill: false                        
                     }]
                 },
                 options: {
