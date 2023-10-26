@@ -9,6 +9,8 @@
      <link rel="stylesheet" href="./styles/headerTechsolutions.CSS">
     <link rel="icon" href="./assets/iconCafe.png">
     <title>Login | TechSolutions</title>
+    <!-- lib de icons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 
 
@@ -50,7 +52,9 @@
                 <div class="oi" >
                     <p>E-mail</p> <input id="ipt_email2" type="email" placeholder="Digite seu e-mail">
                     <span id="alerta_email"></span>
-                    <p>Senha</p><input id="ipt_senha2" type="password" placeholder="Digite sua senha"> 
+                    <p>Senha</p>
+                    <input id="ipt_senha2" type="password" placeholder="Digite sua senha"> 
+                    <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha()"></span>
                     <span id="alerta_senha"></span>
 
                     <div class="botaoEntrar">
@@ -59,7 +63,7 @@
                     </div> 
                     <br>
                    <div class="recuperarSenha">
-                    <a class="link" href="/redefiniçãoDeSenha.html">
+                    <a class="link" href="./redefiniçãoDeSenha.html">
                         <h5 class="esqueceuSenha2">Esqueceu sua senha?</h5>
                     </a>
                         
@@ -178,4 +182,14 @@
 
     }
 
+    function verSenha() {
+        var inputPass = document.getElementById('ipt_senha2');
+
+
+        if (inputPass.type === 'password') {
+            inputPass.setAttribute('type', 'text')
+        } else {
+            inputPass.setAttribute('type', 'password')
+        } 
+        }
 </script>

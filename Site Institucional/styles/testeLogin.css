@@ -75,6 +75,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
 }
 .recuperarSenha{
     width: 100%;
@@ -109,4 +110,13 @@
 .link{
     text-decoration: none;
     color: black;
+}
+
+#botaoVerSenha{
+    position: absolute;
+    right: 39%;
+    width: 30px;
+    cursor: pointer;
+    top: 65%;
+    /* border:  black solid 2px; */
 }
