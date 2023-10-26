@@ -113,10 +113,11 @@
 }
 
 #botaoVerSenha{
-    position: absolute;
-    right: 39%;
+    position: relative;
+    bottom: 8%;
+    left: 87%;
     width: 30px;
     cursor: pointer;
-    top: 65%;
+    
     /* border:  black solid 2px; */
 }
