@@ -21,9 +21,10 @@ input {
 .quadrado_esquerda_marrom {
     background-color:#794830;
     padding: 30px; 
-    width: 650px; 
+    width: 640px; 
     height: 500px;
     margin-left: 100px;
+    margin-top: 25px;
 }
 
 .titulo {
