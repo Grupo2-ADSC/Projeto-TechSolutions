@@ -143,13 +143,17 @@
         
         if(senha != senha.toUpperCase() && senha != senha.toLowerCase()){
         }else {
-            alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma LETRA MAIÚSCULA e Caracteres especiais "!@/?#*."`
+            alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma Letra MAIÚSCULA, minúscula e Caracteres especiais "!@/?#*."`
         }
 
         if (senha.length < 8) {
-            alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter pelo menos 8 caracteres`
+            alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter pelo menos de 8 á 16 caracteres`
         }
         
+
+        if (senha.length > 16) {
+            alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter pelo menos de 8 á 16 caracteres`
+        }
 
 
         if(email.indexOf(" ") >= 0){
