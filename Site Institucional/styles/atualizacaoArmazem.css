@@ -22,12 +22,8 @@ body{
 
 .container_perguntas{
     background-color: #f8f5ec;
-    text-align: center;
     width: 480px;
     height: 480px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     margin-top: 80px;
     margin-left: 580px ;
     padding-left: 200px;
@@ -65,11 +61,12 @@ input::placeholder {
 
 .botao{
     display: flex;
-    width: 350px;
-    justify-content: space-around;
-    margin-left: -180px;
-    margin-bottom: 50px ;
+    justify-content: flex-start;
+    margin-left: -175px;
+    /* margin-bottom: 50px ; */
+    width: 150%;
     height: 35px ;
+    /* border: #000 solid 2px; */
 }
 
 .botao_confirmar, .botao_cancelar{
@@ -80,16 +77,20 @@ input::placeholder {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    margin-right: 20px;
+    
 }
 
 .botao_confirmar{
-    background-color: rgb(48, 170, 48);
-    width: 200px;
+    background-color: #00BF63;
+    width: 100px;
+    height: 30px;
 }
 
 .botao_cancelar{
-    background-color: red;
+    background-color: #FF3131;
     width: 120px;
+    height: 30px;
 }
 
 
