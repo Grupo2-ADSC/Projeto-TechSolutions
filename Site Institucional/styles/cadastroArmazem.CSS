@@ -41,11 +41,13 @@ input{
 
 .button{
   display: flex;
-  width: 350px;
-  justify-content: space-around;
-  margin-left: -180px;
+  width: 87%;
+  align-items: center;
+  justify-content: flex-start;
+  /* margin-left: 200px; */
   margin-bottom: 50px ;
   height: 35px ;
+  /* border: black solid 2px; */
 }
 
 .button_cadastrar, .button_cancelar{
@@ -58,13 +60,30 @@ input{
 }
 
 .button_cadastrar{
-  background-color: rgb(48, 170, 48);
-  width: 200px;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  height: 30px;
+  width: 110px;
+  background-color: #00BF63;
+  margin-right: 20px;
+  cursor: pointer;
+
 }
 
 .button_cancelar{
-  background-color: red;
-  width: 120px;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  height: 30px;
+  width: 110px;
+  background-color: #FF3131;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .header {

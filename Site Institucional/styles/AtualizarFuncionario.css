@@ -28,6 +28,7 @@ body{
     border: solid black 1px;
     border-radius: 5px;
     box-shadow: #5C5B5B 10px 10px 10px;
+    padding-bottom: 20px;
 }
 
 .divisao{
