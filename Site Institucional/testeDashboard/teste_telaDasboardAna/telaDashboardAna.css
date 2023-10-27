@@ -75,8 +75,6 @@ body{
     margin-left: 23%;
   }
 
-  
-
 .metricas{
     display: flex;
     margin: 45px;
@@ -84,7 +82,8 @@ body{
     text-align: center;
     line-height: 70px;
     font-weight: bolder;
-  }
+    margin-left: 470px;
+}
 
 .quadrado_vermelho{
     width: 125px;
@@ -110,3 +109,20 @@ body{
     background-color: #58c758;
     
 }
+
+.conteudo_metricas_graficos{
+  flex-direction: column;
+}
+
+.graficos_container{
+  display: flex;
+  height: 400px; 
+  width: 400px;
+  margin-left: 440px;
+  margin-top: 60px;
+}
+
+canvas{
+  margin-right: 70px;
+}
+
