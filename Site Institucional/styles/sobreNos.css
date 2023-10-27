@@ -58,9 +58,9 @@ input {
 /*foto da equipe*/
 
 .foto{
-    width: 680px;
+    width: 640px;
     position: relative;
-    bottom: 515px;
+    bottom: 555px;
     left: 720px;
     margin-bottom: -500px;
 }
