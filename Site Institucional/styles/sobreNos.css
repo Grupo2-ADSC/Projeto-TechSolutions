@@ -55,6 +55,15 @@ input {
 .destaque{
     color: black;
 }
+/*foto da equipe*/
+
+.foto{
+    width: 680px;
+    position: relative;
+    bottom: 515px;
+    left: 720px;
+    margin-bottom: -500px;
+}
 
 
 /* inicio footer */
