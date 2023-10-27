@@ -7,11 +7,11 @@ USE TechSolutions;
 CREATE TABLE endereco (
  idEndereco INT PRIMARY KEY AUTO_INCREMENT,
  CEP CHAR(9) NOT NULL,
- logradouro VARCHAR(130) NOT NULL,
+ logradouro VARCHAR(50) NOT NULL,
  numero INT NOT NULL,
  complemento VARCHAR(100) DEFAULT 'Sem endereço',
- bairo VARCHAR(45) NOT NULL,
- cidade VARCHAR(45) NOT NULL,
+ bairo VARCHAR(50) NOT NULL,
+ cidade VARCHAR(50) NOT NULL,
  estado CHAR(2) NOT NULL,
  tipo CHAR(7),
  CONSTRAINT chk CHECK (tipo IN('Empresa','Armazém'))
@@ -19,7 +19,7 @@ CREATE TABLE endereco (
  
  INSERT INTO endereco VALUES 
  (NULL, '09260-290', 'Rua Conceição', 1245, NULL, 'Campo Limpo', 'São Paulo', 'SP', 'Empresa'), 
- (NULL, '09260-420', 'Avenida Francisco Pessoa', 25, NULL, 'Brasilandia', 'Santo André', 'SP', 'Empresa'),
+ (NULL, '09275-420', 'Avenida Francisco Pessoa', 25, NULL, 'Brasilandia', 'Santo André', 'SP', 'Empresa'),
  (NULL, '09260-420', 'Avenida dos Estados', 2540, NULL, 'Alzira Franco', 'São Paulo', 'SP', 'Empresa'),
  (NULL, '03340-390', 'Rua da Liberdade', 190, NULL, 'Jardim Santo Alberto', 'São Bernardo do Campo', 'SP', 'Armazém' ), 
  (NULL, '08310-220', 'Rua Almada', 31, 'Ao lado do posto ipiranga', 'Parque das Nações', 'São Paulo', 'SP', 'Armazém'), 
@@ -29,10 +29,10 @@ CREATE TABLE endereco (
 CREATE TABLE empresa (
 idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
 cnpj CHAR(14) UNIQUE NOT NULL,
-nome VARCHAR(100) NOT NULL,
+nome VARCHAR(50) NOT NULL,
 telefone CHAR(11) DEFAULT 'Sem numero',
-email VARCHAR(90) NOT NULL,
-senha VARCHAR(50) NOT NULL,
+email VARCHAR(100) NOT NULL,
+senha VARCHAR(16) NOT NULL,
 fkEndereco INT, 
 FOREIGN KEY (fkEndereco) REFERENCES endereco(idEndereco)
 );
@@ -49,11 +49,11 @@ UPDATE empresa SET fkEndereco = 101 WHERE idEmpresa = 2;*/
  
  CREATE TABLE funcionario (
  idFuncionario INT AUTO_INCREMENT,
- nome VARCHAR(45) NOT NULL,
- sobrenome VARCHAR(90) NOT NULL,
- cargo VARCHAR(45),
- email VARCHAR(90) NOT NULL,
- senha VARCHAR(50) NOT NULL,
+ nome VARCHAR(50) NOT NULL,
+ sobrenome VARCHAR(50) NOT NULL,
+ cargo VARCHAR(50),
+ email VARCHAR(100) NOT NULL,
+ senha VARCHAR(16) NOT NULL,
  fkEmpresa INT, 
  FOREIGN KEY (fkEmpresa) REFERENCES empresa(idEmpresa),
  PRIMARY KEY (idFuncionario, fkEmpresa)
@@ -68,8 +68,8 @@ INSERT INTO funcionario (nome, sobrenome, cargo, email, senha, idFuncionario, fk
 
 CREATE TABLE armazem (
 idArmazem INT PRIMARY KEY AUTO_INCREMENT,
-numero VARCHAR(50),
-areaArmazem decimal(4,3),
+numero INT,
+areaArmazem DECIMAL(5,3),
 fkEmpresa INT, 
 FOREIGN KEY (fkEmpresa) REFERENCES empresa(idEmpresa),
 fkEndereco INT, 
@@ -151,5 +151,3 @@ JOIN registro ON sensor.idSensor = registro.fkSensor;
 
 SELECT sensor.idSensor AS 'Sensor', registro.dataRegistro AS 'Data e Hora', registro.umidadeRegistro AS 'Umidade' FROM sensor
 JOIN registro ON sensor.idSensor = registro.fkSensor;
-
-
