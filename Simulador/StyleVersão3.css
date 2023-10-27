@@ -1,10 +1,22 @@
 *{margin: 0;
-  background-color: transparent;
+  background-color: none;
 margin-bottom: 0;}
 
 .logo{
   align-items: flex-start;
   width: 350px;
+}
+
+span{
+  background-color: white;
+}
+
+p{
+  background-color: white;
+}
+
+.fundoB b{
+  background-color: white;
 }
 
 .header{
@@ -65,7 +77,10 @@ font-family: 'Montserrat', sans-serif;
 
 .FundoImagem {
     display: flex; /* Aqui eu estou tornando o meu conteúdo flex = flexível */
-    height: 100vh; /* Aqui eu defini a altura da imagem de fundo, Vh é V = view, H = height que significa altura */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 600px; /* Aqui eu defini a altura da imagem de fundo, Vh é V = view, H = height que significa altura */
     background-image: url(../Simulador/assets/testinho.jpg); /* Baixei uma imagem de fundo e chamei ela pelo caminho de pastas */
     background-size: cover; /* Aqui eu falo pra minha imagem de fundo cobrir a tela inteira no tamanho certo */
     justify-content: center; /* Aqui eu estou mandando todo meu conteúdo ficar no meio, tudo que fica dentro da img de fundo  */
@@ -92,15 +107,10 @@ font-family: 'Montserrat', sans-serif;
     background-color: rgba(255, 255, 255, 0);
   }
 
-  .ContainerF{
-    margin-top: 60PX;
-    height: 525px; 
-    display: flex; /* Aqui eu estou tornando o meu conteúdo flex = flexível */
-    flex-direction: row; /* Aqui estou ordenando que a direção dele seja row = em linha */
-    align-items: center; /* Alinhando todos itens do container (as duas partes brancas) no centro */
-  }
+ 
 
   .ContainerFundoBranco {
+    margin-right: 800px;
     position: absolute; 
     display: flex;
     flex-direction: column;
@@ -148,7 +158,6 @@ font-family: 'Montserrat', sans-serif;
  }
  
  #rodape {
-     border-top: 4px solid rgb(0, 0, 0);
      padding: 20px;
      text-align: center;
  }
