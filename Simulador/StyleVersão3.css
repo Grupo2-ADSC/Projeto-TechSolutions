@@ -1,4 +1,5 @@
 *{margin: 0;
+  background-color: transparent;
 margin-bottom: 0;}
 
 .logo{
@@ -76,16 +77,24 @@ font-family: 'Montserrat', sans-serif;
   }
 
   .Titulo{
+    background-color: white;
     margin-top: 40px;
     color: rgb(99, 36, 11); /* Dando a cor do título de marrom */
     font-size: 35px; /* Dando tamanho para a fonte(letra) do título */
   }
 
   .CaixaInput{
+    background-color: white;
     margin-top: 30px;
   }
 
-  .Container{
+  .fundoB{
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .ContainerF{
+    margin-top: 60PX;
+    height: 525px; 
     display: flex; /* Aqui eu estou tornando o meu conteúdo flex = flexível */
     flex-direction: row; /* Aqui estou ordenando que a direção dele seja row = em linha */
     align-items: center; /* Alinhando todos itens do container (as duas partes brancas) no centro */
@@ -97,7 +106,7 @@ font-family: 'Montserrat', sans-serif;
     flex-direction: column;
     align-items: center; /* Alinhando todos itens do container (as duas partes brancas) no centro */
     background-color: white;
-    border-radius: 5px 0px 0px 5px; /* Aqui estou falando que quero uma borda com raio */
+    border-radius: 10px 0px 0px 10px; /* Aqui estou falando que quero uma borda com raio */
     height: 525px; /* Dando altura para o fundo branco */
     width: 332px; /* Dando largura para o fundo branco */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Chamando um tipo de fonte(letra) */
@@ -114,6 +123,7 @@ font-family: 'Montserrat', sans-serif;
 }
 
   .ContainerButton{
+    background-color: white;
     height: 30px;
     display: flex;
     flex-direction: column;
@@ -121,12 +131,12 @@ font-family: 'Montserrat', sans-serif;
   }
 
   .FundoBrancoMensagem{
-    margin-left: 44vh;
+    margin-left: 55vh;
     padding: 30px;
     padding-bottom: 15px; /* dando padding (margem interna) na parte de baixo */
     align-items: center;
     background-color: white;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 10px 10px 0px;
     height: 480px;
     width: 700px;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -177,4 +187,8 @@ font-family: 'Montserrat', sans-serif;
 
   .back-Rodape{
     background-color: #2c2c2c;
+}
+
+.fundoF{
+  background-color: #2C2C2C;
 }
