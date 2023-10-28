@@ -47,43 +47,147 @@
             <div class="container1">
                 <p>
                     Nome: <br>
-                    <input class="input" type="text" placeholder="Ex: Fernando" id="ipt_nome">
+                    <input class="input" type="text" placeholder="Ex: Fernando" id="ipt_nome"><br>
+                    <span id="alerta_nome"></span>
                 </p><br>
 
                 <p>
                     Sobrenome: <br>
-                    <input class="input" type="text" placeholder="Ex: Santos" id="ipt_sobrenome">
+                    <input class="input" type="text" placeholder="Ex: Santos" id="ipt_sobrenome"><br>
+                    <span id="alerta_sobrenome"></span>
                 </p><br>
 
                 <p>
                     Cargo: <br>
-                    <input class="input" type="text" placeholder="Ex: Técnico" id="ipt_cargo">
+                    <input class="input" type="text" placeholder="Ex: Técnico" id="ipt_cargo"><br>
+                    <span id="alerta_cargo"></span>
                 </p><br>
             </div>
 
             <div class="container2">
                 <p>
                     Email: <br>
-                    <input class="input" type="email" placeholder="Ex: Fernando@gmail.com" id="ipt_email">
+                    <input class="input" type="email" placeholder="Ex: Fernando@gmail.com" id="ipt_email"><br>
+                    <span id="alerta_email"></span>
                 </p><br>
 
                 <p>
                     Senha: <br>
-                    <input class="input" placeholder="Ex: ********" type="password" id="ipt_senha">
+                    <input class="input" placeholder="Ex: ********" type="password" id="ipt_senha"><br>
+                    <span id="alerta_senha"></span>
                 </p><br>
 
                 <p>
                     Confirme a senha: <br>
-                    <input class="input" type="password" placeholder="Ex: ********" id="ipt_C_senha">
+                    <input class="input" type="password" placeholder="Ex: ********" id="ipt_Csenha"><br>
+                    <span id="alerta_Csenha"></span>
                 </p><br>
             </div>
         </div>
 
         <div class="buttonDivisao">
             <button class="button1" onclick="Confirmar()">Confirmar</button>
-            <button class="button2" onclick="Cancelar()">Cancelar</button>
+            <button class="button2" onclick="Cancelar()"><a class="link" href="../Site Institucional/tabeladefuncionarios.html">Cancelar</a></button>
         </div>
     </div>
 
 </body>
 </html>
+<script>
+    function Confirmar(){
+        var senha = ipt_senha.value
+        var email = ipt_email.value
+        var nome = ipt_nome.value
+        var sobrenome = ipt_sobrenome.value
+        var cargo = ipt_cargo.value
+        var Csenha = ipt_Csenha.value
+
+        alerta_senha.innerHTML = ''
+        alerta_email.innerHTML = ''
+        alerta_nome.innerHTML = ''
+        alerta_sobrenome.innerHTML = ''
+        alerta_cargo.innerHTML = ''
+        alerta_Csenha.innerHTML = ''
+
+        // começo das validações da senha
+        if(senha.indexOf(" ") >=0){
+            alerta_senha.innerHTML = `Sua senha não pode conter espaço`
+        }
+
+        if(senha.indexOf("!") == -1)
+        
+        if(senha.indexOf("@") == -1)
+        
+        if(senha.indexOf("/") == -1)
+        
+        if(senha.indexOf("?") == -1)
+        
+        if(senha.indexOf("#") == -1)
+        
+        if(senha.indexOf("*") == -1)
+        
+        if(senha.indexOf(".") == -1){
+             
+            alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma <br> LETRA MAIÚSCULA e Caracteres<br>especiais "!@/?#*."`
+        }
+
+        if(senha != senha.toUpperCase() && senha != senha.toLowerCase()){
+        }else {
+            alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma <br> Letra MAIÚSCULA, minúscula e Caracteres<br>especiais "!@/?#*."`
+        }
+
+        if (senha.length < 8 || senha.length > 16) {
+            alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter <br> pelo menos de 8 á 16 caracteres`
+        }
+
+        // começo das validações email
+        if(email.indexOf(" ") >= 0){
+            alerta_email.innerHTML = `Insira um email válido`
+        }
+
+        if(email.indexOf("@") == -1){
+            alerta_email.innerHTML = `Insira um email válido`
+        }
+
+        if(email.indexOf(".com") == -1)
+
+        if(email.indexOf(".br") == -1)
+
+        if(email.indexOf(".net") == -1)
+
+        if(email.indexOf(".org") == -1)
+
+        if(email.indexOf(".io") == -1)
+
+        if(email.indexOf(".company") == -1)
+
+        if(email.indexOf(".gov") == -1)
+        {
+            alerta_email.innerHTML = `Insira um email válido`
+        }
+
+        // começo das validações nome
+        if(nome == ''){
+            alerta_nome.innerHTML = `O campo Nome não pode ser vazio`
+        }
+
+        // começo das validações sobrenome
+        if(sobrenome == ''){
+            alerta_sobrenome.innerHTML = `O campo Sobrenome não pode ser vazio`
+        }
+
+        // começo das validações cargo
+        if(cargo == ''){
+            alerta_cargo.innerHTML = `O campo Cargo não pode ser vazio`
+        }
+
+        // começo das validações Csenha
+        if(Csenha == ''){
+            alerta_Csenha.innerHTML = `O campo Confirme a senha não pode ser vazio`
+        }
+        
+        if(Csenha != senha){
+            alerta_Csenha.innerHTML = `O campo tem que ser igual a Senha`
+        } 
+    }
+</script>
