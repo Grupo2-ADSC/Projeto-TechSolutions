@@ -41,12 +41,12 @@ input{
 
 .button{
   display: flex;
-  width: 87%;
+  width: 100%;
   align-items: center;
   justify-content: flex-start;
   /* margin-left: 200px; */
-  margin-bottom: 50px ;
-  height: 35px ;
+  margin-bottom: 80px ;
+  height: 100vh ;
   /* border: black solid 2px; */
 }
 
@@ -57,6 +57,8 @@ input{
   letter-spacing: 1px;
   border: none;
   cursor: pointer;
+  margin-top: -10vh;
+  
 }
 
 .button_cadastrar{
@@ -68,8 +70,10 @@ input{
   height: 30px;
   width: 110px;
   background-color: #00BF63;
+  margin-left: 55vh;
   margin-right: 20px;
   cursor: pointer;
+ 
 
 }
 
@@ -82,7 +86,6 @@ input{
   height: 30px;
   width: 110px;
   background-color: #FF3131;
-  margin-right: 20px;
   cursor: pointer;
 }
 
