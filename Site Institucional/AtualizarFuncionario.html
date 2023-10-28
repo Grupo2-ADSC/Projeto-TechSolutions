@@ -189,5 +189,13 @@
         if(Csenha != senha){
             alerta_Csenha.innerHTML = `O campo tem que ser igual a Senha`
         } 
+
+        //Dados mocados para entrar na tela tabela funcionario
+        if (nome == 'Claudio' && sobrenome == 'Frizzarini' && cargo == 'Técnico' && email == 'frizza@gmail.com' && senha == 'B4n4n!nha' && Csenha == 'B4n4n!nha') {
+            alert('Atualizado com sucesso!')
+            window.location.href = "../Site Institucional/tabeladefuncionarios.html";
+        } else {
+            alert('Falha, verificar infotmações')
+        }
     }
 </script>
