@@ -12,10 +12,14 @@
     margin-bottom: 10px;
 }
 
+.titulo{
+    font-family: 'Poppins', sans-serif;
+}
+
 .background {
     padding-top: 50px;
     display: flex;
-    height: 100vh;
+    height: 110vh;
     background-image: url(../assets/Fundo.png);
     background-size: cover;
     justify-content: center;
@@ -47,9 +51,23 @@
     box-shadow: rgba(0, 0, 0, 0.418) 0px 7px 7px;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    font-family: 'Poppins', sans-serif;
+}
+
+button{
+    font-family: 'Poppins', sans-serif;
 }
 
 .input {
+    font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
     border-radius: 3px;
     border: 2px solid #5C5B5B;
