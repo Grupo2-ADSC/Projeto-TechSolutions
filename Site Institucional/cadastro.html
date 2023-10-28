@@ -43,44 +43,52 @@
                 <div class="container1">
                     <p>
                         CNPJ <br>
-                        <input class="input" placeholder=" 12.345.678/0009-10" type="text" id="inpCnpj" maxlength="18">
+                        <input class="input" placeholder=" 12.345.678/0009-10" type="text" id="ipt_cnpj" maxlength="18"><br>
+                        <span id="alerta_cnpj"></span>
                     </p><br>
 
                     <p>
                         Nome da empresa <br>
-                        <input class="input" placeholder=" Três Corações" type="text" id="ipt_nome">
+                        <input class="input" placeholder=" Três Corações" type="text" id="ipt_nome"><br>
+                        <span id="alerta_nome"></span>
                     </p><br>
 
                     <p>
                         Telefone <br>
-                        <input class="input" placeholder=" (11)4455-8899" type="text" id="ipt_tel" maxlength="14">
+                        <input class="input" placeholder=" (11)4455-8899" type="text" id="ipt_tel" maxlength="14"><br>
+                        <span id="alerta_telefone"></span>
                     </p><br>
 
                     <p>
                         Email <br>
-                        <input class="input" placeholder=" cafe@brasil.com" type="text" id="ipt_email">
+                        <input class="input" placeholder=" cafe@brasil.com" type="text" id="ipt_email"><br>
+                        <span id="alerta_email"></span>
                     </p><br>
 
                     <p>
                         Senha <br>
-                        <input class="input" placeholder=" ********" type="password" id="ipt_senha">
+                        <input class="input" placeholder=" ********" type="password" id="ipt_senha"><br>
+                        <span id="alerta_senha"></span>
                     </p><br>
 
                     <p>
                         CEP <br>
-                        <input class="input" placeholder=" 09230-470" type="text" id="ipt_cep" maxlength="9">
+                        <input class="input" placeholder=" 09230-470" type="text" id="ipt_cep" maxlength="9"><br>
+                        <span id="alerta_cep"></span>
                     </p><br>
                 </div>
 
                 <div class="container2">
                     <p>
                         Logradouro <br>
-                        <input class="input" placeholder=" Rua Conceição" type="text" id="ipt_logradouro">
+                        <input class="input" placeholder=" Rua Conceição" type="text" id="ipt_logradouro"><br>
+                        <span id="alerta_logradouro"></span>
                     </p><br>
 
                     <p>
                         Número <br>
-                        <input class="input" placeholder=" 1200" type="text" id="ipt_num">
+                        <input class="input" placeholder=" 1200" type="text" id="ipt_num"><br>
+                        <span id="alerta_numero"></span>
                     </p><br>
 
                     <p>
@@ -90,17 +98,20 @@
 
                     <p>
                         Bairro <br>
-                        <input class="input" placeholder=" Jardim Santo Alberto" type="text" id="ipt_bairro">
+                        <input class="input" placeholder=" Jardim Santo Alberto" type="text" id="ipt_bairro"><br>
+                        <span id="alerta_bairro"></span>
                     </p><br>
 
                     <p>
                         Cidade <br>
-                        <input class="input" placeholder=" São Paulo" type="text" id="ipt_cidade">
+                        <input class="input" placeholder=" São Paulo" type="text" id="ipt_cidade"><br>
+                        <span id="alerta_cidade"></span>
                     </p><br>
 
                     <p>
                         Selecione um estado<br>
-                        <select id="estado" name="estado">
+                        <select id="select_estado" name="estado">
+                            <option value="Selecione">Selecione Estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
                             <option value="AP">Amapá</option>
@@ -128,11 +139,13 @@
                             <option value="SP">São Paulo</option>
                             <option value="SE">Sergipe</option>
                             <option value="TO">Tocantins</option>
-                        </select>
+                        </select><br>
+                        <span id="alerta_estado"></span>
                     </p><br>
                 </div>
             </div><br>
             <button class="button2" onclick="Conferir()">Cadastrar-se</button>
+                <a class="link" href="../Site Institucional/Login.HTML">Já tem cadastro? Faça seu Login</a>
         </div>
 
     </div>
@@ -168,11 +181,151 @@
 </html>
 
 <script>
+    function Conferir(){
+        var cnpj = ipt_cnpj.value
+        var nome = ipt_nome.value
+        var telefone = ipt_tel.value
+        var email = ipt_email.value
+        var senha = ipt_senha.value
+        var cep = ipt_cep.value
+        var logradouro = ipt_logradouro.value
+        var numero = ipt_num.value
+        var complemento = ipt_complemento.value
+        var bairro = ipt_bairro.value
+        var cidade = ipt_cidade.value
+        var estado = select_estado.value
+        alerta_senha.innerHTML = ''
+        alerta_email.innerHTML = ''
+        alerta_cnpj.innerHTML = ''
+        alerta_nome.innerHTML = ''
+        alerta_telefone.innerHTML = ''
+        alerta_cep.innerHTML = ''
+        alerta_logradouro.innerHTML = ''
+        alerta_numero.innerHTML = ''
+        alerta_bairro.innerHTML = ''
+        alerta_cidade.innerHTML = ''
+
+        // começo das validações da senha
+        if(senha.indexOf(" ") >=0){
+            alerta_senha.innerHTML = `Sua senha não pode conter espaço`
+        }
+
+        if(senha.indexOf("!") == -1)
+        
+        if(senha.indexOf("@") == -1)
+        
+        if(senha.indexOf("/") == -1)
+        
+        if(senha.indexOf("?") == -1)
+        
+        if(senha.indexOf("#") == -1)
+        
+        if(senha.indexOf("*") == -1)
+        
+        if(senha.indexOf(".") == -1){
+             
+            alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma <br> LETRA MAIÚSCULA e Caracteres<br>especiais "!@/?#*."`
+        }
+
+        if(senha != senha.toUpperCase() && senha != senha.toLowerCase()){
+        }else {
+            alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma <br> Letra MAIÚSCULA, minúscula e Caracteres<br>especiais "!@/?#*."`
+        }
+
+        if (senha.length < 8 || senha.length > 16) {
+            alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter <br> pelo menos de 8 á 16 caracteres`
+        }
+
+        // começo das validações do email
+        if(email.indexOf(" ") >= 0){
+            alerta_email.innerHTML = `Insira um email válido`
+        }
+
+        if(email.indexOf("@") == -1){
+            alerta_email.innerHTML = `Insira um email válido`
+        }
+
+        if(email.indexOf(".com") == -1)
+
+        if(email.indexOf(".br") == -1)
+
+        if(email.indexOf(".net") == -1)
+
+        if(email.indexOf(".org") == -1)
+
+        if(email.indexOf(".io") == -1)
+
+        if(email.indexOf(".company") == -1)
+
+        if(email.indexOf(".gov") == -1)
+        {
+            alerta_email.innerHTML = `Insira um Email válido`
+        }
+
+        //Começo da validação cnpj
+        if(cnpj == ''){
+            alerta_cnpj.innerHTML = `O campo CNPJ não pode ser vazio`
+        }
+
+        if(cnpj.indexOf(" ") >= 0){
+            alerta_cnpj.innerHTML = `Insira um CNPJ válido`
+        }
+
+        //Começo da validação nome empresa
+        if(nome == ''){
+            alerta_nome.innerHTML = `O campo Nome não pode ser vazio`
+        }
+
+        //Começo da validação do telefone
+        if(telefone == ''){
+            alerta_telefone.innerHTML = `O campo Telefone não pode ser vazio`
+        }
+
+         //Começo da validação do cep
+         if(cep == ''){
+            alerta_cep.innerHTML = `O campo CEP não pode ser vazio`
+        }
+
+        //Começo da validação do logradouro
+        if(logradouro == ''){
+            alerta_logradouro.innerHTML = `O campo Logradouro não pode ser vazio`
+        }
+
+        //Começo da validação do numero
+        if(numero == ''){
+            alerta_numero.innerHTML = `O campo Número não pode ser vazio`
+        }
+
+        //Começo da validação do numero
+        if(numero == ''){
+            alerta_numero.innerHTML = `O campo Número não pode ser vazio`
+        }
+
+        //Começo da validação do bairro
+        if(bairro == ''){
+            alerta_bairro.innerHTML = `O campo Bairro não pode ser vazio`
+        }
+
+        //Começo da validação do cidade
+        if(cidade == ''){
+            alerta_cidade.innerHTML = `O campo Cidade não pode ser vazio`
+        }
+
+        //Começo da validação do estado
+        if(estado == ''){
+            alerta_estado.innerHTML = `O campo Estado não pode ser vazio`
+        }
+
+        /* if(estado == 'Selecione'){
+            alerta_estado.innerHTML = `Selecione um estado válido`
+        } */
+
+    }
     // mascara para sobreescrever valores das inputs
     const input = document.querySelector('input')
 
     input.addEventListener('keypress', () => {
-        let inputLength = inpCnpj.value.length
+        let inputLength = ipt_cnpj.value.length
 
         // MAX LENGHT 14  CPF
         if (inputLength == 2 || inputLength == 6) {
