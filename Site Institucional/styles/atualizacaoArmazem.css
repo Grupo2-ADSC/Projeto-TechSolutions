@@ -60,12 +60,11 @@ input::placeholder {
 
 .botao{
     display: flex;
+    width: 100%;
+    align-items: center;
     justify-content: flex-start;
-    margin-left: -175px;
-    /* margin-bottom: 50px ; */
-    width: 150%;
-    height: 35px ;
-    /* border: #000 solid 2px; */
+    margin-bottom: 80px ;
+    height: 100vh ;
 }
 
 .botao_confirmar, .botao_cancelar{
@@ -75,21 +74,35 @@ input::placeholder {
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    margin-right: 20px;
+    margin-top: -90vh;
+    
     
 }
 
 .botao_confirmar{
-    background-color: #00BF63;
-    width: 100px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
     height: 30px;
+    width: 110px;
+    background-color: #00BF63;
+    margin-left: 25vh;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
 .botao_cancelar{
-    background-color: #FF3131;
-    width: 120px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
     height: 30px;
+    width: 110px;
+    background-color: #FF3131;
+    cursor: pointer;
 }
 
 
