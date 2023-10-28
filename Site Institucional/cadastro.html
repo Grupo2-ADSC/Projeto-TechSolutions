@@ -42,7 +42,7 @@
                 <div class="container1">
                     <p>
                         CNPJ <br>
-                        <input class="input" placeholder=" 12.345.678/0009-10" type="text" id="ipt_cnpj">
+                        <input class="input" placeholder=" 12.345.678/0009-10" type="text" id="inpCnpj" maxlength="18">
                     </p><br>
         
                     <p>
@@ -52,7 +52,7 @@
         
                     <p>
                         Telefone <br>
-                        <input class="input" placeholder=" (11)4455-8899" type="text" id="ipt_tel">
+                        <input class="input" placeholder=" (11)4455-8899" type="text" id="ipt_tel" maxlength="14">
                     </p><br>
         
                     <p>
@@ -67,7 +67,7 @@
     
                     <p>
                         CEP <br>
-                        <input class="input" placeholder=" 09230-470" type="text" id="ipt_cep">
+                        <input class="input" placeholder=" 09230-470" type="text" id="ipt_cep" maxlength="9">
                     </p><br>
                 </div>
 
@@ -136,3 +136,43 @@
 </body>
 
 </html>
+
+<script>
+// mascara para sobreescrever valores das inputs
+    const input = document.querySelector('input')
+
+input.addEventListener('keypress', () => {
+let inputLength = inpCnpj.value.length
+
+// MAX LENGHT 14  CPF
+if (inputLength == 2 || inputLength == 6) {
+    input.value += '.'
+}else if (inputLength == 10) {
+    input.value += '/'
+}
+else if(inputLength == 15) input.value += '-'
+})
+
+const inputCep = document.querySelector('input')
+
+ipt_cep.addEventListener('keypress', () => {
+let valorcep = ipt_cep.value.length
+
+if (valorcep == 5) ipt_cep.value += '-'
+
+})
+
+const inputTel = document.querySelector('ipt_tel')
+
+ipt_tel.addEventListener('keypress', () => {
+let valorTelefone = ipt_tel.value.length
+
+if (valorTelefone == 0) ipt_tel.value += '('
+else if (valorTelefone == 3) ipt_tel.value += ')'
+else if (valorTelefone == 8) ipt_tel.value += '-'
+
+})
+
+// fim das mask
+
+</script>
