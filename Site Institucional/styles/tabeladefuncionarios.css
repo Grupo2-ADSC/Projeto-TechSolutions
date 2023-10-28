@@ -5,11 +5,11 @@ body{
 }
 
 .header {
-    background-color:  #f8f5ec;
     display: flex;
-    padding-left: 400px;
-    border: none; 
-    border-bottom: 4px solid #000000;
+    flex-direction: row;
+    background-color:  #F8F5EC;
+    padding-left: 380px;
+    border-bottom: 4px solid #184062; 
 }
 
 .titulo{

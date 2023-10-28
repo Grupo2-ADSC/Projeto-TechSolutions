@@ -87,11 +87,13 @@ input{
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
-  background-color:  #F8F5EC;
-  padding-left: 380px;
-  border-bottom: 4px solid #184062; 
+ 
+    display: flex;
+    flex-direction: row;
+    background-color:  #F8F5EC;
+    padding-left: 380px;
+    border-bottom: 4px solid #184062; 
+
 }
 
 .texto{
