@@ -1,28 +1,3 @@
-
-
-.Div{
-  background-color: #f8f5ec;
-  text-align: center;
-  width: 480px;
-  height: 480px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-top: 80px;
-  margin-left: 580px ;
-  padding-left: 200px;
-  border: 2px solid #184062;
-  box-shadow: 5px 6px 8px 5px #a7a0a0;
-}
-
-.imput1 {
-  display: flex;
-  justify-content: space-around;
-  margin-left: -200px;
-  height: 380px;
-  margin-top: 30px;
-}
-
 p{
   font-weight: bolder;
   text-align: start;
@@ -37,71 +12,12 @@ input{
 
 
 
-/* botões*/
-
-.button{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 80px ;
-  height: 100vh ;
-}
-
-.button_cadastrar, .button_cancelar{
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  letter-spacing: 1px;
-  border: none;
-  cursor: pointer;
-  margin-top: -10vh;
-  
-}
-
-.button_cadastrar{
-  color: #ffffff;
-  border-radius: 5px;
-  border: none;
-  font-size: 15px;
-  font-weight: bold;
-  height: 30px;
-  width: 110px;
-  background-color: #00BF63;
-  margin-left: 55vh;
-  margin-right: 20px;
-  cursor: pointer;
- 
-
-}
-
-.button_cancelar{
-  color: #ffffff;
-  border-radius: 5px;
-  border: none;
-  font-size: 15px;
-  font-weight: bold;
-  height: 30px;
-  width: 110px;
-  background-color: #FF3131;
-  cursor: pointer;
-}
-
-.header {
- 
-    display: flex;
-    flex-direction: row;
-    background-color:  #F8F5EC;
-    padding-left: 380px;
-    border-bottom: 4px solid #184062; 
-
-}
 
 .texto{
   color:#184062; 
 }
 
-/* arrumando */
+
 .quadro{
   display: flex;
   flex-direction: column;
@@ -113,7 +29,7 @@ input{
   height: 400px;
   background-color: #F8F5EC;
   border: solid black 1px;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: #5C5B5B 10px 10px 10px;
 }
 
@@ -125,16 +41,69 @@ input{
 
 .container1{
   justify-content: space-around;
-  margin-right: 40px;
+  margin-right: 80px;
 }
 
-.input{
+  input{
   padding-left: 10px;
   font-weight: bold;
   font-size: 15px;
   background-color: #ffffff;
-  border-radius: 3px;
+  border-radius: 2px;
   border: 2px solid #5C5B5B;
   height: 25px;
   width: 225px;
 }
+
+
+
+
+  /* botões*/
+  
+  .button{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 80px ;
+    height: 100vh ;
+  }
+  
+  .button_cadastrar, .button_cancelar{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    margin-top: -8vh;
+    
+  }
+  
+  .button_cadastrar{
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    width: 110px;
+    background-color: #00BF63;
+    margin-left: 55vh;
+    margin-right: 20px;
+    cursor: pointer;
+   
+  
+  }
+  
+  .button_cancelar{
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    width: 110px;
+    background-color: #FF3131;
+    cursor: pointer;
+  }

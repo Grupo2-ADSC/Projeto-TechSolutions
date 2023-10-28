@@ -1,119 +1,105 @@
-/*header*/
-
-body{
-    margin: 0;
-    background-color: #e7eaf0;
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    background-color:  #F8F5EC;
-    padding-left: 380px;
-    border-bottom: 4px solid #184062; 
-}
-.titulo{
-    font-size: 25px;
-    color:#184062 ; 
-}
-
-/*perguntas*/
-
-.container_perguntas{
-    background-color: #f8f5ec;
-    width: 480px;
-    height: 480px;
-    margin-top: 80px;
-    margin-left: 580px ;
-    padding-left: 200px;
-    border: 2px solid #184062;
-    box-shadow: 5px 6px 8px 5px #a7a0a0;
-}
-
-.perguntas {
-    display: flex;
-    justify-content: space-around;
-    margin-left: -200px;
-    height: 380px;
-    margin-top: 30px;
-}
-
-p{
+   p{
     font-weight: bolder;
     text-align: start;
     font-size: 16px;
-}
-
-input{
+  }
+  
+  input{
     border: 0.5px solid #b6b6b6;
     width: 280px;
     height: 30px;
-}
+  }
+  
+  
+  .texto{
+      color:#184062; 
+    }
+    
 
-input::placeholder {
-    color:#b6b6b6 ;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-/* botões*/
-
-.botao{
+.perguntas{
     display: flex;
-    width: 100%;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 80px ;
-    height: 100vh ;
-}
-
-.botao_confirmar, .botao_cancelar{
-    color: white;
+    padding-top: 20px;
+    margin-top: 100px;
+    margin-left: 575px;
+    width: 700px;
+    height: 400px;
+    background-color: #F8F5EC;
+    border: solid black 1px;
+    border-radius: 3px;
+    box-shadow: #5C5B5B 10px 10px 10px;
+  }
+  
+  .divisao{
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .perguntas_esquerda{
+    justify-content: space-around;
+    margin-right: 80px;
+  }
+  
+    input{
+    padding-left: 10px;
     font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
-    margin-top: -90vh;
-    
-    
-}
-
-.botao_confirmar{
-    color: #ffffff;
-    border-radius: 5px;
-    border: none;
     font-size: 15px;
-    font-weight: bold;
-    height: 30px;
-    width: 110px;
-    background-color: #00BF63;
-    margin-left: 25vh;
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-.botao_cancelar{
-    color: #ffffff;
-    border-radius: 5px;
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-    height: 30px;
-    width: 110px;
-    background-color: #FF3131;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: 2px solid #5C5B5B;
+    height: 25px;
+    width: 225px;
+  }
+  
+  
+    /* botões*/
+    
+    .button{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 80px ;
+      height: 100vh ;
+    }
+    
+    .button_cadastrar, .button_cancelar{
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      margin-top: -8vh;
+      
+    }
+    
+    .button_cadastrar{
+      color: #ffffff;
+      border-radius: 5px;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      height: 30px;
+      width: 110px;
+      background-color: #00BF63;
+      margin-left: 55vh;
+      margin-right: 20px;
+      cursor: pointer;
+     
+    
+    }
+    
+    .button_cancelar{
+      color: #ffffff;
+      border-radius: 5px;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      height: 30px;
+      width: 110px;
+      background-color: #FF3131;
+      cursor: pointer;
+    }

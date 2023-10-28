@@ -6,21 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/atualizacaoArmazem.css">
     <link rel="stylesheet" href="./styles/menuLateral.css">
+    <link rel="stylesheet" href="./styles/codigo_HeaderDash.CSS">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Atualizar informações armazém</title>
 </head>
 
 <body>
-    
-    <div class="header">
-        <div class="container">
-        
-            <h1 class="titulo">Atualizar informações armazém</h1>
-                
-        </div>
-    </div>
 
+    <div class="header">
+            <h2 class="titulo">Atualizar informações armazém</h2>     
+    </div>
 
     <nav id="menuLateral">
         <div class="container">
@@ -34,11 +30,11 @@
                 </div>
 
                 <div class="item">
-                    <b><a href="atualizacaoArmazem.html"> <span class="material-symbols-outlined">warehouse</span> Armazém</a></b>
+                    <b><a href="cadastroArmazem.HTML"> <span class="material-symbols-outlined">warehouse</span> Armazém</a></b>
                 </div>
 
                 <div class="item">
-                    <a href="AtualizarFuncionario.html"> <span class="material-symbols-outlined">groups</span> Funcionário</a>
+                    <a href="telaAdicionarFuncionario.html"> <span class="material-symbols-outlined">groups</span> Funcionário</a>
                 </div>
             </div>
 
@@ -49,36 +45,68 @@
         </div>
     </nav>
 
-    <div class="container_perguntas">
-        <div class="perguntas">
 
-            <div class="perguntas_esquerda">  
-                <p>Número do armazém</p><input id="input_numero_armazem" type="text" placeholder="Ex: 01">
-                <p>Área</p><input id="input_area" type="text" placeholder="Ex: 10.000">
-                <p>Logradouro</p><input id="input_logradouro" type="text" placeholder="Ex: Rua da Conquista">
-                <p>Número</p><input id="input_numero" type="text" placeholder="Ex: 1020"> 
-                <p>CEP</p><input id="input_cep" type="text" placeholder="Ex: 02979-130">
+    <div class="perguntas">
+
+        <div class="divisao">
+
+            <div class="perguntas_esquerda">
+                <p>Número do armazém <br>
+                <input id="ipt_numArm" placeholder=" 13" type="number">
+                </p>
+
+                <p>Área <br>
+                <input id="ipt_area" placeholder=" 7.000" type="text">
+                </p>
+                
+                <p>CEP <br>
+                    <input id="ipt_cep" placeholder=" 02879-130" type="text">
+                    </p>
+
+                <p>Logradouro <br>
+                <input id="ipt_logradouro" placeholder=" Rua Conceição" type="text">
+                </p>
+
+                <p>Número <br>
+                <input id="ipt_num" placeholder=" 124" type="text">
+                </p>
+
+                
+    
+
             </div>
 
             <div class="perguntas_direita">
-                <p>Complemento</p><input id="input_complemento" type="text" placeholder="Ex: Casa amarela">
-                <p>Bairro</p><input id="input_bairro" type="text" placeholder="Ex: Jardim das Maravilhas">
-                <p>Cidade</p><input id="input_cidade" type="text" placeholder="Ex: São Paulo">
-                <p>Estado</p><input id="input_estado" type="text" placeholder="Ex: São Paulo">
+
+                <p>Complemento <br>
+                <input id="ipt_complemento" placeholder=" Ao lado do posto BR" type="text">
+                </p>
+
+                <p>Bairro <br>
+                <input id="ipt_bairro" placeholder=" Jardim Ana Maria" type="text">
+                </p>
+
+                <p>Cidade <br>
+                <input id="ipt_cidade" placeholder=" São Caetano do sul" type="text">
+                </p>
+
+                <p>Estado <br>
+                <input id="ipt_estado" placeholder=" São Paulo" type="text">
+                </p>
             </div>
 
         </div>
 
-        <div class="botao">
+        <div class="button">
 
-            <button class="botao_confirmar">Confirmar</button>
-            <button class="botao_cancelar">Cancelar</button>
+            <button class="button_cadastrar">Cadastrar</button>
+            <button class="button_cancelar">Cancelar</button>
+
 
         </div>
 
     </div>
 
-   
 
 </body>
 
