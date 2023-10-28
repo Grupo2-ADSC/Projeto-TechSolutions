@@ -68,6 +68,7 @@
                     <p>
                         Senha <br>
                         <input class="input" placeholder=" ********" type="password" id="ipt_senha"><br>
+                        <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha()"></span>
                         <span id="alerta_senha"></span>
                     </p><br>
 
@@ -321,6 +322,18 @@
         } */
 
     }
+
+    function verSenha() {
+        var inputPass = document.getElementById('ipt_senha2');
+
+
+        if (inputPass.type === 'password') {
+            inputPass.setAttribute('type', 'text')
+        } else {
+            inputPass.setAttribute('type', 'password')
+        }
+    }
+
     // mascara para sobreescrever valores das inputs
     const input = document.querySelector('input')
 

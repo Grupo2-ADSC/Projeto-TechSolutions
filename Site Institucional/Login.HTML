@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/LoginStyle.CSS">
     <link rel="stylesheet" href="./styles/testeLogin.css">
-     <link rel="stylesheet" href="./styles/headerTechsolutions.CSS">
+    <link rel="stylesheet" href="./styles/headerTechsolutions.CSS">
     <link rel="icon" href="./assets/iconCafe.png">
     <title>Login | TechSolutions</title>
     <!-- lib de icons -->
@@ -15,7 +15,7 @@
 
 
 <body>
-    
+
     <div class="header">
 
         <div class="container">
@@ -25,83 +25,84 @@
             <div class="navbar">
 
                 <ul>
-                    
+
                     <li><a href="Index.html"><b>Home</b></a></li> |
                     <li><a href="cadastro.html"><b>Cadastro </b></a></li> |
                     <li><b>Login </b></li> |
                     <li><a href="telaFaleConosco.html"><b>Fale Conosco</b></a></li> |
-                    <li ><a href="telaSobreNos.html"><b>Sobre Nós</b></a></li> |
-                    <li><button class="buttonSimulador"><a href="../Simulador/CalculadoraVersão2.html"><b>Simulador</b></a></button></li>  
+                    <li><a href="telaSobreNos.html"><b>Sobre Nós</b></a></li> |
+                    <li><button class="buttonSimulador"><a
+                                href="../Simulador/CalculadoraVersão2.html"><b>Simulador</b></a></button></li>
 
 
                 </ul>
             </div>
         </div>
-    </div> 
+    </div>
 
-    <div class="FundoImagem2" >
+    <div class="FundoImagem2">
 
-        
+
         <div class="DivPrincipal2">
-            
+
             <div class="titulo2">
                 <h1>Login</h1>
             </div>
- 
+
             <div class="inputsEmailSenha2">
-                <div class="oi" >
+                <div class="oi">
                     <p>E-mail</p> <input id="ipt_email2" type="email" placeholder="Digite seu e-mail">
                     <span id="alerta_email"></span>
                     <p>Senha</p>
-                    <input id="ipt_senha2" type="password" placeholder="Digite sua senha"> 
+                    <input id="ipt_senha2" type="password" placeholder="Digite sua senha">
                     <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha()"></span>
                     <span id="alerta_senha"></span>
 
                     <div class="botaoEntrar">
-                        <button onclick = "entrar ()" class="button_entrar">Entrar</button>
+                        <button onclick="entrar ()" class="button_entrar">Entrar</button>
 
-                    </div> 
+                    </div>
                     <br>
-                   <div class="recuperarSenha">
-                    <a class="link" href="./redefiniçãoDeSenha.html">
-                        <h5 class="esqueceuSenha2">Esqueceu sua senha?</h5>
-                    </a>
-                        
-                   </div>
+                    <div class="recuperarSenha">
+                        <a class="link" href="./redefiniçãoDeSenha.html">
+                            <h5 class="esqueceuSenha2">Esqueceu sua senha?</h5>
+                        </a>
+
+                    </div>
 
                 </div>
 
             </div>
-            
+
         </div>
     </div>
-   
 
-   
 
-        <footer id="rodape" class="back-Rodape">
-            <ul id="icones" class="back-Rodape">
-                <li><a href="#"><img src="./assets/instagram.png" alt="imagem instagram'"></a></li>
-                <li><a href="#"><img href="https://wa.me/+5511949591340?text=Olá, vi seu profile card!" target="_blank"
-                            src="./assets/whatsapp.png" alt="imagem whatsapp"></a></li>
-                <li><a href="https://github.com/Grupo2-ADSC"><img src="./assets/github.png" alt=""></a></li>
-            </ul>
-            <br>
-            <ul id="infos" class="back-Rodape">
-                <li><a href="./Index.html">Home</a></li> -
-                <li><a href="telaFaleConosco.html">Fale Conosco</a></li> -
-                <li><a href="telaSobreNos.html">Sobre Nós</a></li>
-            </ul>
-            <br>
-            <ul id="termos" class="back-Rodape">
-                <li>Politica de Privacidade </li> -
-                <li>Termos de Uso</li>
-            </ul>
-            <br>
 
-            <p id="direitos" class="back-Rodape">© 2023 All rights reserved SPTECH - TechSolutions </p>
 
-        </footer>
+    <footer id="rodape" class="back-Rodape">
+        <ul id="icones" class="back-Rodape">
+            <li><a href="#"><img src="./assets/instagram.png" alt="imagem instagram'"></a></li>
+            <li><a href="#"><img href="https://wa.me/+5511949591340?text=Olá, vi seu profile card!" target="_blank"
+                        src="./assets/whatsapp.png" alt="imagem whatsapp"></a></li>
+            <li><a href="https://github.com/Grupo2-ADSC"><img src="./assets/github.png" alt=""></a></li>
+        </ul>
+        <br>
+        <ul id="infos" class="back-Rodape">
+            <li><a href="./Index.html">Home</a></li> -
+            <li><a href="telaFaleConosco.html">Fale Conosco</a></li> -
+            <li><a href="telaSobreNos.html">Sobre Nós</a></li>
+        </ul>
+        <br>
+        <ul id="termos" class="back-Rodape">
+            <li>Politica de Privacidade </li> -
+            <li>Termos de Uso</li>
+        </ul>
+        <br>
+
+        <p id="direitos" class="back-Rodape">© 2023 All rights reserved SPTECH - TechSolutions </p>
+
+    </footer>
 
 
     </div>
@@ -112,7 +113,7 @@
 </html>
 
 <script>
-    function entrar () {
+    function entrar() {
 
         var senha = ipt_senha2.value;
         var email = ipt_email2.value;
@@ -120,68 +121,67 @@
         alerta_senha.innerHTML = "";
 
 
-        if(senha.indexOf(" ") >=0){
+        if (senha.indexOf(" ") >= 0) {
             alerta_senha.innerHTML = `Sua senha não pode conter espaço`
         }
-        
-        if(senha.indexOf("!") == -1)
-        
-        if(senha.indexOf("@") == -1)
-        
-        if(senha.indexOf("/") == -1)
-        
-        if(senha.indexOf("?") == -1)
-        
-        if(senha.indexOf("#") == -1)
-        
-        if(senha.indexOf("*") == -1)
-        
-        if(senha.indexOf(".") == -1){
-             
-            alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma LETRA MAIÚSCULA e Caracteres especiais "!@/?#*."`
-        }
-        
-        if(senha != senha.toUpperCase() && senha != senha.toLowerCase()){
-        }else {
+
+        if (senha.indexOf("!") == -1)
+
+            if (senha.indexOf("@") == -1)
+
+                if (senha.indexOf("/") == -1)
+
+                    if (senha.indexOf("?") == -1)
+
+                        if (senha.indexOf("#") == -1)
+
+                            if (senha.indexOf("*") == -1)
+
+                                if (senha.indexOf(".") == -1) {
+
+                                    alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma LETRA MAIÚSCULA e Caracteres especiais "!@/?#*."`
+                                }
+
+        if (senha != senha.toUpperCase() && senha != senha.toLowerCase()) {
+        } else {
             alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma Letra MAIÚSCULA, minúscula e Caracteres especiais "!@/?#*."`
         }
 
         if (senha.length < 8) {
             alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter pelo menos de 8 á 16 caracteres`
         }
-        
+
 
         if (senha.length > 16) {
             alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter pelo menos de 8 á 16 caracteres`
         }
 
 
-        if(email.indexOf(" ") >= 0){
+        if (email.indexOf(" ") >= 0) {
             alerta_email.innerHTML = `Insira um email válido`
         }
 
-        if(email.indexOf("@") == -1){
+        if (email.indexOf("@") == -1) {
             alerta_email.innerHTML = `Insira um email válido`
         }
 
-        if(email.indexOf(".com") == -1)
+        if (email.indexOf(".com") == -1)
 
-        if(email.indexOf(".br") == -1)
+            if (email.indexOf(".br") == -1)
 
-        if(email.indexOf(".net") == -1)
+                if (email.indexOf(".net") == -1)
 
-        if(email.indexOf(".org") == -1)
+                    if (email.indexOf(".org") == -1)
 
-        if(email.indexOf(".io") == -1)
+                        if (email.indexOf(".io") == -1)
 
-        if(email.indexOf(".company") == -1)
+                            if (email.indexOf(".company") == -1)
 
-        if(email.indexOf(".gov") == -1)
-        {
-            alerta_email.innerHTML = `Insira um email válido`
-        }
+                                if (email.indexOf(".gov") == -1) {
+                                    alerta_email.innerHTML = `Insira um email válido`
+                                }
 
-       
+
 
 
     }
@@ -194,6 +194,6 @@
             inputPass.setAttribute('type', 'text')
         } else {
             inputPass.setAttribute('type', 'password')
-        } 
         }
+    }
 </script>
