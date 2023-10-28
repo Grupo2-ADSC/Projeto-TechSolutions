@@ -44,10 +44,8 @@ input{
   width: 100%;
   align-items: center;
   justify-content: flex-start;
-  /* margin-left: 200px; */
   margin-bottom: 80px ;
   height: 100vh ;
-  /* border: black solid 2px; */
 }
 
 .button_cadastrar, .button_cancelar{
