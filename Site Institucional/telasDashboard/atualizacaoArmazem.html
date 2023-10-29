@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="../CSStelasDashboard/codigo_HeaderDash.CSS">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="icon" href="../assets/iconCafe.png">
+    <link rel="icon" href="../assets/iconCafe.png">
     <title>Atualizar informações armazém</title>
 </head>
 
 <body>
 
     <div class="header">
-            <h2 class="titulo">Atualizar informações armazém</h2>     
+        <h2 class="titulo">Atualizar informações armazém</h2>
     </div>
 
     <nav id="menuLateral">
@@ -31,11 +31,13 @@
                 </div>
 
                 <div class="item">
-                    <b><a href="cadastroArmazem.HTML"> <span class="material-symbols-outlined">warehouse</span> Armazém</a></b>
+                    <b><a href="cadastroArmazem.HTML"> <span class="material-symbols-outlined">warehouse</span>
+                            Armazém</a></b>
                 </div>
 
                 <div class="item">
-                    <a href="telaAdicionarFuncionario.html"> <span class="material-symbols-outlined">groups</span> Funcionário</a>
+                    <a href="telaAdicionarFuncionario.html"> <span class="material-symbols-outlined">groups</span>
+                        Funcionário</a>
                 </div>
             </div>
 
@@ -53,44 +55,44 @@
 
             <div class="perguntas_esquerda">
                 <p>Número do armazém <br>
-                <input id="ipt_numArm" placeholder=" 13" type="number">
+                    <input id="ipt_numArm" placeholder=" 13" type="number">
                 </p>
 
                 <p>Área <br>
-                <input id="ipt_area" placeholder=" 7.000" type="text">
+                    <input id="ipt_area" placeholder=" 7.000" type="text">
                 </p>
-                
+
                 <p>CEP <br>
-                    <input id="ipt_cep" placeholder=" 02879-130" type="text">
-                    </p>
+                    <input id="ipt_cep" placeholder=" 02879-130" type="text" maxlength="9">
+                </p>
 
                 <p>Logradouro <br>
-                <input id="ipt_logradouro" placeholder=" Rua Conceição" type="text">
+                    <input id="ipt_logradouro" placeholder=" Rua Conceição" type="text">
                 </p>
 
                 <p>Número <br>
-                <input id="ipt_num" placeholder=" 124" type="text">
+                    <input id="ipt_num" placeholder=" 124" type="text" maxlength="4">
                 </p>
 
-                
-    
+
+
 
             </div>
 
             <div class="perguntas_direita">
 
                 <p>Complemento <br>
-                <input id="ipt_complemento" placeholder=" Ao lado do posto BR" type="text">
+                    <input id="ipt_complemento" placeholder=" Ao lado do posto BR" type="text">
                 </p>
 
                 <p>Bairro <br>
-                <input id="ipt_bairro" placeholder=" Jardim Ana Maria" type="text">
+                    <input id="ipt_bairro" placeholder=" Jardim Ana Maria" type="text">
                 </p>
 
                 <p>Cidade <br>
-                <input id="ipt_cidade" placeholder=" São Caetano do sul" type="text">
+                    <input id="ipt_cidade" placeholder=" São Caetano do sul" type="text">
                 </p>
-                 
+
                 <p>
                     Selecione um estado:<br>
                     <select id="estado" name="estado">
@@ -144,55 +146,52 @@
 
 <script>
 
-    function cadastrar () {
+    function cadastrar() {
 
 
-        if(numArmazem == ''){
+        if (numArmazem == '') {
             alerta_cep.innerHTML = `O campo Armazém não pode ser vazio`
-        } 
-        
-        if(area == ''){
+        }
+
+        if (area == '') {
             alerta_cep.innerHTML = `O campo Área não pode ser vazio`
-        } 
-        
-        if(cep == ''){
+        }
+
+        if (cep == '') {
             alerta_cep.innerHTML = `O campo CEP não pode ser vazio`
         }
 
-        if(logradouro == ''){
+        if (logradouro == '') {
             alerta_logradouro.innerHTML = `O campo Logradouro não pode ser vazio`
         }
 
-        if(numero == ''){
+        if (numero == '') {
             alerta_numero.innerHTML = `O campo Número não pode ser vazio`
         }
 
-        if(bairro == ''){
+        if (bairro == '') {
             alerta_bairro.innerHTML = `O campo Bairro não pode ser vazio`
         }
 
-        if(cidade == ''){
+        if (cidade == '') {
             alerta_cidade.innerHTML = `O campo Cidade não pode ser vazio`
         }
 
-        if(estado == ''){
+        if (estado == '') {
             alerta_estado.innerHTML = `O campo Estado não pode ser vazio`
         }
-        
+    }
 
-      /*Mascaras*/
 
-        const inputCep = document.querySelector('input')
+    /*Mascaras*/
+
+    const inputCep = document.querySelector('input')
 
     ipt_cep.addEventListener('keypress', () => {
-    let valorcep = ipt_cep.value.length
+        let valorcep = ipt_cep.value.length
 
-    if (valorcep == 5) ipt_cep.value += '-'
+        if (valorcep == 5) ipt_cep.value += '-'
 
-})
-      
-
-
-    }
+    })
 
 </script>

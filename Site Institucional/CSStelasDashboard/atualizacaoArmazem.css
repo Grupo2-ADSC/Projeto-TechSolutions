@@ -44,7 +44,6 @@
   
     input{
     padding-left: 10px;
-    font-weight: bold;
     font-size: 15px;
     background-color: #ffffff;
     border-radius: 2px;
@@ -55,7 +54,6 @@
 
   #estado{
     padding-left: 10px;
-    font-weight: bold;
     font-size: 15px;
     background-color: #ffffff;
     border-radius: 2px;
