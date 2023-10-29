@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
+
+/* cadastro */
+
+.button2 {
+    border: none;
+    width: 120px;
+    height: 35px;
+    background-color: #5f341c;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    font-family: 'Poppins', sans-serif;
+}
+
+.background {
+    padding-top: 50px;
+    display: flex;
+    height: 110vh;
+    background-image: url('https://www.supremoarabica.com.br/wp-content/uploads/2019/12/iStock-1135359711-1.jpg');
+    background-size: cover;
+    justify-content: center;
+}
+
+.container1 {
+    margin-right: 40px;
+}
+
+.divisao {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+
+.ContainerFundo {
+    border: solid 1px #522714;
+    padding-top: 20px;
+    flex-direction: column;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: 450px;
+    border-radius: 5px;
+    background-color: #F8F5EC;
+    box-shadow: #2c2c2c 10px;
+    box-shadow: rgba(0, 0, 0, 0.418) 0px 7px 7px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+p {
+    background-color: transparent;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    background-color: transparent;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.input {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    border-radius: 3px;
+    border: 2px solid #5C5B5B;
+    height: 22px;
+    width: 280px;
+}
+
+.link {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+#botaoVerSenha {
+    position: absolute;
+    /* bottom: 1%; */
+    top: 388px;
+    left: 75%;
+    width: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    /* border:  black solid 2px; */
+}
+
+#botaoVerSenha2 {
+    position: absolute;
+    /* bottom: 1%; */
+    top: 453px;
+    left: 75%;
+    width: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    /* border:  black solid 2px; */
+}
+
+#alerta_senha {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_email {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_cnpj {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_nome {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_telefone {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_cep {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_logradouro {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_numero {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_bairro {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_cidade {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_estado {
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#select_estado {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    border-radius: 3px;
+    border: 2px solid #5C5B5B;
+    height: 22px;
+    width: 280px;
+}
+
+
+#containderFooter {
+    display: block;
+}
+
+#rodape {
+    padding: 20px;
+    text-align: center;
+}
+
+#icones,
+#infos,
+#termos {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+}
+
+#icones li,
+#infos li,
+#termos li {
+    display: inline;
+    margin: 0 10px;
+
+}
+
+#icones img {
+    width: 40px;
+    height: 40px;
+    color: #F8F5EC;
+}
+
+#infos a,
+#termos li {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+#direitos {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+    /* Cor do texto branco */
+}
+
+.back-Rodape {
+    background-color: #2A1A17;
+}
+
+.back-Rodape li,
+li a,
+li img {
+    background-color: #2A1A17;
+}
+
+.back-Rodape {
+    background-color: #2A1A17;
+}
