@@ -129,7 +129,7 @@
 
         <div class="button">
 
-            <button class="button_cadastrar">Cadastrar</button>
+            <button  onclick="cadastrar ()"  class="button_cadastrar">Cadastrar</button>
             <button class="button_cancelar">Cancelar</button>
 
 
@@ -141,3 +141,58 @@
 </body>
 
 </html>
+
+<script>
+
+    function cadastrar () {
+
+
+        if(numArmazem == ''){
+            alerta_cep.innerHTML = `O campo Armazém não pode ser vazio`
+        } 
+        
+        if(area == ''){
+            alerta_cep.innerHTML = `O campo Área não pode ser vazio`
+        } 
+        
+        if(cep == ''){
+            alerta_cep.innerHTML = `O campo CEP não pode ser vazio`
+        }
+
+        if(logradouro == ''){
+            alerta_logradouro.innerHTML = `O campo Logradouro não pode ser vazio`
+        }
+
+        if(numero == ''){
+            alerta_numero.innerHTML = `O campo Número não pode ser vazio`
+        }
+
+        if(bairro == ''){
+            alerta_bairro.innerHTML = `O campo Bairro não pode ser vazio`
+        }
+
+        if(cidade == ''){
+            alerta_cidade.innerHTML = `O campo Cidade não pode ser vazio`
+        }
+
+        if(estado == ''){
+            alerta_estado.innerHTML = `O campo Estado não pode ser vazio`
+        }
+        
+
+      /*Mascaras*/
+
+        const inputCep = document.querySelector('input')
+
+    ipt_cep.addEventListener('keypress', () => {
+    let valorcep = ipt_cep.value.length
+
+    if (valorcep == 5) ipt_cep.value += '-'
+
+})
+      
+
+
+    }
+
+</script>
