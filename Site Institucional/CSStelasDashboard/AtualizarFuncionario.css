@@ -148,4 +148,19 @@ body{
     align-items: center;
     text-align: center;
 }
+#botaoVerSenha{
+    position:relative;
+    top: 50px;
+    right: 30px;
+}
+#botaoVerSenha2{
+    position:relative;
+    top: 170px;
+    right: 47px;
+}
+.visualizarSenha{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 44px;
+}
 
