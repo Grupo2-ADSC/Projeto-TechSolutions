@@ -69,9 +69,22 @@ table tr {
     font-weight: bold;
     border: none;
     border-radius: 2px;
-    width: 7%;
+    width: 100px;
     height: 30px;
-    margin-top: 25px;
-    margin-left: 76%;
+    /* margin-top: 25px; */
+    /* margin-left: ; */
     font-size: 15px;
+}
+.buttonAdicionar{
+    
+}
+.controle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-left: 23%;
+    width: 60%;
+    height: 40px;
+    /* border: red solid 2px; */
 }
