@@ -62,7 +62,7 @@ table tr {
 
 /*Botão Adicionar*/
 
-button {
+.button {
     cursor: pointer;
     background-color: #00BF63;
     color: white;
