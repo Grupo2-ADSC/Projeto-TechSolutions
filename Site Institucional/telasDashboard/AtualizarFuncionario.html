@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./styles/menuLateral.css">
-    <link rel="stylesheet" href="./styles/AtualizarFuncionario.css">
+    <link rel="stylesheet" href="../CSStelasDashboard/menuLateral.css">
+    <link rel="stylesheet" href="../CSStelasDashboard/AtualizarFuncionario.css">
     <title>Atualizar Funcionário</title>
 </head>
 <body class="body">
 
     <nav id="menuLateral">
         <div class="container">
-            <p><img id="imgPerfil" src="./assets/imgPerf.png" alt=""></p>
+            <p><img id="imgPerfil" src="../assets/imgPerf.png" alt=""></p>
 
             <p>Bem Vindo</p>
 
@@ -32,7 +32,7 @@
             </div>
 
             <div class="buttonSair">
-                <a href="Login.HTML"> <span class="material-symbols-outlined">logout</span>Sair</a>
+                <a href="../Login.HTML"> <span class="material-symbols-outlined">logout</span>Sair</a>
             </div>
 
         </div>
@@ -87,7 +87,7 @@
 
         <div class="buttonDivisao">
             <button class="button1" onclick="Confirmar()">Confirmar</button>
-            <button class="button2" onclick="Cancelar()"><a class="link" href="../Site Institucional/tabeladefuncionarios.html">Cancelar</a></button>
+            <button class="button2" onclick="Cancelar()"><a class="link" href="tabeladefuncionarios.html">Cancelar</a></button>
         </div>
     </div>
 
@@ -193,7 +193,7 @@
         //Dados mocados para entrar na tela tabela funcionario
         if (nome == 'Claudio' && sobrenome == 'Frizzarini' && cargo == 'Técnico' && email == 'frizza@gmail.com' && senha == 'B4n4n!nha' && Csenha == 'B4n4n!nha') {
             alert('Atualizado com sucesso!')
-            window.location.href = "../Site Institucional/tabeladefuncionarios.html";
+            window.location.href = "tabeladefuncionarios.html";
         } else {
             alert('Falha, verificar infotmações')
         }
