@@ -87,6 +87,12 @@ input{
     margin-top: -8vh;
     
   }
+
+  .button_cadastrar a, .button_cancelar a{
+    text-decoration: none;
+    color: white;
+
+  }
   
   .button_cadastrar{
     color: #ffffff;
