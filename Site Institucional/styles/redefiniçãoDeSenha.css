@@ -8,8 +8,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
 .input {
-    width: 30%;
+    width: 120px;
     margin: 20 auto;
     padding: 10px;
     margin-bottom: 10px;
@@ -19,11 +20,11 @@
 }
 
 .divExternaSenha {
-    height: 400px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     border-radius: 10px;
     text-align: end;
-    margin-top: 130px;
+    margin-top: 80px;
 }
 
 .titulos2 {
@@ -36,7 +37,7 @@
 }
 
 .e-mail {
-    margin-left: 90px;
+    margin-left: 62px;
 }
 
 .flex-containerSenha {
@@ -51,20 +52,25 @@
     border-radius: 1000px;
 }
 #sombra {
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 6px 8px 5px #a7a0a0;
+    border: 2px solid #000000;
+    border-radius: 5px;
 }
 .FundoImagem {
     display: flex;
     height: 100vh;
     width: 100%;
-    background-image: url(../assets/imagemComMenosCafés.png);
+    background-image: url('https://www.supremoarabica.com.br/wp-content/uploads/2019/12/iStock-1135359711-1.jpg');
     background-size: cover;
     justify-content: center;
 }
 
+.texto{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
 .voltar{
+
     text-decoration: none;
     color:black;
 }
@@ -100,6 +106,10 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+
+.botaoEntrar{
+    padding-top: 20px;
 }
 
 #infos a,
@@ -160,5 +170,5 @@ li img {
     border-radius: 5px;
     border: 2px solid #5C5B5B;
     height: 30px;
-    width: 315px;
+    width: 315px; 
 }

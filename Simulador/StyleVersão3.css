@@ -81,7 +81,7 @@ font-family: 'Montserrat', sans-serif;
     align-items: center;
     justify-content: center;
     height: 600px; /* Aqui eu defini a altura da imagem de fundo, Vh é V = view, H = height que significa altura */
-    background-image: url(../Simulador/assets/testinho.jpg); /* Baixei uma imagem de fundo e chamei ela pelo caminho de pastas */
+    background-image: url('https://www.supremoarabica.com.br/wp-content/uploads/2019/12/iStock-1135359711-1.jpg'); /* Baixei uma imagem de fundo e chamei ela pelo caminho de pastas */
     background-size: cover; /* Aqui eu falo pra minha imagem de fundo cobrir a tela inteira no tamanho certo */
     justify-content: center; /* Aqui eu estou mandando todo meu conteúdo ficar no meio, tudo que fica dentro da img de fundo  */
   }

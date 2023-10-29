@@ -184,14 +184,17 @@ border-bottom: 50px solid #794830;
 #sombra {
     border: 1px solid;
     padding: 10px;
-    box-shadow: 5px 10px 0px 1px #a7a0a0;
+    box-shadow: #5C5B5B 10px 10px 10px;
 
 }
 .divExterna{
+    border-radius: 5px;
+
 height: 300px; 
 width: 300px;
 }
 .divInterna{
+    border-radius: 5px;
     padding: 10px;
     height: 125px;
     width: 125px;

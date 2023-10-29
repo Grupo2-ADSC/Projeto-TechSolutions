@@ -4,7 +4,7 @@
   display: flex;
   height: 700px;
   width: 100%;
-  background-image: url(../assets/imagemComMenosCafés.png);
+  background-image: url('https://img.freepik.com/fotos-premium/graos-de-cafe-em-fundo-marrom-vista-do-topo_106006-6352.jpg');
   background-size: cover;
   justify-content: center;
 }
@@ -20,7 +20,7 @@
   margin-left: 30px;
   padding-left: 200px;
   border-radius: 5px;
-  border: solid 1px black;
+  border: solid 1px #AD713A;
   box-shadow: #0000006b 0px 7px 7px;
 }
 

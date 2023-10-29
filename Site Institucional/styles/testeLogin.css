@@ -1,20 +1,26 @@
 .FundoImagem2{
     height: 90vh;
     width: 100%;
-    background-image: url(../assets/Fundo.png);
+    background-image: url('https://www.supremoarabica.com.br/wp-content/uploads/2019/12/iStock-1135359711-1.jpg');
     display: flex;
     justify-content: center;
+    background-size: cover;
     align-items: center;
+}
+
+.texto{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
 }
 
 .DivPrincipal2{
     background-color: #f8f5ec;
-    width: 30vw;
+    width: 400px;
     height: 60vh;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    border: solid 1px black;
+    border: solid 2px #000000;
     box-shadow: #0000006b 0px 7px 7px;
     padding: 20px;
     /* text-align: center; */
