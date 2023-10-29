@@ -82,11 +82,13 @@ button {
 }
 
 #botaoVerSenha {
-    position: relative;
-    bottom: 8%;
-    left: 87%;
+    position: absolute;
+    /* bottom: 1%; */
+    top: 391px;
+    left: 42%;
     width: 30px;
     cursor: pointer;
+    background-color: transparent;
     /* border:  black solid 2px; */
 }
 
