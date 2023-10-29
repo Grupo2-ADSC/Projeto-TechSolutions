@@ -12,7 +12,7 @@ O sistema é composto por três componentes principais:
 
 ## Principais paginas web
 
-<img src="/IMG/TechSolutions_site.jpg">
+<img src="/IMG/TelaSobreNós.png">
 
 ## Metricas e dados dos sensores
 
