@@ -61,7 +61,7 @@
                 </p>
 
                 <p>CEP <br>
-                    <input id="ipt_cep" placeholder=" 02879-130" type="text">
+                    <input id="inp_cep" placeholder=" 02879-130" type="text" maxlength="9">
                     </p>
 
                 <p>Logradouro <br>
@@ -180,19 +180,19 @@
         }
         
 
-      /*Mascaras*/
+        
+        
+        
+    }
+    
+    /*Mascaras*/
 
-        const inputCep = document.querySelector('input')
+      const inpCep = document.querySelector('inp_cep')
 
-    ipt_cep.addEventListener('keypress', () => {
-    let valorcep = ipt_cep.value.length
+  inp_cep.addEventListener('keypress', () => {
+  let valorcep = inp_cep.value.length
 
-    if (valorcep == 5) ipt_cep.value += '-'
+  if (valorcep == 5) inp_cep.value += '-'
 
 })
-      
-
-
-    }
-
 </script>
