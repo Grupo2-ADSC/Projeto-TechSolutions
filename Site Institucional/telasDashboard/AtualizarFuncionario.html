@@ -81,7 +81,8 @@
                 <div class="visualizarSenha">
                     <p>
                         Senha <br>
-                        <input id="ipt_senha" class="input" type="password" placeholder=" ********">
+                        <input id="ipt_senha" class="input" type="password" placeholder=" ********"><br>
+                        <span id="alerta_senha"></span>
                     </p><br>
 
                     <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha()"></span>
@@ -97,8 +98,7 @@
         </div>
 
         <div class="buttonDivisao">
-            <button class="button1" onclick="Confirmar()"><a class="link"
-                    href="tabeladefuncionarios.html">Confirmar</a></button>
+            <button class="button1" onclick="Confirmar()">Confimar</button>
             <button class="button2" onclick="Cancelar()"><a class="link"
                     href="tabeladefuncionarios.html">Cancelar</a></button>
         </div>
@@ -229,7 +229,7 @@
             alert('Atualizado com sucesso!')
             window.location.href = "tabeladefuncionarios.html";
         } else {
-            alert('Falha, verificar infotmações')
+            alert('Falha, verificar informações')
         }
     }
 </script>
