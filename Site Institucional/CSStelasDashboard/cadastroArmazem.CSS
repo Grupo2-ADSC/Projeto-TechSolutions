@@ -95,7 +95,7 @@ input {
   width: 110px;
   background-color: #00BF63;
   margin-left: 390px;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   cursor: pointer;
 
 
