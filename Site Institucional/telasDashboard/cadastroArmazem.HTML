@@ -56,22 +56,27 @@
             <div class="container1">
                 <p>Número do armazém <br>
                     <input id="ipt_numArm" placeholder=" 13" type="number">
+                    <span id="alerta_numArm"></span>
                 </p>
 
                 <p>Área <br>
                     <input id="ipt_area" placeholder=" 7.000" type="text">
+                    <span id="alerta_area"></span>
                 </p>
 
                 <p>CEP <br>
-                    <input id="inp_cep" placeholder=" 02879-130" type="text" maxlength="9">
+                    <input id="ipt_cep" placeholder=" 02879-130" type="text" maxlength="9">
+                    <span id="alerta_cep"></span>
                 </p>
 
                 <p>Logradouro <br>
                     <input id="ipt_logradouro" placeholder=" Rua Conceição" type="text">
+                    <span id="alerta_logradouro"></span>
                 </p>
 
                 <p>Número <br>
-                    <input id="ipt_num" placeholder=" 124" type="text" maxlength="4">
+                    <input id="ipt_num" placeholder=" 124" type="text" maxlength="5">
+                    <span id="alerta_num"></span>
                 </p>
 
 
@@ -87,15 +92,18 @@
 
                 <p>Bairro <br>
                     <input id="ipt_bairro" placeholder=" Jardim Ana Maria" type="text">
+                    <span id="alerta_bairro"></span>
                 </p>
 
                 <p>Cidade <br>
                     <input id="ipt_cidade" placeholder=" São Caetano do sul" type="text">
+                    <span id="alerta_cidade"></span>
                 </p>
 
                 <p>
                     Selecione um estado:<br>
                     <select id="estado" name="estado">
+                        <option value="selecione">Selecione o estado</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AP">Amapá</option>
@@ -124,6 +132,7 @@
                         <option value="SE">Sergipe</option>
                         <option value="TO">Tocantins</option>
                     </select>
+                    <span id="alerta_estado"></span>
                 </p>
             </div>
 
@@ -131,7 +140,7 @@
 
         <div class="button">
 
-            <button onclick="cadastrar ()" class="button_cadastrar"><a href="./Armazem.html">Cadastrar</a></button>
+            <button onclick="cadastrar ()" class="button_cadastrar"><a href="">Cadastrar</a></button>
             <button class="button_cancelar">Cancelar</button>
 
 
@@ -146,15 +155,34 @@
 
 <script>
 
-    function cadastrar() {
+    function cadastrar () {
+
+       var numArmazem = Number(ipt_numArm.value)
+       var area = ipt_area.value
+       var cep = ipt_cep.value
+       var logradouro = ipt_logradouro.value
+       var numero = ipt_num.value
+       var bairro = ipt_bairro.value
+       var cidade = ipt_cidade.value
+       var estado = estado.value
+       alerta_numArm.innerHTML = "";
+       alerta_area.innerHTML = "";
+       alerta_cep.innerHTML = "";
+       alerta_logradouro.innerHTML = "";
+       alerta_num.innerHTML = "";
+       alerta_bairro.innerHTML = "";
+       alerta_cidade.innerHTML = "";
+       alerta_estado.innerHTML = "";
+
+
 
 
         if (numArmazem == '') {
-            alerta_cep.innerHTML = `O campo Armazém não pode ser vazio`
+            alerta_numArm.innerHTML = `O campo Número Armazém não pode ser vazio`
         }
 
         if (area == '') {
-            alerta_cep.innerHTML = `O campo Área não pode ser vazio`
+            alerta_area.innerHTML = `O campo Área não pode ser vazio`
         }
 
         if (cep == '') {
@@ -166,7 +194,7 @@
         }
 
         if (numero == '') {
-            alerta_numero.innerHTML = `O campo Número não pode ser vazio`
+            alerta_num.innerHTML = `O campo Número não pode ser vazio`
         }
 
         if (bairro == '') {
@@ -177,24 +205,22 @@
             alerta_cidade.innerHTML = `O campo Cidade não pode ser vazio`
         }
 
-        if (estado == '') {
+        if (estado == 'Selecione o estado') {
             alerta_estado.innerHTML = `O campo Estado não pode ser vazio`
         }
-
-
-
 
 
     }
 
     /*Mascaras*/
 
-    const inpCep = document.querySelector('inp_cep')
+    const iptCep = document.querySelector('ipt_cep')
 
-    inp_cep.addEventListener('keypress', () => {
-        let valorcep = inp_cep.value.length
+    ipt_cep.addEventListener('keypress', () => {
+        let valorcep = ipt_cep.value.length
 
-        if (valorcep == 5) inp_cep.value += '-'
+        if (valorcep == 5) ipt_cep.value += '-'
 
-    })
+    }
+    )
 </script>
