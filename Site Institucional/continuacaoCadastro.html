@@ -112,7 +112,7 @@
                 <span id="alerta_estado"></span>
             </p><br>
 
-            <button class="button2" onclick="Conferir()"><a href="../Site Institucional/Login.HTML">Cadastrar</a></button>
+            <button class="button2" onclick="Conferir()">Cadastrar</button>
                 <a class="link" href="../Site Institucional/Login.HTML">Já tem cadastro? Faça seu Login</a>
         </div>
 
@@ -150,11 +150,6 @@
 
 <script>
     function Conferir(){
-        var cnpj = ipt_cnpj.value
-        var nome = ipt_nome.value
-        var telefone = ipt_tel.value
-        var email = ipt_email.value
-        var senha = ipt_senha.value
         var cep = ipt_cep.value
         var logradouro = ipt_logradouro.value
         var numero = ipt_num.value
@@ -162,16 +157,14 @@
         var bairro = ipt_bairro.value
         var cidade = ipt_cidade.value
         var estado = select_estado.value
-        alerta_senha.innerHTML = ''
-        alerta_email.innerHTML = ''
-        alerta_cnpj.innerHTML = ''
-        alerta_nome.innerHTML = ''
-        alerta_telefone.innerHTML = ''
+
+        
         alerta_cep.innerHTML = ''
         alerta_logradouro.innerHTML = ''
         alerta_numero.innerHTML = ''
         alerta_bairro.innerHTML = ''
         alerta_cidade.innerHTML = ''
+        alerta_estado.innerHTML = ''
 
         // começo das validações da senha
         if(senha.indexOf(" ") >=0){

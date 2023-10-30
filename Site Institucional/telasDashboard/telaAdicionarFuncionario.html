@@ -31,12 +31,13 @@
                 </div>
 
                 <div class="item">
-                    <b><a href="./Armazem.html"> <span class="material-symbols-outlined">warehouse</span>
-                            Armazém</a></b>
+                    <a href="./Armazem.html"> <span class="material-symbols-outlined">warehouse</span>
+                        Armazém</a>
                 </div>
 
                 <div class="item">
-                    <b><a href="telaAdicionarFuncionario.html"> <span class="material-symbols-outlined">groups</span> Funcionário</a></b>
+                    <b><a href="telaAdicionarFuncionario.html"> <span class="material-symbols-outlined">groups</span>
+                            Funcionário</a></b>
                 </div>
             </div>
 
@@ -56,36 +57,41 @@
             <div class="containerP">
                 <p>
                     Nome <br>
-                    <input id="ipt_nome" placeholder=" Maria" class="input" type="text">
+                    <input id="ipt_nome" placeholder=" Maria" class="input" type="text"> <br>
+                    <span id="alerta_nome"></span>
                 </p><br>
 
                 <p>
                     Sobrenome <br>
-                    <input id="ipt_sobrenome" placeholder=" Santos" class="input" type="text">
+                    <input id="ipt_sobrenome" placeholder=" Santos" class="input" type="text"> <br>
+                    <span id="alerta_sobrenome"></span>
                 </p><br>
 
                 <p>
                     Cargo <br>
-                    <input id="ipt_cargo" placeholder=" Técnico" class="input" type="text">
+                    <input id="ipt_cargo" placeholder=" Técnico" class="input" type="text"> <br>
+                    <span id="alerta_cargo"></span>
                 </p><br>
             </div>
 
             <div id="containerS">
                 <p>
                     Email <br>
-                    <input id="ipt_email" placeholder=" maria.santos@gmail.com" class="input" type="text">
+                    <input id="ipt_email" placeholder=" maria.santos@gmail.com" class="input" type="text"> <br>
+                    <span id="alerta_email"></span>
                 </p><br>
 
                 <p>
                     Senha <br>
-                    <input id="ipt_senha" class="input" type="password" placeholder=" ********">
+                    <input id="ipt_senha" class="input" type="password" placeholder=" ********"> <br>
+                    <span id="alerta_senha"></span>
                     <!-- <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha()"></span> -->
                 </p><br>
 
                 <p>
                     Confirmação de senha<br>
-                    <input id="ipt_confirmacao" class="input" type="password"
-                        placeholder=" ********">
+                    <input id="ipt_Csenha" class="input" type="password" placeholder=" ********"> <br>
+                    <span id="alerta_Csenha"></span>
                     <!-- <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha2()"></span> -->
                 </p>
             </div>
@@ -100,6 +106,109 @@
 </html>
 
 <script>
+    function Confirmar() {
+        var senha = ipt_senha.value     
+        var email = ipt_email.value
+        var nome = ipt_nome.value
+        var sobrenome = ipt_sobrenome.value
+        var cargo = ipt_cargo.value
+        var Csenha = ipt_Csenha.value
+
+        alerta_senha.innerHTML = ''
+        alerta_email.innerHTML = ''
+        alerta_nome.innerHTML = ''
+        alerta_sobrenome.innerHTML = ''
+        alerta_cargo.innerHTML = ''
+        alerta_Csenha.innerHTML = ''
+
+        // começo das validações da senha
+        if (senha.indexOf(" ") >= 0) {
+            alerta_senha.innerHTML = `Sua senha não pode conter espaço`
+        }
+
+        if (senha.indexOf("!") == -1)
+
+            if (senha.indexOf("@") == -1)
+
+                if (senha.indexOf("/") == -1)
+
+                    if (senha.indexOf("?") == -1)
+
+                        if (senha.indexOf("#") == -1)
+
+                            if (senha.indexOf("*") == -1)
+
+                                if (senha.indexOf(".") == -1) {
+
+                                    alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma <br> LETRA MAIÚSCULA e Caracteres<br>especiais "!@/?#*."`
+                                }
+
+        if (senha != senha.toUpperCase() && senha != senha.toLowerCase()) {
+        } else {
+            alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma <br> Letra MAIÚSCULA, minúscula e Caracteres<br>especiais "!@/?#*."`
+        }
+
+        if (senha.length < 8 || senha.length > 16) {
+            alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter <br> pelo menos de 8 á 16 caracteres`
+        }
+
+        // começo das validações email
+        if (email.indexOf(" ") >= 0) {
+            alerta_email.innerHTML = `Insira um email válido`
+        }
+
+        if (email.indexOf("@") == -1) {
+            alerta_email.innerHTML = `Insira um email válido`
+        }
+
+        if (email.indexOf(".com") == -1)
+
+            if (email.indexOf(".br") == -1)
+
+                if (email.indexOf(".net") == -1)
+
+                    if (email.indexOf(".org") == -1)
+
+                        if (email.indexOf(".io") == -1)
+
+                            if (email.indexOf(".company") == -1)
+
+                                if (email.indexOf(".gov") == -1) {
+                                    alerta_email.innerHTML = `Insira um email válido`
+                                }
+
+        // começo das validações nome
+        if (nome == '') {
+            alerta_nome.innerHTML = `O campo Nome não pode ser vazio`
+        }
+
+        // começo das validações sobrenome
+        if (sobrenome == '') {
+            alerta_sobrenome.innerHTML = `O campo Sobrenome não pode ser vazio`
+        }
+
+        // começo das validações cargo
+        if (cargo == '') {
+            alerta_cargo.innerHTML = `O campo Cargo não pode ser vazio`
+        }
+
+        // começo das validações Csenha
+        if (Csenha == '') {
+            alerta_Csenha.innerHTML = `O campo Confirme a senha não pode ser vazio`
+        }
+
+        if (Csenha != senha) {
+            alerta_Csenha.innerHTML = `O campo tem que ser igual a Senha`
+        }
+
+        //Dados mocados para entrar na tela tabela funcionario
+        if (nome == 'Claudio' && sobrenome == 'Frizzarini' && cargo == 'Técnico' && email == 'frizza@gmail.com' && senha == 'B4n4n!nha' && Csenha == 'B4n4n!nha') {
+            alert('Atualizado com sucesso!')
+            window.location.href = "tabeladefuncionarios.html";
+        } else {
+            alert('Falha, verificar informações')
+        }
+    }
     function verSenha() {
         var inputPass = document.getElementById('ipt_senha');
 
