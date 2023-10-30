@@ -190,20 +190,21 @@ font-family: 'Montserrat', sans-serif;
 }
 
 #infos a, #termos li {
-    font-family: 'Alice', serif;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: #fff;
 }
 
 #direitos {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-top: 20px;
     font-size: 14px;
     color: #fff; /* Cor do texto branco */
 }
 
-  .back-Rodape{
+.back-Rodape{
     background-color: #2A1A17;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .fundoF{
