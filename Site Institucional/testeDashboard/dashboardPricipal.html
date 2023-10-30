@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styleDash2.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../CSStelasDashboard/codigo_HeaderDash.CSS">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
@@ -50,15 +51,48 @@
 
         <p></p>
 
-        <div class="containerAlert">
-            <div class="alerta-vermelho">0 á 20</div>
-            <div class="alerta-laranja">20 á 41</div>
-            <div class="alerta-amarelo">42 á 63</div>
-            <div class="alerta-verde">64 á 66</div>
-            <div class="alerta-amarelo">67 á 77</div>
-            <div class="alerta-laranja">78 á 88</div>
-            <div class="alerta-vermelho">89 á 100</div>
-        </div>
+        <div class="guia_de_umidade"><p>Guia de umidade</p></div>
+
+    <div class="conteudo_metricas_graficos">
+
+        <div class="metricas">
+
+            <div class="quadrado-container">
+                <div class="quadrado_vermelho"><p>0% a 20%</p></div>
+                <div class="overlay-text">Crítico</div>
+            </div>
+              
+            <div class="quadrado-container">
+                <div class="quadrado_laranja"><p>21% a 41%</p></div>
+                <div class="overlay-text">Cuidado</div>
+            </div> 
+
+            <div class="quadrado-container">
+                <div class="quadrado_amarelo"><p>42% a 63%</p></div>
+                <div class="overlay-text">Atenção</div>
+            </div>            
+            
+            <div class="quadrado-container">
+                <div class="quadrado_verde"><p>64% a 65%</p></div>
+                <div class="overlay-text">Ideal</div>
+            </div>
+
+            <div class="quadrado-container">
+                <div class="quadrado_amarelo"><p>67% a 68%</p></div>
+                <div class="overlay-text">Atenção</div>
+            </div>
+            
+            <div class="quadrado-container">
+                <div class="quadrado_laranja"><p>78% a 88%</p></div>
+                <div class="overlay-text">Cuidado</div>
+            </div> 
+
+            <div class="quadrado-container">
+                <div class="quadrado_vermelho"><p>89% a 100%</p></div>
+                <div class="overlay-text">Crítico</div>
+            </div>
+    
+       </div>
         
         <div class="Dashs">
 
@@ -67,9 +101,11 @@
             <div class="corGraficos">
 
               
-
+                <div id="divGraficoLinha">
                     <p>Média por hora da umidade por armazém de café <br> no dia 20.10.23</p>    
                     <canvas id="graficoBarra"></canvas>
+
+                </div>
     
 
 
@@ -93,7 +129,7 @@
                     </div>
                     <div class="quadro">
                         <div class="retangulo1"><b>Armazem 1 <br> Sensor 3</b></div>
-                        <div class="retangulo2">Umidade 60%</div>
+                        <div class="retangulo2">Umidade 60% 💧</div>
                     </div>
                 </div>
                 <div class="divisao2">
