@@ -111,29 +111,30 @@
 
     function exibir() {
 
-        div_lucro.innerHTML += `- <b style="color: red;">${porcentagem * 100}%</b> de cada saco com <b>60kg</b> corresponde à perda de <b style="color: red;">${perdakg.toFixed(1)}</b>kg em grãos<br>
+    div_lucro.innerHTML += `- <b style="color: red;">${porcentagem * 100}%</b> de cada saco com <b>60kg</b> corresponde à perda de <b style="color: red;">${perdakg.toFixed(1)}</b>kg em grãos<br>
 
 - Você está <b>perdendo</b> <b style="color: red;">${perdakgTotalKilos.toFixed(0)}</b> quilos de <b>${qtdSacos}</b> sacos o que <b>equivale</b> a <b style="color: red;">${perdaTotalSacos.toFixed(0)}</b> sacos<br>
 
-- Então, na <b>quebra de safra</b>, onde o <b>preço do café dobra</b>, seu <b>prejuízo</b> com <b style="color: red;">${perdaTotalSacos.toFixed(0)}</b> <b>sacos a menos</b> vai ser de <b>R$</b><b style="color: red;">${ValorPerdaQuebraSafra.toLocaleString('pt-BR')}</b><br><br>
+- Então, na <b>quebra de safra</b>, onde o <b>preço do café dobra</b>, seu <b>prejuízo</b> com <b style="color: red;">${perdaTotalSacos.toFixed(0)}</b> <b>sacos a menos</b> vai ser de <b>R$ </b><b style="color: red;">${ValorPerdaQuebraSafra.toLocaleString('pt-BR')}</b><br><br>
 
-- O seu <b>lucro atual</b> é de <b>R$</b><b style="color: blue;">${lucro.toLocaleString('pt-BR')}</b><br><br>
+- O seu <b>lucro atual</b> é de <b>R$ </b><b style="color: blue;">${lucro.toLocaleString('pt-BR')}</b><br><br>
 
-Com o <b>nosso serviço</b> você terá um retorno de até <b>100%</b>, totalizando <b>R$</b><b style="color: green;">${lucroFinal.toLocaleString('pt-BR') }</b> e <b style="color: green;">0</b> quilos perdidos.<br><br>
+Com o <b>nosso serviço</b> você terá um retorno de até <b>100%</b>, totalizando <b>R$ </b><b style="color: green;">${lucroFinal.toLocaleString('pt-BR') }</b> e <b style="color: green;">0</b> quilos perdidos.<br><br>
 
 <b>Vamos conversar sobre a nossa solução para o seu problema?<br>
-Faça seu orçamento em nossa página <a href="../Site Institucional/telaFaleConosco.html">“Fale conosco”</a></b>`
+
+<br>Faça seu orçamento em nossa página <a style="text-decoration:none; color: #794830;" href="../Site Institucional/telaFaleConosco.html">Fale conosco</a></b>`
 
     }
     function exibirMenos() {
 
         div_lucro.innerHTML += `<br><b>Umidade baixa</b>, isso pode ocasionar em <b>branqueamento dos grãos.</b><br>
-        <br>Segundo a fonte de pesquisa <b>EMPRAPA</b>, a mau administração dos armazéns gera uma perda de até <b style="color: red;">15%</b><br><br>`
+        <br>Segundo a fonte de pesquisa <b>EMBRAPA</b>, a má administração dos armazéns gera uma perda de até <b style="color: red;">15%</b><br><br>`
     }
     function exibirMais() {
 
         div_lucro.innerHTML += `<br><b>Umidade elevada</b>, isso pode ocasionar em proliferação de <b> pragas, mofos e fungos.</b><br>
-        <br>Segundo a fonte de pesquisa <b>EMPRAPA</b>, a mau administração dos armazéns gera uma perda de até <b style="color: red;">15%</b><br><br>`
+        <br>Segundo a fonte de pesquisa <b>EMBRAPA</b>, a má administração dos armazéns gera uma perda de até <b style="color: red;">15%</b><br><br>`
     }
     function exibirIgual() {
 

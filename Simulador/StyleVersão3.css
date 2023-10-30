@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
+
+
 *{margin: 0;
   background-color: none;
 margin-bottom: 0;}
@@ -9,6 +12,7 @@ margin-bottom: 0;}
 
 span{
   background-color: white;
+  font-weight: lighter;
 }
 
 p{
@@ -94,8 +98,9 @@ font-family: 'Montserrat', sans-serif;
   .Titulo{
     background-color: white;
     margin-top: 40px;
-    color: rgb(99, 36, 11); /* Dando a cor do título de marrom */
+    color: #5f341c; /* Dando a cor do título de marrom */
     font-size: 35px; /* Dando tamanho para a fonte(letra) do título */
+    font-family: 'Poppins', sans-serif;
   }
 
   .CaixaInput{
@@ -130,6 +135,8 @@ font-family: 'Montserrat', sans-serif;
     border: 2px solid #5C5B5B;
     height: 18px;
     width: 200px;
+    font-family: 'Roboto', sans-serif;
+    padding: 3px;
 }
 
   .ContainerButton{
@@ -138,6 +145,7 @@ font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
   }
 
   .FundoBrancoMensagem{
@@ -149,7 +157,7 @@ font-family: 'Montserrat', sans-serif;
     border-radius: 0px 10px 10px 0px;
     height: 480px;
     width: 700px;
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-shadow: rgba(0, 0, 0, 0.418) 0px 10px 12px;
   }
 
