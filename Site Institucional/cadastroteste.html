@@ -76,7 +76,7 @@
             <p>
                 Confirme a senha <br>
                 <input class="input" placeholder=" ********" type="password" id="ipt_Csenha"><br>
-                <span id="botaoVerSenha2" class="lnr lnr-eye" onclick="verSenha()"></span>
+                <span id="botaoVerSenha2" class="lnr lnr-eye" onclick="verSenha2()"></span>
                 <span id="alerta_Csenha"></span>
             </p><br>
 
@@ -124,12 +124,13 @@
         var email = ipt_email.value
         var senha = ipt_senha.value
         var Csenha = ipt_Csenha.value
-        alerta_senha.innerHTML = ''
-        alerta_Csenha.innerHTML = ''
-        alerta_email.innerHTML = ''
+
         alerta_cnpj.innerHTML = ''
         alerta_nome.innerHTML = ''
         alerta_telefone.innerHTML = ''
+        alerta_email.innerHTML = ''
+        alerta_senha.innerHTML = ''
+        alerta_Csenha.innerHTML = ''
 
         // começo das validações da senha
         if (senha.indexOf(" ") >= 0) {
@@ -151,13 +152,12 @@
                                 if (senha.indexOf(".") == -1) {
 
                                     alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma <br> LETRA MAIÚSCULA e Caracteres<br>especiais "!@/?#*."`
-                                } else {
-                                    window.location.href = "continuacaoCadastro.html";
-
+                                } 
+                                if(Csenha != senha){
+                                    alerta_Csenha.innerHTML = `A senha deve estar igual ao campo de cima`
                                 }
-
         if (senha != senha.toUpperCase() && senha != senha.toLowerCase()) {
-            window.location.href = "continuacaoCadastro.html";
+            
         } else {
             alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma <br> Letra MAIÚSCULA, minúscula e Caracteres<br>especiais "!@/?#*."`
         }
@@ -165,14 +165,14 @@
         if (senha.length < 8 || senha.length > 16) {
             alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter <br> pelo menos de 8 á 16 caracteres`
         } else {
-            window.location.href = "continuacaoCadastro.html";
+            
         }
 
         // começo das validações do email
         if (email.indexOf(" ") >= 0) {
             alerta_email.innerHTML = `Insira um email válido`
         } else {
-            window.location.href = "continuacaoCadastro.html";
+            
         }
 
         if (email.indexOf("@") == -1) {
@@ -194,44 +194,63 @@
                                 if (email.indexOf(".gov") == -1) {
                                     alerta_email.innerHTML = `Insira um Email válido`
                                 } else {
-                                    window.location.href = "continuacaoCadastro.html";
+                                    
                                 }
 
         //Começo da validação cnpj
         if (cnpj == '') {
             alerta_cnpj.innerHTML = `O campo CNPJ não pode ser vazio`
         }else{
-            window.location.href = "continuacaoCadastro.html";
+            
         }
 
         if (cnpj.indexOf(" ") >= 0) {
             alerta_cnpj.innerHTML = `Insira um CNPJ válido`
         }else{
-            window.location.href = "continuacaoCadastro.html";
+            
         }
 
         //Começo da validação nome empresa
         if (nome == '') {
             alerta_nome.innerHTML = `O campo Nome não pode ser vazio`
         }else{
-            window.location.href = "continuacaoCadastro.html";
+            
         }
 
         //Começo da validação do telefone
         if (telefone == '') {
             alerta_telefone.innerHTML = `O campo Telefone não pode ser vazio`
         }else{
-            window.location.href = "continuacaoCadastro.html";
+            
         }
 
         /* if(estado == 'Selecione'){
             alerta_estado.innerHTML = `Selecione um estado válido`
         } */
 
+        // dados mocados para cadastro e validação
+        if(cnpj == '12.345.678/9123-45' && nome == 'Café Pilão' && telefone == '1144556677' && email == 'Pilão@brasil.com' && senha == 'P!l4oBr4s!l' && Csenha == 'P!l4oBr4s!l'){
+            alert('Dadas cadastrados com sucesso, seguir para próxima etapa') 
+            window.location.href = "../Site Institucional/continuacaoCadastro.html";
+        } else {
+            alert('FALHA, VERIFICAR INFORMAÇÕES')
+        }
+
     }
 
     function verSenha() {
         var inputPass = document.getElementById('ipt_senha');
+
+
+        if (inputPass.type === 'password') {
+            inputPass.setAttribute('type', 'text')
+        } else {
+            inputPass.setAttribute('type', 'password')
+        }
+    }
+
+    function verSenha2() {
+        var inputPass = document.getElementById('ipt_Csenha');
 
 
         if (inputPass.type === 'password') {
