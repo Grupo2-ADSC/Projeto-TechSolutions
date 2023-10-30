@@ -153,10 +153,11 @@ li img {
 .button_entrar {
     width: 120px;
     height: 35px;
-    background-color: #AD713A;
+    background-color: #5f341c;
     color: white;
     border-radius: 5px;
     font-size: 15px;
+    border: none;
   }
 .e-mail {
     text-align: start;
@@ -171,4 +172,12 @@ li img {
     border: 2px solid #5C5B5B;
     height: 30px;
     width: 315px; 
+}
+
+.texto1 {
+    font-weight: lighter;
+}
+
+h4 {
+    font-weight: lighter;
 }

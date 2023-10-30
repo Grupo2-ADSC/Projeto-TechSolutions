@@ -45,28 +45,27 @@
 
                     <br>
                     <div><br>
-                        <h4>informe o E-mail ja cadastrado<br>
-                            para qual deseja Enviar</h4>
+                        <h4>Informe o e-mail para o qual deseja <br> redefinir a sua senha</h4>
                         <div class="e-mail">
                             <br>
 
                             <h3>E-mail</h3>
                         </div>
 
-                        <input class="inputE-mail" placeholder="Ex:cafe@brasil.com" type="email" id="input_senha">
-<div id="div_msg" ></div>
+                        <input class="inputE-mail" placeholder="cafe@brasil.com" type="email" id="input_senha">
+                        <div id="div_msg"></div>
                         <br>
                         <br>
                     </div>
                     <div class="botaoEntrar">
-                        <button onclick="entrar ()" class="button_entrar">Entrar</button>
+                        <button onclick="enviar()" class="button_entrar">Entrar</button>
                         <br>
 
                         <br>
 
                         <a href="Login.HTML" class="voltar"><b class="voltar">
-                            <span class="texto1">Voltar ao Login</span>
-                        </b></a>
+                                <span class="texto1">Voltar ao Login</span>
+                            </b></a>
 
 
                     </div>
@@ -106,7 +105,7 @@
 
 </html>
 <script>
-    function entrar() {
+    function enviar() {
 
         var email = input_senha.value;
         div_msg.innerHTML = "";
@@ -132,7 +131,7 @@
                             if (email.indexOf(".company") == -1)
 
                                 if (email.indexOf(".gov") == -1) {
-                                    
+
                                     div_msg.innerHTML = `Insira um email válido`
                                 }
     }
