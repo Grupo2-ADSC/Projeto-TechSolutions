@@ -55,23 +55,28 @@
 
             <div class="perguntas_esquerda">
                 <p>Número do armazém <br>
-                    <input id="ipt_numArm" placeholder=" 13" type="number">
+                    <input id="ipt_numArm" placeholder=" 13" type="number"> <br>
+                    <span id="alerta_numArm"></span>
                 </p>
 
                 <p>Área <br>
-                    <input id="ipt_area" placeholder=" 7.000" type="text">
+                    <input id="ipt_area" placeholder=" 7.000" type="text"> <br>
+                    <span id="alerta_area"></span>
                 </p>
 
                 <p>CEP <br>
-                    <input id="ipt_cep" placeholder=" 02879-130" type="text" maxlength="9">
+                    <input id="ipt_cep" placeholder=" 02879-130" type="text" maxlength="9"> <br>
+                    <span id="alerta_cep"></span>
                 </p>
 
                 <p>Logradouro <br>
-                    <input id="ipt_logradouro" placeholder=" Rua Conceição" type="text">
+                    <input id="ipt_logradouro" placeholder=" Rua Conceição" type="text"> <br>
+                    <span id="alerta_logradouro"></span>
                 </p>
 
                 <p>Número <br>
-                    <input id="ipt_num" placeholder=" 124" type="text" maxlength="4">
+                    <input id="ipt_num" placeholder=" 124" type="text" maxlength="4"> <br>
+                    <span id="alerta_num"></span>
                 </p>
 
 
@@ -82,20 +87,22 @@
             <div class="perguntas_direita">
 
                 <p>Complemento <br>
-                    <input id="ipt_complemento" placeholder=" Ao lado do posto BR" type="text">
+                    <input id="ipt_complemento" placeholder=" Ao lado do posto BR" type="text"> <br>
                 </p>
 
                 <p>Bairro <br>
-                    <input id="ipt_bairro" placeholder=" Jardim Ana Maria" type="text">
+                    <input id="ipt_bairro" placeholder=" Jardim Ana Maria" type="text"> <br>
+                    <span id="alerta_bairro"></span>
                 </p>
 
                 <p>Cidade <br>
-                    <input id="ipt_cidade" placeholder=" São Caetano do sul" type="text">
+                    <input id="ipt_cidade" placeholder=" São Caetano do sul" type="text"> <br>
+                    <span id="alerta_cidade"></span>
                 </p>
 
                 <p>
                     Selecione um estado:<br>
-                    <select id="estado" name="estado">
+                    <select id="select_estado" name="estado">
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AP">Amapá</option>
@@ -124,18 +131,19 @@
                         <option value="SE">Sergipe</option>
                         <option value="TO">Tocantins</option>
                     </select>
+                    <span id="alerta_estado"></span>
                 </p>
             </div>
 
         </div>
-
-        <div class="button">
-
-            <button onclick="cadastrar ()" class="button_cadastrar">Cadastrar</button>
+        <div class="containerButton">
+            <button onclick="cadastrar ()" class="button_cadastrar">Atualizar</button>
             <button class="button_cancelar">Cancelar</button>
-
-
         </div>
+
+        
+
+
 
     </div>
 
@@ -147,14 +155,31 @@
 <script>
 
     function cadastrar() {
+        
+        var numArmazem = Number(ipt_numArm.value)
+        var area = ipt_area.value
+        var cep = ipt_cep.value
+        var logradouro = ipt_logradouro.value
+        var numero = ipt_num.value
+        var bairro = ipt_bairro.value
+        var cidade = ipt_cidade.value
+        var estado = select_estado.value
 
+        alerta_numArm.innerHTML = "";
+        alerta_area.innerHTML = "";
+        alerta_cep.innerHTML = "";
+        alerta_logradouro.innerHTML = "";
+        alerta_num.innerHTML = "";
+        alerta_bairro.innerHTML = "";
+        alerta_cidade.innerHTML = "";
+        alerta_estado.innerHTML = "";
 
         if (numArmazem == '') {
-            alerta_cep.innerHTML = `O campo Armazém não pode ser vazio`
+            alerta_numArm.innerHTML = `O campo Armazém não pode ser vazio`
         }
 
         if (area == '') {
-            alerta_cep.innerHTML = `O campo Área não pode ser vazio`
+            alerta_area.innerHTML = `O campo Área não pode ser vazio`
         }
 
         if (cep == '') {
@@ -166,7 +191,7 @@
         }
 
         if (numero == '') {
-            alerta_numero.innerHTML = `O campo Número não pode ser vazio`
+            alerta_num.innerHTML = `O campo Número não pode ser vazio`
         }
 
         if (bairro == '') {
