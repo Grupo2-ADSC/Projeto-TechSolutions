@@ -1,0 +1,174 @@
+body{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e7eaf0;
+  
+  }
+  
+/*guia de umidade*/
+
+.guia_de_umidade{
+  margin-left: 360px;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  font-size: 20px;
+}
+
+
+
+
+/*metricas*/
+
+.metricas{
+    display: flex;
+    margin: 45px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bolder;
+    font-size: 12px;
+    margin-left: 360px;
+}
+
+.quadrado-container {
+  position: relative;
+  width: 110px;
+  height: 100px;
+}
+
+/*verde*/
+
+.quadrado_verde {
+  width:90px;
+  height: 75px;
+  background-color: #78ca78;
+  border-radius: 5px;
+  transition: opacity 0.9s;
+}
+
+.quadrado-container:hover .quadrado_verde {
+  opacity: 0.1;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 65%;
+  left: 41%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 13px;
+  opacity: 1; 
+  visibility: hidden;
+  letter-spacing: 1.5px;
+}
+
+.quadrado-container:hover .quadrado_verde + .overlay-text {
+  visibility: visible;
+  color: #038103; 
+}
+
+.quadrado-container:hover .overlay-text {
+  visibility: visible; 
+}
+
+/*amarelo*/
+
+.quadrado_amarelo{
+  width:90px;
+  height:75px;
+  background-color: #ffdd19;
+  border-radius: 5px;
+  transition: opacity 0.5s;
+}
+
+.quadrado-container:hover .quadrado_amarelo {
+  opacity: 0.1;
+}
+
+.quadrado-container:hover .quadrado_amarelo + .overlay-text {
+  visibility: visible;
+  color: #cdbb00; 
+}
+
+/*laranja*/
+
+.quadrado_laranja{
+  width:90px;
+  height:75px;
+  background-color: #f79a2f;
+  border-radius: 5px;
+  transition: opacity 0.9s;
+}
+
+.quadrado-container:hover .quadrado_laranja {
+  opacity: 0.1;
+}
+
+.quadrado-container:hover .quadrado_laranja + .overlay-text {
+  visibility: visible;
+  color: #c25b0c; 
+}
+
+/*vermelho*/
+
+.quadrado_vermelho{
+  width: 90px;
+  height: 75px;
+  background-color: #f93d3d;
+  border-radius: 5px;
+  transition: opacity 0.9s;
+}
+
+.quadrado-container:hover .quadrado_vermelho {
+  opacity: 0.1;
+}
+
+.quadrado-container:hover .quadrado_vermelho + .overlay-text {
+  visibility: visible;
+  color: #e01010; 
+}
+
+.sino {
+  margin-left: 100px;
+  margin-top: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+
+/* graficos */
+.conteudo_metricas_graficos{
+  flex-direction: column;
+}
+
+.graficos_container{
+  display: flex;
+  height: 550px; 
+  width: 550px;
+  margin-left: 400px;
+  margin-top: 120px;
+}
+
+canvas{
+  margin-right: 70px;
+}
+
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.container-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6%;
+  margin-left: 400px;
+}
+
+.chart-itens {
+  width: 50vw;
+  height: 50vh;
+}
