@@ -57,6 +57,10 @@ body{
   cursor: pointer;
   width: fit-content;
 }
+#menuLateral a.Monitorar{
+  font-size: 15px;
+
+}
 
 #menuLateral a span {
   padding-right: 25px;
@@ -77,6 +81,8 @@ body{
 #conteudoPrincipal{
   margin-left: 23%;
 }
+
+
 
 
 /* fim do menu lateral */
