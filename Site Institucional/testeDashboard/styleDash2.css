@@ -1,5 +1,5 @@
 body {
-  height: 1700px;
+  height: 1900px;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -209,10 +209,6 @@ body {
 }
 
 
-
-
-
-
 /* dashs */
 
 
@@ -243,8 +239,8 @@ body {
 
 .div_alertas {
   margin-top: 50px;
-  height: 500px;
-  width: 775px;
+  height: 600px;
+  width: 900px;
   background-color: #DCDCDC;
   border-radius: 5px;
 }
@@ -257,7 +253,7 @@ body {
 
 .quadro {
   margin-top: 20px;
-  width: 250px;
+  width: 300px;
   border-radius: 5px;
   display: flex;
 }
@@ -278,7 +274,7 @@ body {
   justify-content: center;
   background-color: #f3f3f3;
   height: 80px;
-  width: 70%;
+  width: 150px;
   border-radius: 5px 0px 0px 5px;
 
 }
@@ -287,10 +283,11 @@ body {
   background-color: #58c758;
   height: 80px;
   border-radius: 0px 5px 5px 0px;
-  width: 30%;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-content: center;
 }
 
 .divisao2 {
@@ -309,14 +306,51 @@ body {
   background-color: #f51d1d;
   height: 80px;
   border-radius: 0px 5px 5px 0px;
-  width: 30%;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .retanguloA{
   background-color: #fffc30;
   height: 80px;
   border-radius: 0px 5px 5px 0px;
-  width: 30%;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
+b{
+  margin-left: 10px;
+}
+
+.p1{
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.p2{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.teste{
+  margin-left: 90px;
+}
+
+h1{
+  padding-top: 30px;
+}
+
+#select_armazem{
+  width: 220px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #184062 ;
+}
 
