@@ -1,3 +1,4 @@
+
 DROP DATABASE IF EXISTS TechSolutions;
 
 CREATE DATABASE IF NOT EXISTS TechSolutions;
@@ -9,8 +10,8 @@ CREATE TABLE endereco (
  CEP CHAR(9) NOT NULL,
  logradouro VARCHAR(50) NOT NULL,
  numero INT NOT NULL,
- complemento VARCHAR(100) DEFAULT 'Sem endereço',
- bairo VARCHAR(50) NOT NULL,
+ complemento VARCHAR(100) DEFAULT 'Sem complemento',
+ bairro VARCHAR(50) NOT NULL,
  cidade VARCHAR(50) NOT NULL,
  estado CHAR(2) NOT NULL,
  tipo CHAR(7),
@@ -30,7 +31,7 @@ CREATE TABLE empresa (
 idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
 cnpj CHAR(14) UNIQUE NOT NULL,
 nome VARCHAR(50) NOT NULL,
-telefone CHAR(11) DEFAULT 'Sem numero',
+telefone CHAR(11) DEFAULT 'Sem telefone',
 email VARCHAR(100) NOT NULL,
 senha VARCHAR(16) NOT NULL,
 fkEndereco INT, 
