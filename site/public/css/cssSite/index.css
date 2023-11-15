@@ -7,7 +7,6 @@ body {
 }
 
 #homeIndex .imagem_principal {
-    background-image: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%), url('/site/public/assets/Grãos_Home.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;

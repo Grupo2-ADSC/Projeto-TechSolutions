@@ -152,15 +152,21 @@ body{
     position:relative;
     top: 50px;
     right: 30px;
+    cursor: pointer;
 }
 #botaoVerSenha2{
     position:relative;
     top: 170px;
     right: 47px;
+    cursor: pointer;
 }
 .visualizarSenha{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 44px;
+}
+
+::-ms-reveal {
+    display: none;
 }
 

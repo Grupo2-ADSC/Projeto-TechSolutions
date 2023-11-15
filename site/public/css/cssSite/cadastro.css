@@ -107,6 +107,10 @@ position: absolute;
     text-align: center;
 }
 
+::-ms-reveal {
+    display: none;
+}
+
 #alerta_email {
     width: 100%;
     height: 5%;
