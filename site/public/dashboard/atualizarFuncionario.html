@@ -30,7 +30,7 @@
 
                 <div class="item">
                     <a href="./armazem.html"> <span class="material-symbols-outlined">warehouse</span>
-                            Armazém</a></b>
+                        Armazém</a></b>
                 </div>
 
                 <div class="item">
@@ -59,24 +59,11 @@
                     <span id="alerta_nome"></span>
                 </p><br>
 
-                <p>
-                    Sobrenome <br>
-                    <input class="input" type="text" placeholder=" Santos" id="ipt_sobrenome"><br>
-                    <span id="alerta_sobrenome"></span>
-                </p><br>
 
                 <p>
                     Cargo <br>
                     <input class="input" type="text" placeholder=" Técnico" id="ipt_cargo"><br>
                     <span id="alerta_cargo"></span>
-                </p><br>
-            </div>
-
-            <div class="container2">
-                <p>
-                    Email <br>
-                    <input class="input" type="email" placeholder=" Fernando@gmail.com" id="ipt_email"><br>
-                    <span id="alerta_email"></span>
                 </p><br>
                 <div class="visualizarSenha">
                     <p>
@@ -84,23 +71,39 @@
                         <input id="ipt_senha" class="input" type="password" placeholder=" ********"><br>
                         <span id="alerta_senha"></span>
                     </p><br>
-
+                    
                     <span id="botaoVerSenha" class="lnr lnr-eye" onclick="verSenha()"></span>
-                    <span id="botaoVerSenha2" class="lnr lnr-eye" onclick="verSenha2()"></span>
+                    
                 </div>
+            </div>
+            <div class="container2">
 
                 <p>
-                    Confirme a senha <br>
-                    <input class="input" type="password" placeholder=" ********" id="ipt_Csenha"><br>
-                    <span id="alerta_Csenha"></span>
+                    Sobrenome <br>
+                    <input class="input" type="text" placeholder=" Santos" id="ipt_sobrenome"><br>
+                    <span id="alerta_sobrenome"></span>
                 </p><br>
+                <p>
+                    Email <br>
+                    <input class="input" type="email" placeholder=" Fernando@gmail.com" id="ipt_email"><br>
+                    <span id="alerta_email"></span>
+                </p><br>
+              
+                <div class="visualizarSenha">
+                    <p>
+                        Confirme a senha <br>
+                        <input class="input" type="password" placeholder=" ********" id="ipt_Csenha"><br>
+                        <span id="alerta_Csenha"></span>
+                    </p><br>
+                  
+                    <span id="botaoVerSenha2" class="lnr lnr-eye" onclick="verSenha2()"></span>
+                </div>
             </div>
         </div>
 
         <div class="buttonDivisao">
             <button class="button1" onclick="Confirmar()">Confimar</button>
-            <button class="button2" onclick="Cancelar()"><a class="link" href="#">Cancelar</a></button>
-        </div>
+            <button class="button2" onclick="Cancelar()">Cancelar<a href="atualizarFuncionario.html">Cancelar</a></button>
     </div>
 
 </body>
@@ -206,17 +209,17 @@
 
         // começo das validações sobrenome
         if (sobrenome == '') {
-            alerta_sobrenome.innerHTML = `O campo Sobrenome não pode ser vazio`
+            alerta_sobrenome.innerHTML = `O campo Sobrenome não pode ser vazio<br>`
         }
 
         // começo das validações cargo
         if (cargo == '') {
-            alerta_cargo.innerHTML = `O campo Cargo não pode ser vazio`
+            alerta_cargo.innerHTML = `O campo Cargo não pode ser vazio<br>`
         }
 
         // começo das validações Csenha
         if (Csenha == '') {
-            alerta_Csenha.innerHTML = `O campo Confirme a senha não pode ser vazio`
+            alerta_Csenha.innerHTML = `O campo Confirme a senha não<br> pode ser vazio`
         }
 
         if (Csenha != senha) {

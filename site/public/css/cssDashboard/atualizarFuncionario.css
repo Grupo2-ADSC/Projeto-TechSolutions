@@ -148,6 +148,7 @@ body{
     align-items: center;
     text-align: center;
 }
+
 #botaoVerSenha{
     position:relative;
     top: 50px;
@@ -155,9 +156,9 @@ body{
     cursor: pointer;
 }
 #botaoVerSenha2{
-    position:relative;
-    top: 170px;
-    right: 47px;
+   position: relative;
+    top: 50px;
+    right: 30px;
     cursor: pointer;
 }
 .visualizarSenha{

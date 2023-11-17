@@ -87,6 +87,7 @@
 
                 <p>Complemento <br>
                     <input id="ipt_complemento" placeholder=" Ao lado do posto BR" type="text"> <br>
+                    <span id="alerta_complemento"></span>
                 </p>
 
                 <p>Bairro <br>
@@ -163,6 +164,7 @@
         var bairro = ipt_bairro.value
         var cidade = ipt_cidade.value
         var estado = select_estado.value
+        var complemento = ipt_complemento.value
 
         alerta_numArm.innerHTML = "";
         alerta_area.innerHTML = "";
@@ -172,6 +174,7 @@
         alerta_bairro.innerHTML = "";
         alerta_cidade.innerHTML = "";
         alerta_estado.innerHTML = "";
+        alerta_complemento.innerHTML = "";
 
         if (numArmazem == '') {
             alerta_numArm.innerHTML = `O campo Armazém não pode ser vazio`
@@ -191,6 +194,9 @@
 
         if (numero == '') {
             alerta_num.innerHTML = `O campo Número não pode ser vazio`
+        }
+        if (complemento == '') {
+            alerta_complemento.innerHTML = `<br>`
         }
 
         if (bairro == '') {

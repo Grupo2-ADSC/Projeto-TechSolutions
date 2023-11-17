@@ -215,7 +215,17 @@ body{
   padding-bottom: 40px;
   padding-top: 30px;
 }
-
+.button2{
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  height: 30px;
+  width: 110px;
+  background-color: #FF3131;
+  margin-right: 20px;
+}
 .divisao{
   font-size: 18px;
   font-weight: bold;
@@ -256,7 +266,7 @@ body{
   margin-right: 20px;
   cursor: pointer;
 }
-
+/* 
 .button2{
   color: #ffffff;
   border-radius: 5px;
@@ -268,7 +278,7 @@ body{
   background-color: #FF3131;
   margin-right: 20px;
   cursor: pointer;
-}
+} */
 
 
 #alerta_senha{
@@ -337,8 +347,8 @@ body{
 }
 #botaoVerSenha2{
   position:relative;
-  top: 170px;
-  right: 47px;
+  top: 50px;
+  right: 30px;
 }
 .visualizarSenha{
   display: flex;
