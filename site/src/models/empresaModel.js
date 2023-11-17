@@ -18,15 +18,22 @@ function cadastrar(cnpj, nome, telefone, email, senha, cep, logradouro, numero, 
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
-    var instrucao = `
-        INSERT INTO empresa (cnpj, nome, telefone, email, senha, fkEndereco) VALUES ('${cnpj}', '${nome}', '${telefone}', '${email}', '${senha}', '${idEndereco}');
-    `;
 
-    var instrucao2 = `
+     var instrucao2 = `
         INSERT INTO endereco (cep, logradouro, numero, complemento, bairro, cidade,
             estado, tipo) VALUES ('${cep}', '${logradouro}', '${numero}', '${complemento}', '${bairro}', '${cidade}', '${estado}', 'Empresa');
     `;
 
+    database.executar(instrucao2);
+
+    var idEndereco = database.executar(`select idEndereco from endereco where cep = '${cep}' and logradouro = '${logradouro}' and numero = '${numero}'`);
+    console.log(idEndereco);
+
+    var instrucao = `
+        INSERT INTO empresa (cnpj, nome, telefone, email, senha, fkEndereco) VALUES ('${cnpj}', '${nome}', '${telefone}', '${email}', '${senha}', '${idEndereco}');
+    `;
+
+   
     console.log("Executando a instrução SQL: \n" + instrucao2);
     return database.executar(instrucao2),
     database.executar(instrucao);
