@@ -10,33 +10,40 @@ function autenticar(email, senha) {
 }
 
 // Coloque os mesmos parâmetros aqui. Vá para a var instrucao
-function cadastrar(cnpj, nome, telefone, email, senha, cep, logradouro, numero, complemento, bairro, cidade,
+async function cadastrar(cnpj, nome, telefone, email, senha, cep, logradouro, numero, complemento, bairro, cidade,
     estado) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", cnpj, nome, telefone, email, senha, cep, logradouro, numero, complemento, bairro, cidade,
-    estado);
-    
-    
+        estado);
+
+
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
 
-     var instrucao2 = `
+    var instrucao2 = `
         INSERT INTO endereco (cep, logradouro, numero, complemento, bairro, cidade,
             estado, tipo) VALUES ('${cep}', '${logradouro}', '${numero}', '${complemento}', '${bairro}', '${cidade}', '${estado}', 'Empresa');
     `;
 
-    database.executar(instrucao2);
+    await database.executar(instrucao2);
 
-    var idEndereco = database.executar(`select idEndereco from endereco where cep = '${cep}' and logradouro = '${logradouro}' and numero = '${numero}'`);
-    console.log(idEndereco);
+    var idEndereco = await database.executar(`SELECT idEndereco FROM endereco WHERE cep = '${cep}' AND logradouro = '${logradouro}' AND numero = '${numero}'`);
 
-    var instrucao = `
-        INSERT INTO empresa (cnpj, nome, telefone, email, senha, fkEndereco) VALUES ('${cnpj}', '${nome}', '${telefone}', '${email}', '${senha}', '${idEndereco}');
-    `;
+    if (idEndereco.length > 0) {
+        // Certifique-se de que você está obtendo um valor válido antes de prosseguir
+        var idEnderecoValor = idEndereco[0].idEndereco;
 
-   
-    console.log("Executando a instrução SQL: \n" + instrucao2);
-    return database.executar(instrucao2),
-    database.executar(instrucao);
+        // Inserção na tabela empresa
+        var instrucao = `
+             INSERT INTO empresa (cnpj, nome, telefone, email, senha, fkEndereco) VALUES ('${cnpj}', '${nome}', '${telefone}', '${email}', '${senha}', ${idEnderecoValor});
+         `;
+
+        console.log("Executando a instrução SQL: \n" + instrucao);
+        return database.executar(instrucao);
+    } else {
+        // Tratar caso não encontre um ID de endereço válido
+        console.error("Erro: Não foi possível obter um ID de endereço válido.");
+        return Promise.reject("Erro: Não foi possível obter um ID de endereço válido.");
+    }
 
 }
 
