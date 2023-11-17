@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/cssSite/cadastro.css">
-    <link rel="stylesheet" href="../public/css/cssSite/header.css">
-    <link rel="icon" href="../public/assets/iconCafe.png">
+    <link rel="stylesheet" href="css/cssSite/cadastro.css">
+    <link rel="stylesheet" href="css/cssSite/header.css">
+    <link rel="icon" href="assets/iconCafe.png">
     <title>Cadastro | TechSolutions</title>
 
     <!-- LIB DE ICON -->
@@ -18,7 +18,7 @@
 
         <div class="container">
 
-            <img class="logo" src="../public/assets/LogoTechSolutions.png" alt="Logo da TechSolutions">
+            <img class="logo" src="assets/LogoTechSolutions.png" alt="Logo da TechSolutions">
 
             <div class="navbar">
 
@@ -28,7 +28,7 @@
                     <li><a href="login.html"><b>Login </b></a></li> |
                     <li><a href="faleConosco.html"><b>Fale Conosco</b></a></li> |
                     <li><a href="sobreNos.html"><b>Sobre Nós</b></a></li> |
-                    <li><b><a href="../public/simulador.html"><b>Simulador</b></a></li>
+                    <li><b><a href="simulador.html"><b>Simulador</b></a></li>
                 </ul>
 
 
@@ -152,7 +152,7 @@
                     </p><br>
                 </div>
             </div><br>
-            <button class="button2" onclick="Conferir()">Cadastrar-se</button>
+            <button class="button2" onclick="cadastrar()">Cadastrar-se</button>
             <a class="link" href="../public/login.html">Já tem cadastro? Faça seu Login</a>
         </div>
 
@@ -189,19 +189,19 @@
 </html>
 
 <script>
-    function Conferir() {
-        var cnpj = ipt_cnpj.value
-        var nome = ipt_nome.value
-        var telefone = ipt_tel.value
-        var email = ipt_email.value
-        var senha = ipt_senha.value
-        var cep = ipt_cep.value
-        var logradouro = ipt_logradouro.value
-        var numero = ipt_num.value
-        var complemento = ipt_complemento.value
-        var bairro = ipt_bairro.value
-        var cidade = ipt_cidade.value
-        var estado = select_estado.value
+    function cadastrar() {
+        var cnpjVar = ipt_cnpj.value
+        var nomeVar = ipt_nome.value
+        var telefoneVar = ipt_tel.value
+        var emailVar = ipt_email.value
+        var senhaVar = ipt_senha.value
+        var cepVar = ipt_cep.value
+        var logradouroVar = ipt_logradouro.value
+        var numeroVar = ipt_num.value
+        var complementoVar = ipt_complemento.value
+        var bairroVar = ipt_bairro.value
+        var cidadeVar = ipt_cidade.value
+        var estadoVar = select_estado.value
         alerta_senha.innerHTML = ''
         alerta_email.innerHTML = ''
         alerta_cnpj.innerHTML = ''
@@ -215,113 +215,113 @@
         alerta_cidade.innerHTML = ''
 
         // começo das validações da senha
-        if (senha.indexOf(" ") >= 0) {
+        if (senhaVar.indexOf(" ") >= 0) {
             alerta_senha.innerHTML = `Sua senha não pode conter espaço<br>`
         }
 
-        if (senha.indexOf("!") == -1)
+        if (senhaVar.indexOf("!") == -1)
 
-            if (senha.indexOf("@") == -1)
+            if (senhaVar.indexOf("@") == -1)
 
-                if (senha.indexOf("/") == -1)
+                if (senhaVar.indexOf("/") == -1)
 
-                    if (senha.indexOf("?") == -1)
+                    if (senhaVar.indexOf("?") == -1)
 
-                        if (senha.indexOf("#") == -1)
+                        if (senhaVar.indexOf("#") == -1)
 
-                            if (senha.indexOf("*") == -1)
+                            if (senhaVar.indexOf("*") == -1)
 
-                                if (senha.indexOf(".") == -1) {
+                                if (senhaVar.indexOf(".") == -1) {
 
                                     alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma <br> LETRA MAIÚSCULA e Caracteres<br>especiais "!@/?#*."<br>`
                                 }
 
-        if (senha != senha.toUpperCase() && senha != senha.toLowerCase()) {
+        if (senhaVar != senhaVar.toUpperCase() && senhaVar != senhaVar.toLowerCase()) {
         } else {
             alerta_senha.innerHTML = `Sua senha deve conter pelo menos uma <br> Letra MAIÚSCULA, minúscula e Caracteres<br>especiais "!@/?#*."<br>`
         }
 
-        if (senha.length < 8 || senha.length > 16) {
+        if (senhaVar.length < 8 || senhaVar.length > 16) {
             alerta_senha.innerHTML = `Verifique a sua senha, ela deve conter <br> pelo menos de 8 á 16 caracteres`
         }
 
         // começo das validações do email
-        if (email.indexOf(" ") >= 0) {
+        if (emailVar.indexOf(" ") >= 0) {
             alerta_email.innerHTML = `Insira um email válido<br>`
         }
 
-        if (email.indexOf("@") == -1) {
+        if (emailVar.indexOf("@") == -1) {
             alerta_email.innerHTML = `Insira um email válido<br>`
         }
 
-        if (email.indexOf(".com") == -1)
+        if (emailVar.indexOf(".com") == -1)
 
-            if (email.indexOf(".br") == -1)
+            if (emailVar.indexOf(".br") == -1)
 
-                if (email.indexOf(".net") == -1)
+                if (emailVar.indexOf(".net") == -1)
 
-                    if (email.indexOf(".org") == -1)
+                    if (emailVar.indexOf(".org") == -1)
 
-                        if (email.indexOf(".io") == -1)
+                        if (emailVar.indexOf(".io") == -1)
 
-                            if (email.indexOf(".company") == -1)
+                            if (emailVar.indexOf(".company") == -1)
 
-                                if (email.indexOf(".gov") == -1) {
+                                if (emailVar.indexOf(".gov") == -1) {
                                     alerta_email.innerHTML = `Insira um Email válido<br>`
                                 }
 
         //Começo da validação cnpj
-        if (cnpj == '') {
+        if (cnpjVar == '') {
             alerta_cnpj.innerHTML = `O campo CNPJ não pode ser vazio<br>`
         }
 
-        if (cnpj.indexOf(" ") >= 0) {
+        if (cnpjVar.indexOf(" ") >= 0) {
             alerta_cnpj.innerHTML = `Insira um CNPJ válido<br>`
         }
 
         //Começo da validação nome empresa
-        if (nome == '') {
+        if (nomeVar == '') {
             alerta_nome.innerHTML = `O campo Nome não pode ser vazio<br>`
         }
 
         //Começo da validação do telefone
-        if (telefone == '') {
+        if (telefoneVar == '') {
             alerta_telefone.innerHTML = `O campo Telefone não pode ser vazio<br>`
         }
 
         //Começo da validação do cep
-        if (cep == '') {
+        if (cepVar == '') {
             alerta_cep.innerHTML = `O campo CEP não pode ser vazio<br>`
         }
 
         //Começo da validação do logradouro
-        if (logradouro == '') {
+        if (logradouroVar == '') {
             alerta_logradouro.innerHTML = `O campo não pode ser vazio<br><br>`
         }
 
         //Começo da validação do numero
-        if (numero == '') {
+        if (numeroVar == '') {
             alerta_numero.innerHTML = `O campo Número não pode ser vazio<br>`
         }
 
         //Começo da validação do numero
-        if (complemento == '') {
+        if (complementoVar == '') {
             alerta_complemento.innerHTML = `<br><br>`
 
         }
 
         //Começo da validação do bairro
-        if (bairro == '') {
+        if (bairroVar == '') {
             alerta_bairro.innerHTML = `O campo Bairro não pode ser vazio<br>`
         }
 
         //Começo da validação do cidade
-        if (cidade == '') {
+        if (cidadeVar == '') {
             alerta_cidade.innerHTML = `O campo Cidade não pode ser vazio<br>`
         }
 
         //Começo da validação do estado
-        if (estado == '') {
+        if (estadoVar == '') {
             alerta_estado.innerHTML = `O campo Estado não pode ser vazio<br>`
         }
 
@@ -329,6 +329,30 @@
             alerta_estado.innerHTML = `Selecione um estado válido`
         } */
 
+        // Enviando o valor da nova input
+        fetch("/empresa/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                cnpjServer: cnpjVar,
+                nomeServer: nomeVar,
+                telefoneServer: telefoneVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                cepServer: cepVar,
+                logradouroServer: logradouroVar,
+                numeroServer: numeroVar,
+                complementoServer: complementoVar,
+                bairroServer: bairroVar,
+                cidadeServer: cidadeVar,
+                estadoServer: estadoVar
+
+            }),
+        })
     }
 
     function verSenha() {

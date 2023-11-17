@@ -1,27 +1,39 @@
-var database = require("../database/config");
+var database = require("../database/config")
 
-function buscarPorId(id) {
-  var query = `select * from empresa where id = '${id}'`;
-
-  return database.executar(query);
+function autenticar(email, senha) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
+    var instrucao = `
+        SELECT id, nome, email, fk_empresa as empresaId FROM usuario WHERE email = '${email}' AND senha = '${senha}';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
 }
 
-function listar() {
-  var query = `select * from empresa`;
+// Coloque os mesmos parâmetros aqui. Vá para a var instrucao
+function cadastrar(cnpj, nome, telefone, email, senha, cep, logradouro, numero, complemento, bairro, cidade,
+    estado) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", cnpj, nome, telefone, email, senha, cep, logradouro, numero, complemento, bairro, cidade,
+    estado);
+    
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO empresa (cnpj, nome, telefone, email, senha, fkEndereco) VALUES ('${cnpj}', '${nome}', '${telefone}', '${email}', '${senha}', '${idEndereco}');
+    `;
 
-  return database.executar(query);
+    var instrucao2 = `
+        INSERT INTO endereco (cep, logradouro, numero, complemento, bairro, cidade,
+            estado, tipo) VALUES ('${cep}', '${logradouro}', '${numero}', '${complemento}', '${bairro}', '${cidade}', '${estado}', 'Empresa');
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucao2);
+    return database.executar(instrucao2),
+    database.executar(instrucao);
+
 }
 
-function buscarPorCnpj(cnpj) {
-  var query = `select * from empresa where cnpj = '${cnpj}'`;
-
-  return database.executar(query);
-}
-
-function cadastrar(razaoSocial, cnpj) {
-  var query = `insert into empresa (razao_social, cnpj) values ('${razaoSocial}', '${cnpj}')`;
-
-  return database.executar(query);
-}
-
-module.exports = { buscarPorCnpj, buscarPorId, cadastrar, listar };
+module.exports = {
+    autenticar,
+    cadastrar
+};
