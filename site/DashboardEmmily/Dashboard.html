@@ -105,8 +105,6 @@
                 <div class="overlay-text">Crítico</div>
             </div>
 
-            <img onclick="mostrarAlerta()" class="sino" src="assets/bell-solid.svg">
-
         </div>
 
     </div>
@@ -122,23 +120,10 @@
             <canvas id="myChart2"></canvas>
         </div>
 
-        <div class="chart-itens">
-            <canvas id="dht11Umidade"></canvas>
-        </div>
-
         <div class="chart-itens div_alertas">
 
             <div class="informacoes">
-                <h5>Alertas por armazem</h5>
-                <select name="" id="">
-                    <option value="Selecione">Selecione o armazem</option>
-                    <option value="Armazem1">Armazem1</option>
-                    <option value="Armazem2">Armazem2</option>
-                    <option value="Armazem1">Armazem3</option>
-                    <option value="Armazem2">Armazem4</option>
-                    <option value="Armazem1">Armazem5</option>
-                    <option value="Armazem2">Armazem6</option>
-                </select>
+                <h5>Visão indivdual dos sensores</h5>
             </div>
 
             <div class="divisao">
@@ -182,8 +167,19 @@
                         <img src="./assets/gota-de-liquido.png">
                     </div>
                 </div>
+
             </div>
+
         </div>
+
+        <div class="chart-itens">
+            <canvas id="myChart3"></canvas>
+        </div>
+
+        <!-- <div class="chart-itens">
+            <canvas id="dht11Umidade"></canvas>
+        </div> -->
+
     </div>
 
     <script src="./main.js"></script>
@@ -195,67 +191,13 @@
 
 <script>
 
-    function mostrarAlerta() {
-        alert(' Detectamos um nível de umidade fora do ideal nos armazéns 1 e 2. \n\nAção imediata é necessária para preservar a qualidade e o valor dos grãos');
-    }
 
     const ctx = document.getElementById('myChart');
 
     new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30'],
-            datasets: [{
-                label: 'Armazem 1',
-                data: [64, 66, 60, 70, 65, 59],
-                backgroundColor: '#ff6384',
-                borderColor: '#ff6384',
-                borderWidth: 2
-            }, {
-                label: 'Armazem 2',
-                data: [67, 64, 58, 60, 66, 62],
-                backgroundColor: '#36a0e8',
-                borderColor: '#36a0e8',
-                borderWidth: 2
-            }]
-        },
-        options: {
-
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Umidade média dos armazens a cada meia hora'
-                }
-            },
-
-            scales: {
-                x: {
-
-                    title: {
-                        display: true,
-                        text: 'Tempo (minutos)'
-                    }
-                },
-
-                y: {
-
-                    title: {
-                        display: true,
-                        text: 'Umidade'
-                    },
-
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-    const ctx2 = document.getElementById('myChart2');
-
-    new Chart(ctx2, {
         type: 'bar',
         data: {
-            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+            labels: ['10:10', '10:30', '10:50', '11:10', '11:30', '11:50'],
             datasets: [{
                 label: 'Armazem 1',
                 data: [64, 66, 59, 68, 67, 63],
@@ -275,7 +217,7 @@
             plugins: {
                 title: {
                     display: true,
-                    text: 'Tendencia de umidade média dos armazens ao longo do ano'
+                    text: 'Variação de umidade por sensor e tempo atual'
                 }
             },
 
@@ -285,7 +227,7 @@
 
                     title: {
                         display: true,
-                        text: 'Mês'
+                        text: 'Tempo (a cada 20 minutos)'
                     }
                 },
 
@@ -302,56 +244,125 @@
         }
     });
 
-    /* -- dht11Umidade -- */
-    var contextoDht11Umidade = document.getElementById('dht11Umidade').getContext('2d');
-    contextoDht11Umidade.canvas.width = 1000;
-    contextoDht11Umidade.canvas.height = 400;
-    var dht11Umidade = new Chart(
-        contextoDht11Umidade,
-        {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: 'Umidade',
-                    type: 'line',
-                    borderColor: ['#45b3e7'],
-                    fill: false
-                }]
-            },
-            options: {
+    const ctx2 = document.getElementById('myChart2');
 
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Sensor DHT11'
-                    }
-                },
+    new Chart(ctx2, {
+        type: 'pie',
+        data: {
+            labels: [
+                'Verde',
+                'Amarelo',
+                'Laranja',
+                'Vermelho'],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [20, 5, 4, 4],
+                backgroundColor: [
+                    '#78ca78',
+                    '#ffdd19',
+                    '#f79a2f',
+                    '#f93d3d'
+                ],
+                hoverOffset: 4
+            }]
+        },
 
-                scales: {
-                    xAxes: [{
+        options: {
 
-                        distribution: 'series',
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
 
-                    yAxes: [{
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Umidade'
-                        },
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                },
-                animation: {
-                    duration: 0
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Alertas Gerais'
                 }
-            }
+            },
         }
-    );
+    });
+
+    // /* -- dht11Umidade -- */
+    // var contextoDht11Umidade = document.getElementById('dht11Umidade').getContext('2d');
+    // contextoDht11Umidade.canvas.width = 1000;
+    // contextoDht11Umidade.canvas.height = 400;
+    // var dht11Umidade = new Chart(
+    //     contextoDht11Umidade,
+    //     {
+    //         type: 'line',
+    //         data: {
+    //             datasets: [{
+    //                 label: 'Umidade',
+    //                 type: 'line',
+    //                 borderColor: ['#45b3e7'],
+    //                 fill: false
+    //             }]
+    //         },
+    //         options: {
+
+    //             plugins: {
+    //                 title: {
+    //                     display: true,
+    //                     text: 'Sensor DHT11'
+    //                 }
+    //             },
+
+    //             scales: {
+    //                 xAxes: [{
+
+    //                     distribution: 'series',
+    //                     ticks: {
+    //                         beginAtZero: true
+    //                     }
+    //                 }],
+
+    //                 yAxes: [{
+    //                     scaleLabel: {
+    //                         display: true,
+    //                         labelString: 'Umidade'
+    //                     },
+    //                     ticks: {
+    //                         beginAtZero: true
+    //                     }
+    //                 }]
+    //             },
+    //             animation: {
+    //                 duration: 0
+    //             }
+    //         }
+    //     }
+    // );
+
+    const ctx3 = document.getElementById('myChart3');
+
+    new Chart(ctx3, {
+        type: 'pie',
+        data: {
+            labels: [
+                'Vermelho',
+                'Amarelo',
+                'Laranja'],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [5,4,4],
+                backgroundColor: [
+                    '#f93d3d',
+                    '#ffdd19',
+                    '#f79a2f'
+                ],
+                hoverOffset: 4
+            }]
+        },
+
+        options: {
+
+
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Alertas fora do ideal'
+                }
+            },
+        }
+    });
+
 
     var paginacao = {};
     var tempo = {};
@@ -389,6 +400,6 @@
         obterDados(luminosidade, 'luminosidade');
         obterDados(lm35Temperatura, 'lm35/temperatura');
         obterDados(chave, 'chave');
-    }, 1000);
+    }, 100000000);
 
 </script>
