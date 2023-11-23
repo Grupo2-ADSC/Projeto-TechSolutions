@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
+
+
+*{margin: 0;
+  background-color: none;
+margin-bottom: 0;}
+
+.logo{
+  align-items: flex-start;
+  width: 350px;
+}
+
+span{
+  background-color: white;
+  font-weight: lighter;
+}
+
+p{
+  background-color: white;
+}
+
+.fundoB b{
+  background-color: white;
+}
+
+.header{
+background-color: #F8F5EC;
+width: 100%;
+height: 100px;
+border-bottom: 4px solid rgb(100, 47, 26);
+font-family: 'Montserrat', sans-serif;
+}
+
+.header .container {
+  width: 85%;
+  height: 100%;
+  margin: 0 10% ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .container li{
+  display: inline;
+  padding: 20px;
+}
+
+.header .container .navbar li a{
+  text-decoration: none;
+  color: #794830;
+}
+
+.logo{
+  align-items: flex-start;
+  width: 350px;
+}
+
+.button {
+    color: #F8F5EC;
+    background-color: #794830;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 4px solid #794830;
+    box-shadow: 0px 0px 0px 2px rgba(255,255,255,1), 0px 0px 0px 5px rgba(121,72,48,1);
+  }
+
+  .button2 {
+    border: none;
+    width: 120px;
+    height: 35px;
+    background-color: #562D10;
+    color: white;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.FundoImagem {
+    display: flex; /* Aqui eu estou tornando o meu conteúdo flex = flexível */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 600px; /* Aqui eu defini a altura da imagem de fundo, Vh é V = view, H = height que significa altura */
+    background-image: url('https://www.supremoarabica.com.br/wp-content/uploads/2019/12/iStock-1135359711-1.jpg'); /* Baixei uma imagem de fundo e chamei ela pelo caminho de pastas */
+    background-size: cover; /* Aqui eu falo pra minha imagem de fundo cobrir a tela inteira no tamanho certo */
+    justify-content: center; /* Aqui eu estou mandando todo meu conteúdo ficar no meio, tudo que fica dentro da img de fundo  */
+  }
+
+  .ContainerTitulo{
+    text-align: center; /* Dentro desse container a gente tem apenas o título, e eu alinho o texto no centro */
+    height: 35px; /* Dou uma altura pro container */
+  }
+
+  .Titulo{
+    background-color: white;
+    margin-top: 40px;
+    color: #5f341c; /* Dando a cor do título de marrom */
+    font-size: 35px; /* Dando tamanho para a fonte(letra) do título */
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .CaixaInput{
+    background-color: white;
+    margin-top: 30px;
+  }
+
+  .fundoB{
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+ 
+
+  .ContainerFundoBranco {
+    margin-right: 800px;
+    position: absolute; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinhando todos itens do container (as duas partes brancas) no centro */
+    background-color: white;
+    border-radius: 10px 0px 0px 10px; /* Aqui estou falando que quero uma borda com raio */
+    height: 525px; /* Dando altura para o fundo branco */
+    width: 332px; /* Dando largura para o fundo branco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Chamando um tipo de fonte(letra) */
+    font-weight: bolder; /* Deixando a letra em negrito b de bold/bolder */
+    box-shadow: rgba(0, 0, 0, 0.418) 0px 7px 7px;/* Colocando uma sombrinha no fundo branco */
+  }
+
+  .input {
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 2px solid #5C5B5B;
+    height: 18px;
+    width: 200px;
+    font-family: 'Roboto', sans-serif;
+    padding: 3px;
+}
+
+  .ContainerButton{
+    background-color: white;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .FundoBrancoMensagem{
+    margin-left: 55vh;
+    padding: 30px;
+    padding-bottom: 15px; /* dando padding (margem interna) na parte de baixo */
+    align-items: center;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    height: 480px;
+    width: 700px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.418) 0px 10px 12px;
+  }
+
+  #containderFooter{
+    display: block;
+ }
+ 
+ #rodape {
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ #icones, #infos, #termos {
+     list-style: none;
+     cursor: pointer;
+     padding: 10px;
+     color: #fff;
+ }
+
+  #icones li, #infos li, #termos li {
+    display: inline;
+    margin: 0 10px;
+    
+}
+
+#icones img {
+    width: 40px;
+    height: 40px;
+    color: #F8F5EC;
+}
+
+#infos a, #termos li {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+#direitos {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff; /* Cor do texto branco */
+}
+
+.back-Rodape{
+    background-color: #2A1A17;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fundoF{
+  background-color: #2A1A17;
+}

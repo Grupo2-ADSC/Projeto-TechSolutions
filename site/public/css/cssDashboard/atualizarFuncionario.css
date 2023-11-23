@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    background-color: #E7EAF0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color:  #F8F5EC;
+    padding-left: 380px;
+    border-bottom: 4px solid #184062; 
+}
+
+.texto{
+    color:#184062; 
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.quadro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin-top: 100px;
+    margin-left: 575px;
+    width: 700px;
+    height: fit-content;
+    background-color: #F8F5EC;
+    border: solid black 1px;
+    border-radius: 5px;
+    box-shadow: #5C5B5B 10px 10px 10px;
+    padding-bottom: 20px;
+}
+
+.divisao{
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+}
+
+.container1{
+    justify-content: space-around;
+    margin-right: 40px;
+}
+
+.input{
+    padding-left: 10px;
+    font-size: 15px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 2px solid #5C5B5B;
+    height: 25px;
+    width: 225px;
+}
+
+.buttonDivisao{
+    display: flex;
+    flex-direction: row;
+    padding-right: 260px;
+    cursor: pointer;
+}
+
+.button1{
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    width: 110px;
+    background-color: #00BF63;
+    margin-right: 20px;
+}
+
+.button2{
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    width: 110px;
+    background-color: #FF3131;
+    margin-right: 20px;
+}
+
+#alerta_senha{
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_email{
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_nome{
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_sobrenome{
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_cargo{
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#alerta_Csenha{
+    width: 100%;
+    height: 5%;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(174, 24, 24);
+    align-items: center;
+    text-align: center;
+}
+
+#botaoVerSenha{
+    position:relative;
+    top: 50px;
+    right: 30px;
+    cursor: pointer;
+}
+#botaoVerSenha2{
+   position: relative;
+    top: 50px;
+    right: 30px;
+    cursor: pointer;
+}
+.visualizarSenha{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 44px;
+}
+
+::-ms-reveal {
+    display: none;
+}
+
