@@ -284,6 +284,8 @@ position: absolute;
 .back-Rodape li,
 li a,
 li img {
+    height: 100px;
+    width: 100px;
     background-color: #2A1A17;
 }
 

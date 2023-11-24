@@ -207,7 +207,7 @@ body{
   margin-top: 100px;
   margin-left: 575px;
   width: 700px;
-  height: 450px;
+  min-height: 250px;
   background-color: #F8F5EC;
   border: solid black 1px;
   border-radius: 5px;
