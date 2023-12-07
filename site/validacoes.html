@@ -1,0 +1,135 @@
+<script>
+
+    var nomeVar = nome_input.value;
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+    var dt_nascimentoVar = dt_nascimento_input.value;
+    var generoVar = genero_input.value;
+    var estadoVar = estado_input.value;
+    var cidadeVar = cidade_input.value;
+    var bairroVar = bairro_input.value;
+    var ruaVar = rua_input.value;
+    var numeroVar = numero_input.value;
+
+
+
+    function exibirErro(mensagem) {
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML = mensagem;
+      }
+
+      // Função para validar o formato do e-mail
+      function emailValido(email) {
+        var emailChecagem = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailChecagem.test(email);
+      }
+
+
+
+      // Função para validar o formato de senha
+    function senhaValida(senha) {
+      if (senha === "") {
+          finalizarAguardar();
+          return false;
+      }
+
+      if (senha.length < 8) {
+          finalizarAguardar();
+          return false;
+      }
+
+      if (!/[a-z]/.test(senha)) {
+          finalizarAguardar();
+          return false;
+      }
+
+      if (!/[A-Z]/.test(senha)) {
+          finalizarAguardar();
+          return false;
+      }
+
+      if (!/\d/.test(senha)) {
+          finalizarAguardar();
+          return false;
+      }
+
+      if (!/[@$!%*?&]/.test(senha)) {
+          finalizarAguardar();
+          return false;
+      }
+      return true;
+  }
+
+
+
+
+
+      // Validando o campo nome
+      if (nomeVar == "") {
+        exibirErro("Por favor, preencha o campo Nome.");
+        finalizarAguardar();
+        return false;
+      }
+
+      // Validando o campo E-mail
+      if (emailVar == "") {
+        exibirErro("Por favor, preencha o campo E-mail.");
+        finalizarAguardar();
+        return false;
+      } else if (!emailValido(emailVar)) {
+        exibirErro("Por favor, insira um e-mail válido. <br> Modelo: seunome@email.com");
+        finalizarAguardar();
+        return false;
+      }
+      // Validando o campo Senha
+      if (senhaVar == "") {
+        exibirErro("Por favor, preencha o campo Senha.");
+        finalizarAguardar();
+        return false;
+      } else if (!senhaValida(senhaVar)) {
+        exibirErro("A Senha deve conter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, números e caracteres especiais.");
+        finalizarAguardar();
+        return false;
+      }
+      // Validando o campo Confirmação de Senha
+      if (confirmacaoSenhaVar == "") {
+        exibirErro("Por favor, preencha o campo Confirmação de Senha.");
+        finalizarAguardar();
+        return false;
+      }
+      // Validando se Senha e Confirmação de Senha coincidem
+      if (senhaVar !== confirmacaoSenhaVar) {
+        exibirErro("A Senha e a Confirmação de Senha devem ser iguais.");
+        finalizarAguardar();
+        return false;
+      }
+
+      // Validando o campo Data de Nascimento
+      if (dt_nascimentoVar == "") {
+        exibirErro("Por favor, selecione uma Data de Nascimento.");
+        finalizarAguardar();
+        return false;
+      }
+
+      // Validando o campo Gênero
+      if (!["feminino", "masculino", "outros"].includes(generoVar.toLowerCase())) {
+        exibirErro("Por favor, preencha o campo Gênero com 'feminino', 'masculino' ou 'outros'.");
+        finalizarAguardar();
+        return false;
+      } 
+
+// SE VC QUISER PODE USAR ESSE FORMATO DE VALIDAÇÃO PARA SENHA TAMBÉM , ELE É MENOS REDUNDANTE DO QUE O QUE EU FIZ
+//^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$
+
+// ^: é o inicio
+// (?=.*[A-Z]): validação para letra maiuscula
+// (?=.*[a-z]): validação para letra minuscula
+// (?=.*\d): validação para numero
+// (?=.*[@$!%*?&]): validação para caractere especial
+// [A-Za-z\d@$!%*?&]{8,}: aqui está definindo os critérios para os caracteres permitidos na senha
+// $: final
+
+
+</script>
+
