@@ -10,7 +10,7 @@ CREATE TABLE endereco (
  logradouro VARCHAR(50) NOT NULL,
  numero INT NOT NULL,
  complemento VARCHAR(100) DEFAULT 'Sem endereço',
- bairo VARCHAR(50) NOT NULL,
+ bairro VARCHAR(50) NOT NULL,
  cidade VARCHAR(50) NOT NULL,
  estado CHAR(2) NOT NULL,
  tipo CHAR(7),
@@ -25,12 +25,14 @@ CREATE TABLE endereco (
  (NULL, '08310-220', 'Rua Almada', 31, 'Ao lado do posto ipiranga', 'Parque das Nações', 'São Paulo', 'SP', 'Armazém'), 
  (NULL, '04270-190', 'Avenida Mimo de Vênus', 147, 'Ao lado do Mercado Rossi', 'Assunçao', 'São Bernardo do Campo', 'SP', 'Armazém' ), 
  (NULL, '06270-210', 'Avenida flor de Abril', 19, 'Muro azul', 'Jardim Ana Maria', 'São Caetano do Sul', 'SP', 'Armazém' );
+ 
+ select idEndereco from endereco where cep = '09260-290' and logradouro = 'Rua Conceição' and numero = 1245;
 
 CREATE TABLE empresa (
 idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
 cnpj CHAR(14) UNIQUE NOT NULL,
 nome VARCHAR(50) NOT NULL,
-telefone CHAR(11) DEFAULT 'Sem numero',
+telefone CHAR(14) DEFAULT 'Sem numero',
 email VARCHAR(100) NOT NULL,
 senha VARCHAR(16) NOT NULL,
 fkEndereco INT, 
@@ -43,6 +45,7 @@ FOREIGN KEY (fkEndereco) REFERENCES endereco(idEndereco)
 (NULL, '63310411000194', '3corações', '1138060020', '3coracoes@cafe.com.br', '3cor4co3s', 102);
 
 SELECT * FROM empresa;
+SELECT * FROM ENDERECO;
 
 /*UPDATE empresa SET fkEndereco = 100 WHERE idEmpresa = 1;
 UPDATE empresa SET fkEndereco = 101 WHERE idEmpresa = 2;*/
@@ -65,6 +68,7 @@ INSERT INTO funcionario (nome, sobrenome, cargo, email, senha, idFuncionario, fk
 ('Gabriel','Silva','Analista','Gabriel@gmail.com','G4br!3l', 3, 2),
 ('Yago','Martins','Supervisor de operações','Yago@gmail.com','Y4go123', 4, 3),
 ('Marcus','Souza','Analista','Marcus@gmail.com','M4rcu5', 5, 3);
+
 
 CREATE TABLE armazem (
 idArmazem INT PRIMARY KEY AUTO_INCREMENT,

@@ -7,15 +7,11 @@ const SERVIDOR_PORTA = 3000;
 const HABILITAR_OPERACAO_INSERIR = true; /*Sempre verdadeiro*/
 
 const serial = async (
-    valoresDht11Umidade,
-    valoresDht11Temperatura,
-    valoresLuminosidade,
-    valoresLm35Temperatura,
-    valoresChave
+    valoresDht11Umidade
 ) => {
     const poolBancoDados = mysql.createPool(
         {
-            host: '127.0.0.1', /*local do SQL*/
+            host: 'localhost', /*local do SQL*/
 
             port: 3306,  /* a porta de entrada do usb, entre no cmd do pc para ativar, "netstat -ano", pegue o PID ex:"12567" e faça "taskkill /PID 12567 -F" obs: veja em qual porta está seu arduino, aparece no git bash quando dá npm start.*/
 
@@ -23,7 +19,7 @@ const serial = async (
 
             password: 'Urubu100', /*senha do usuario*/
 
-            database: 'metricas' /* database do banco, INSERT INTO sensores (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave),*/
+            database: 'TechSolutions' /* database do banco, INSERT INTO sensores (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave),*/
         }
     ).promise();
 
@@ -44,24 +40,26 @@ const serial = async (
     arduino.pipe(new serialport.ReadlineParser({ delimiter: '\r\n' })).on('data', async (data) => {
         const valores = data.split(';');
         const dht11Umidade = parseFloat(valores[0]);
-        const dht11Temperatura = parseFloat(valores[1]);
-        const luminosidade = parseFloat(valores[2]);
-        const lm35Temperatura = parseFloat(valores[3]);
-        const chave = parseInt(valores[4]);
 
         valoresDht11Umidade.push(dht11Umidade);
-        valoresDht11Temperatura.push(dht11Temperatura);
-        valoresLuminosidade.push(luminosidade);
-        valoresLm35Temperatura.push(lm35Temperatura);
-        valoresChave.push(chave);
 
-        console.log(chave)
+        console.log(dht11Umidade)
 
         if (HABILITAR_OPERACAO_INSERIR) {
             await poolBancoDados.execute(
-                'INSERT INTO sensores (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, chave) VALUES (?, ?, ?, ?, ?)',
-                [dht11Umidade, dht11Temperatura, luminosidade, lm35Temperatura, chave]
+                'INSERT INTO registro (dado, fkSensor) VALUES (?, ?)',
+                [dht11Umidade, 1]
             );
+
+            var dht11Umidade2 = dht11Umidade + 5;
+
+            console.log(dht11Umidade2)
+
+            await poolBancoDados.execute(
+                'INSERT INTO registro (dado, fkSensor) VALUES (?, ?)',
+                [dht11Umidade2, 2]
+            );
+   
         }
 
     });
@@ -71,11 +69,8 @@ const serial = async (
 }
 
 const servidor = (
-    valoresDht11Umidade,
-    valoresDht11Temperatura,
-    valoresLuminosidade,
-    valoresLm35Temperatura,
-    valoresChave
+    valoresDht11Umidade
+
 ) => {
     const app = express();
     app.use((request, response, next) => {
@@ -89,38 +84,16 @@ const servidor = (
     app.get('/sensores/dht11/umidade', (_, response) => {
         return response.json(valoresDht11Umidade);
     });
-    app.get('/sensores/dht11/temperatura', (_, response) => {
-        return response.json(valoresDht11Temperatura);
-    });
-    app.get('/sensores/luminosidade', (_, response) => {
-        return response.json(valoresLuminosidade);
-    });
-    app.get('/sensores/lm35/temperatura', (_, response) => {
-        return response.json(valoresLm35Temperatura);
-    });
-    app.get('/sensores/chave', (_, response) => {
-        return response.json(valoresChave);
-    });
 }
 
 (async () => {
     const valoresDht11Umidade = [];
-    const valoresDht11Temperatura = [];
-    const valoresLuminosidade = [];
-    const valoresLm35Temperatura = [];
-    const valoresChave = [];
+
     await serial(
-        valoresDht11Umidade,
-        valoresDht11Temperatura,
-        valoresLuminosidade,
-        valoresLm35Temperatura,
-        valoresChave
+        valoresDht11Umidade
+
     );
     servidor(
-        valoresDht11Umidade,
-        valoresDht11Temperatura,
-        valoresLuminosidade,
-        valoresLm35Temperatura,
-        valoresChave
+        valoresDht11Umidade
     );
 })();
